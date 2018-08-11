@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './style.scss';
+
 const Navbar = () => {
   return (
     <header>
-      <div class="logo">k</div>
+      <div class="logo"></div>
     </header>
   );
 };
