@@ -94,7 +94,7 @@ module.exports = {
             },
           },
           {
-            test: /\.css$/,
+            test: /\.scss$/,
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
@@ -105,6 +105,9 @@ module.exports = {
                     },
                   },
                   use: [
+                    {
+                      loader: 'style-loader',
+                    },
                     {
                       loader: require.resolve('css-loader'),
                       options: {
@@ -130,6 +133,9 @@ module.exports = {
                         ],
                       },
                     },
+                    {
+                      loader: 'sass-loader',
+                    }
                   ],
                 },
                 extractTextPluginOptions

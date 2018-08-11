@@ -82,13 +82,15 @@ module.exports = {
             },
           },
           {
-            test: /\.css$/,
-            use: [
-              require.resolve('style-loader'),
+            test: /\.scss$/,
+            use: [{
+                loader: 'style-loader',
+              },
               {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 1,
+                  minimize: true,
                 },
               },
               {
@@ -108,6 +110,9 @@ module.exports = {
                   ],
                 },
               },
+              {
+                loader: 'sass-loader',
+              }
             ],
           },
           {
