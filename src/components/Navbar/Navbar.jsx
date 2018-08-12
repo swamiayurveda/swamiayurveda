@@ -10,7 +10,7 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-transparent">
+      <nav className="navbar has-shadow">
         <div className="navbar-brand">
           <a className="navbar-item" href="https://bulma.io">
             <img className="navbar-logo" src="http://inddc.in/webroot/assets/img/sample/shortcode/logo/1.png" alt="logo" />

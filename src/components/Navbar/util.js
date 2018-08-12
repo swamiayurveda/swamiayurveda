@@ -1,5 +1,4 @@
-
-
+// TODO: Convert to use refs
 export const setNavbarToggler = () => {
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 

@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
-@import "bulma/bulma.sass"; //TODO: break only what i need at end
 @import "bulma/sass/utilities/_all.sass";
 
-html {
-  background: $grey-dark;
-}
-
+$navbar-background-color: $white;
+// $navbar-item-color: $white;
 $family-sans-serif: "Nunito", sans-serif;
 
+@import "bulma/bulma.sass"; //TODO: break only what i need at end
 
 body {
   margin: 0;
