@@ -14,9 +14,9 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar has-shadow">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
+          <Link className="navbar-item" to="/">
             <img className="navbar-logo" src="http://inddc.in/webroot/assets/img/sample/shortcode/logo/1.png" alt="logo" />
-          </a>
+          </Link>
           <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
             <span></span>
             <span></span>
