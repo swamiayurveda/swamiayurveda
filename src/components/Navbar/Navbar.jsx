@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+import { Link } from "react-router-dom";
 
 import { setNavbarToggler } from './util';
 import './style.scss';
@@ -24,11 +26,10 @@ class Navbar extends React.Component {
 
         <div id="navbarMenu" className="navbar-menu">
           <div className="navbar-end">
-            <a className="navbar-item"><i className="far fa-star"></i></a>
-            <a className="navbar-item" href="https://bulma.io/">Browse</a>
-            <a className="navbar-item" href="https://bulma.io/">Sell</a>
-            <a className="navbar-item" href="https://bulma.io/">Financing</a>
-            <a className="navbar-item" href="https://bulma.io/">About Us</a>
+            <a className="navbar-item" onClick={() => alert('open favs')}><i className="far fa-star"></i></a>
+            <Link className="navbar-item" to="/">Browse</Link>
+            <Link className="navbar-item" to="/finance">Finance</Link>
+            <Link className="navbar-item" to="/about">About Us</Link>
           </div>
         </div>
       </nav>
@@ -37,4 +38,4 @@ class Navbar extends React.Component {
 };
 
 
-export default Navbar;
+export default withRouter(Navbar);
