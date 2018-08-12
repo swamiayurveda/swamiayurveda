@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Card from 'components/Card';
+import CarCard from 'components/CarCard';
+import FilterBar from 'components/FilterBar';
 
 const cards = [
   {
@@ -56,10 +57,11 @@ const cards = [
 const Browse = () => {
   return (
     <div>
+      <FilterBar />
       <div className="columns is-gapless is-multiline">
         {cards.map(card => (
           <div className="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
-            <Card {...card} />
+            <CarCard {...card} />
           </div>
         ))}
       </div>
