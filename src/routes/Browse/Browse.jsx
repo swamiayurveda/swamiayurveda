@@ -2,6 +2,9 @@ import React from 'react';
 
 import CarCard from 'components/CarCard';
 import FilterBar from 'components/FilterBar';
+import SearchBar from 'components/SearchBar';
+
+import './style.scss';
 
 const cards = [
   {
@@ -54,20 +57,48 @@ const cards = [
   },
 ];
 
-const Browse = () => {
-  return (
-    <div>
-      <FilterBar />
-      <div className="columns is-gapless is-multiline">
-        {cards.map(card => (
-          <div className="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
-            <CarCard {...card} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+class Browse extends React.Component {
+  componentDidMount() {
+    window.onscroll = () => {
+      if (window.pageYOffset > this.container.offsetTop) {
+        this.searchBar.container.classList.add("sticky")
+      } else {
+        this.searchBar.container.classList.remove("sticky");
+      }
+    };
+  }
 
+  render() {
+    return (
+      <div>
+        <section className="hero is-medium is-primary is-bold">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">
+                Primary bold title
+              </h1>
+              <h2 className="subtitle">
+                Primary bold subtitle
+              </h2>
+            </div>
+          </div>
+        </section>
+        <div className="is-flex" ref={ref => { this.container = ref }}>
+          <FilterBar />
+          <div className="car-browse-container">
+            <SearchBar ref={ref => { this.searchBar = ref }} />
+            <div className="columns car-columns is-gapless is-multiline">
+              {cards.map(card => (
+                <div className="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
+                  <CarCard {...card} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+};
 
 export default Browse;

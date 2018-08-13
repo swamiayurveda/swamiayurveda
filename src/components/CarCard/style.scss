@@ -2,7 +2,11 @@
 
 .car-card {
   .card-image {
-    padding: 5px;
+    padding: 1px;
     border-radius: 10px;
+  }
+
+  &:hover {
+    border-color: blue;
   }
 }
