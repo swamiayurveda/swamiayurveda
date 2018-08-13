@@ -6,43 +6,7 @@ import SearchBar from 'components/SearchBar';
 
 import './style.scss';
 
-const cards = [
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/13255311/1056070313.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/18877910/1054729045.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/19746068/thumb/1054745774.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/19843851/thumb/1056708489.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/13255311/1056070313.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/18877910/1054729045.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/19746068/thumb/1054745774.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/19843851/thumb/1056708489.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/13255311/1056070313.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/18877910/1054729045.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/19746068/thumb/1054745774.jpg",
-  },
-  {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/19843851/thumb/1056708489.jpg",
-  },
+const dummies = [
   {
     imageURL: "https://cdn04.carsforsale.com/3/544555/13255311/1056070313.jpg",
   },
@@ -56,6 +20,8 @@ const cards = [
     imageURL: "https://cdn04.carsforsale.com/3/544555/19843851/thumb/1056708489.jpg",
   },
 ];
+
+const cards = [...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies];
 
 class Browse extends React.Component {
   componentDidMount() {

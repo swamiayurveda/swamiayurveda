@@ -10,13 +10,13 @@ class FilterBar extends React.Component {
     return (
       <div className="filter-sidebar-wrapper p-md">
         <div className="field">
-          <label className="label">Price</label>
+          <label className="label is-uppercase has-text-weight-light">Price</label>
           <div className="control">
             <input className="slider is-fullwidth is-large is-success" step="1" min="0" max="100" type="range" />
           </div>
         </div>
         <div className="field m-t-lg">
-          <label className="label">Mileage</label>
+          <label className="label is-uppercase has-text-weight-light">Mileage</label>
           <div className="control">
             <input className="slider is-fullwidth is-large is-info" step="1" min="0" max="100" type="range" />
           </div>

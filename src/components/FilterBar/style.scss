@@ -1,6 +1,7 @@
 @import "../../styles/index.scss";
 
 .filter-sidebar-wrapper {
+  text-align: left;
   width: $filter-sidebar-width;
   height: 100vh;
   position: sticky;
