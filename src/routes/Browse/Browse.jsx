@@ -71,7 +71,7 @@ class Browse extends React.Component {
   render() {
     return (
       <div>
-        <section className="hero is-medium is-primary is-bold">
+        <section className="hero is-medium is-info is-bold">
           <div className="hero-body">
             <div className="container">
               <h1 className="title">
