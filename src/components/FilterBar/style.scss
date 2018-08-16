@@ -5,7 +5,7 @@
   width: $filter-sidebar-width;
   height: 100vh;
   position: sticky;
-  top: 0;
+  top: $navbar-height;
   overflow: hidden;
   border-right: 1px solid $grey-lighter;
 }

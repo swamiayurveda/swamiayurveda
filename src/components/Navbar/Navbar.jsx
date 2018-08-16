@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 import { Link } from "react-router-dom";
 
 import { setNavbarToggler } from './util';
+import image from '../../images/logo.png';
 import './style.scss';
 
 class Navbar extends React.Component {
@@ -12,12 +13,12 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar has-shadow">
+      <nav className="navbar has-shadow is-fixed-top">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img className="navbar-logo" src="http://inddc.in/webroot/assets/img/sample/shortcode/logo/1.png" alt="logo" />
+            <img className="navbar-logo" src={image} alt="logo" />
           </Link>
-          <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          <div className="navbar-burger burger" data-target="navbarMenu">
             <span></span>
             <span></span>
             <span></span>

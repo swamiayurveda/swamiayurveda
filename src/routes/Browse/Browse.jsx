@@ -23,10 +23,12 @@ const dummies = [
 
 const cards = [...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies];
 
+const navbarHeight = 52;
+
 class Browse extends React.Component {
   componentDidMount() {
     window.onscroll = () => {
-      if (window.pageYOffset > this.container.offsetTop) {
+      if (window.pageYOffset > (this.container.offsetTop - navbarHeight)) {
         this.searchBar.container.classList.add("sticky")
       } else {
         this.searchBar.container.classList.remove("sticky");

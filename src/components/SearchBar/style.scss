@@ -20,8 +20,8 @@
 
   &.sticky {
     position: fixed;
-    top: 0;
-    z-index: 1000000;
+    top: $navbar-height;
+    z-index: 2;
     background: white;
     width: calc(100% - #{$filter-sidebar-width});
     box-shadow: 7px -1px 7px $dark;
