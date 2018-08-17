@@ -7,7 +7,7 @@ const Card = (props) => {
   const { id, make, model, year, miles, price, imageURL } = props;
 
   return (
-    <div className="card car-card">
+    <div className="card car-card hvr-shrink hvr-underline">
       <header class="card-header">
         <p class="card-header-title">
           <strong>{year}</strong>&nbsp;<span className="car-title">{`${make} ${model}`}</span>
