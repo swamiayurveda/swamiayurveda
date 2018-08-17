@@ -5,15 +5,17 @@
   transition: .3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   // border: 1px solid white;
   border: 1px solid rgba(101, 101, 101, 0.1);
+  overflow: hidden;
 
   .card-image {
     // padding: 1px;
     border-radius: 10px;
   }
 
-  .car-title {
+  .card-header-title {
     overflow: hidden;
     white-space: nowrap;
+    font-weight: lighter;
 
     & > *:last-child {
       overflow: hidden;

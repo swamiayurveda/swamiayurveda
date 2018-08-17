@@ -17,7 +17,7 @@ const dummies = [
     imageURL: "https://cdn04.carsforsale.com/3/544555/19746068/thumb/1054745774.jpg",
   },
   {
-    imageURL: "https://cdn04.carsforsale.com/3/544555/19843851/thumb/1056708489.jpg",
+    imageURL: "https://shiftcars1.imgix.net/content/con15fv9tmZtEmboPF8ETUZ0wBvlxch8Ta1WP9lm9sF5hJxKgQuaQA?fit=crop&w=666&h=494&auto=format%2Ccompress",
   },
 ];
 
@@ -57,7 +57,7 @@ class Browse extends React.Component {
             <SearchBar ref={ref => { this.searchBar = ref }} />
             <div className="columns car-columns is-gapless is-multiline">
               {cards.map(card => (
-                <div className="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
+                <div className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
                   <CarCard {...card} />
                 </div>
               ))}

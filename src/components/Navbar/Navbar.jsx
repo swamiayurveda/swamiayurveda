@@ -16,7 +16,7 @@ class Navbar extends React.Component {
       <nav className="navbar has-shadow is-fixed-top">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img className="navbar-logo" src={image} alt="logo" />
+            <img className="navbar-logo" src={'https://automaxutah.com/Dealers/14001_15000/14010/images/logo.png'} alt="logo" />
           </Link>
           <div className="navbar-burger burger" data-target="navbarMenu">
             <span></span>

@@ -8,6 +8,11 @@ const Card = (props) => {
 
   return (
     <div className="card car-card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <strong>{year}</strong>&nbsp;<span className="car-title">{`${make} ${model}`}</span>
+        </p>
+      </header>
       <div class="card-image">
         <figure class="image is-4by3">
           <img src={imageURL} alt="Plaimage" />
@@ -16,18 +21,13 @@ const Card = (props) => {
       <div className="card-content">
         <div className="content columns">
           <div className="column is-paddingless">
-            <div className="level-left car-title">
-              <span className="is-light m-r-xs">{year}</span>
-              <strong className="m-r-xs">{make}</strong> <span>{model}</span>
-            </div>
             <div className="level">
-              <span className="level-left has-text-info">{miles}k miles</span>
+              <span className="level-left has-text-grey">{miles} miles</span>
               <div className="level-right is-one-fifths is-paddingless has-text-right">
-                <span className="tag is-success is-rounded is-size-6">${price}</span>
+                <span className="is-size-6">${price}</span>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -39,8 +39,8 @@ Card.defaultProps = {
   make: 'Chevrolet',
   model: 'Camaro LT Coupe',
   year: 2018,
-  miles: 1,
-  price: '23,050',
+  miles: 100000,
+  price: '233,050',
   imageURL: 'https://bulma.io/images/placeholders/1280x960.png',
 };
 
