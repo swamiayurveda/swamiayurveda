@@ -3,11 +3,11 @@
 @import "bulma/sass/utilities/_all.sass";
 
 $navbar-height: 3.25rem;
-$background: $dark;
+// $background: $dark;
 $filter-sidebar-width: 300px;
 $navbar-background-color: $white;
 // $navbar-item-color: $white;
-$family-sans-serif: "Nunito", sans-serif;
+// $family-sans-serif: "Nunito", sans-serif;
 
 @import "bulma/bulma.sass"; //TODO: break only what i need at end
 @import 'bulma-extensions/bulma-slider/dist/css/bulma-slider.sass';

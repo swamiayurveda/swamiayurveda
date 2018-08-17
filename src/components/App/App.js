@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Navbar from 'components/Navbar';
 import Browse from 'routes/Browse';
+import CarDetail from 'routes/CarDetail';
 import Finance from 'routes/Finance';
 import About from 'routes/About';
 import Terms from 'routes/Terms';
@@ -18,6 +19,7 @@ class App extends Component {
           <Navbar />
           <div>
             <Route exact path="/" component={Browse} />
+            <Route path="/car/:id" component={CarDetail} />
             <Route path="/finance" component={Finance} />
             <Route path="/about" component={About} />
             <Route path="/terms" component={Terms} />

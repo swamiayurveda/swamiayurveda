@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 class FilterBar extends React.Component {
+  state = {
+    maxPrice: 0,
+    maxMiles: 0,
+  };
+
   render() {
     const { id, make, model, year, miles, price } = this.props;
 
@@ -12,13 +17,13 @@ class FilterBar extends React.Component {
         <div className="field">
           <label className="label is-uppercase has-text-weight-light">Price</label>
           <div className="control">
-            <input className="slider is-fullwidth is-large is-success" step="1" min="0" max="100" type="range" />
+            <input className="slider is-fullwidth" step="1" min="0" max="100" type="range" />
           </div>
         </div>
         <div className="field m-t-lg">
           <label className="label is-uppercase has-text-weight-light">Mileage</label>
           <div className="control">
-            <input className="slider is-fullwidth is-large is-info" step="1" min="0" max="100" type="range" />
+            <input className="slider is-fullwidth" step="1" min="0" max="100" type="range" />
           </div>
         </div>
       </div>
