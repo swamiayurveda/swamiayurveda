@@ -87,36 +87,15 @@ module.exports = {
           {
             test: /\.scss$/,
             use: [{
-                loader: 'style-loader',
-              },
-              {
-                loader: require.resolve('css-loader'),
+                loader: "style-loader"
+            }, {
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader",
                 options: {
-                  importLoaders: 1,
-                  minimize: true,
-                },
-              },
-              {
-                loader: require.resolve('postcss-loader'),
-                options: {
-                  ident: 'postcss',
-                  plugins: () => [
-                    require('postcss-flexbugs-fixes'),
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                      ],
-                      flexbox: 'no-2009',
-                    }),
-                  ],
-                },
-              },
-              {
-                loader: 'sass-loader',
-              }
-            ],
+                    includePaths: ["absolute/path/a", "absolute/path/b"]
+                }
+            }]
           },
           {
             exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],

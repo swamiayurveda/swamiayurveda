@@ -89,9 +89,9 @@ const CarDetail = (props) => {
           </figure>
         </div>
         <div className="column is-two-fifths-desktop">
-        <div class="tabs is-centered">
+        <div className="tabs is-centered">
           <ul>
-            <li class="is-active"><a>Overview</a></li>
+            <li className="is-active"><a>Overview</a></li>
             <li><a>Pricing</a></li>
             <li><a>Features</a></li>
           </ul>

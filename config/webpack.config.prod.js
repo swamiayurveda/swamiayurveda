@@ -8,6 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils-for-webpack4/InterpolateHtmlPlugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const eslintFormatter = require('react-dev-utils-for-webpack4/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils-for-webpack4/ModuleScopePlugin');
 const paths = require('./paths');
@@ -25,7 +26,7 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
 
 const cssFilename = 'static/css/[name].[contenthash:8].css';
 
-const extractTextPluginOptions = shouldUseRelativeAssetPaths
+const extractTextPluginOptions = shouldUseRelativeAssetPaths ?
     { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
 
@@ -43,6 +44,9 @@ module.exports = {
       path
         .relative(paths.appSrc, info.absoluteResourcePath)
         .replace(/\\/g, '/'),
+  },
+  optimization: {
+    minimize: true,
   },
   resolve: {
     modules: [
@@ -96,52 +100,16 @@ module.exports = {
           },
           {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract(
-              Object.assign(
-                {
-                  fallback: {
-                    loader: require.resolve('style-loader'),
-                    options: {
-                      hmr: false,
-                    },
-                  },
-                  use: [
-                    {
-                      loader: 'style-loader',
-                    },
-                    {
-                      loader: require.resolve('css-loader'),
-                      options: {
-                        importLoaders: 1,
-                        minimize: true,
-                        sourceMap: shouldUseSourceMap,
-                      },
-                    },
-                    {
-                      loader: require.resolve('postcss-loader'),
-                      options: {
-                        ident: 'postcss',
-                        plugins: () => [
-                          require('postcss-flexbugs-fixes'),
-                          autoprefixer({
-                            browsers: [
-                              '>1%',
-                              'last 4 versions',
-                              'Firefox ESR',
-                            ],
-                            flexbox: 'no-2009',
-                          }),
-                        ],
-                      },
-                    },
-                    {
-                      loader: 'sass-loader',
-                    }
-                  ],
-                },
-                extractTextPluginOptions
-              )
-            ),
+            use: [{
+                loader: "style-loader"
+            }, {
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader",
+                options: {
+                    includePaths: ["absolute/path/a", "absolute/path/b"]
+                }
+            }]
           },
           {
             loader: require.resolve('file-loader'),
@@ -155,7 +123,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new InterpolateHtmlPlugin(env.raw),
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
@@ -172,21 +139,8 @@ module.exports = {
         minifyURLs: true,
       },
     }),
+    new InterpolateHtmlPlugin(env.raw),
     new webpack.DefinePlugin(env.stringified),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        comparisons: false,
-      },
-      mangle: {
-        safari10: true,
-      },
-      output: {
-        comments: false,
-        ascii_only: true,
-      },
-      sourceMap: shouldUseSourceMap,
-    }),
     new ExtractTextPlugin({
       filename: cssFilename,
     }),
