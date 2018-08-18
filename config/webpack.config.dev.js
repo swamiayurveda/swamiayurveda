@@ -5,10 +5,12 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
-const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
-const eslintFormatter = require('react-dev-utils/eslintFormatter');
-const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
+const InterpolateHtmlPlugin = require('react-dev-utils-for-webpack4/InterpolateHtmlPlugin');
+const WatchMissingNodeModulesPlugin = require('react-dev-utils-for-webpack4/WatchMissingNodeModulesPlugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const eslintFormatter = require('react-dev-utils-for-webpack4/eslintFormatter');
+const ModuleScopePlugin = require('react-dev-utils-for-webpack4/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
@@ -17,10 +19,11 @@ const publicUrl = '';
 const env = getClientEnvironment(publicUrl);
 
 module.exports = {
+  mode: 'development',
   devtool: 'cheap-module-source-map',
   entry: [
     require.resolve('./polyfills'),
-    require.resolve('react-dev-utils/webpackHotDevClient'),
+    require.resolve('react-dev-utils-for-webpack4/webpackHotDevClient'),
     paths.appIndexJs,
   ],
   output: {
@@ -127,17 +130,23 @@ module.exports = {
     ],
   },
   plugins: [
-    new InterpolateHtmlPlugin(env.raw),
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
     }),
+    new InterpolateHtmlPlugin(env.raw),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin(env.stringified),
     new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin(),
     new WatchMissingNodeModulesPlugin(paths.appNodeModules),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    // new OptimizeCssAssetsPlugin({
+    //   assetNameRegExp: /\.scss$/,
+    //   cssProcessor: require('cssnano'),
+    //   cssProcessorOptions: { discardComments: { removeAll: true } },
+    //   canPrint: true
+    // }),
   ],
   node: {
     dgram: 'empty',
