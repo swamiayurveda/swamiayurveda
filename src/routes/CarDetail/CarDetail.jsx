@@ -3,7 +3,24 @@ import React from 'react';
 const CarDetail = () => {
   return (
     <div>
-      CarDetail
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
+      <p> CarDetail </p>
     </div>
   );
 };

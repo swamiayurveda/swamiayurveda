@@ -47,7 +47,6 @@ class FilterBar extends React.Component {
             </div>
             <div class="level-right">
               {maxMiles}k
-              
             </div>
           </div>
           <div className="control">
