@@ -13,7 +13,7 @@ class FilterBar extends React.Component {
   handleMilesChange = e => this.setState({ maxMiles: e.target.value });
 
   render() {
-    const { id, make, model, year, miles, price } = this.props;
+    // const { id, make, model, year, miles, price } = this.props;
     const { maxPrice, maxMiles } = this.state;
 
     return (

@@ -60,7 +60,7 @@ const Overview = () => (
 );
 
 const CarDetail = (props) => {
-  const { id, make, model, year, miles, price, imageURL } = props;
+  const { make, model, year, miles, price, imageURL } = props;
 
   return (
     <div className="car-detail-container">
@@ -85,7 +85,7 @@ const CarDetail = (props) => {
       <div className="columns">
         <div className="column is-three-fifths-desktop">
           <figure className="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/640x480.png" />
+            <img src={imageURL} alt="car-sample" />
           </figure>
         </div>
         <div className="column is-two-fifths-desktop">

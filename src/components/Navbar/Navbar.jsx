@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import { Link } from "react-router-dom";
 
 import { setNavbarToggler } from './util';
-import image from '../../images/logo.png';
+// import image from '../../images/logo.png';
 import './style.scss';
 
 class Navbar extends React.Component {

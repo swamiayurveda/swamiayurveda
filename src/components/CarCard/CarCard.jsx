@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const Card = (props) => {
-  const { id, make, model, year, miles, price, imageURL } = props;
+  const { make, model, year, miles, price, imageURL } = props;
 
   return (
     <div className="card car-card hvr-shrink hvr-underline">

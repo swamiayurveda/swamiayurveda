@@ -5,7 +5,7 @@ import './style.scss';
 
 class SearchBar extends React.Component {
   render() {
-    const { id, make, model, year, miles, price } = this.props;
+    // const { id, make, model, year, miles, price } = this.props;
 
     return (
       <div ref={ref => { this.container = ref }} className="search-bar">

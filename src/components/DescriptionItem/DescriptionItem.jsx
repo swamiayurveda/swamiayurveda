@@ -7,7 +7,7 @@ const DescriptionItem = ({ title, description, iconClass, iconSrc }) => (
   <div className="description-item">
     <span class="icon is-large">
       {iconClass && <i class={`fas fa-2x ${iconClass}`}></i>}
-      {iconSrc && <img src={iconSrc} />}
+      {iconSrc && <img src={iconSrc} alt="icon" />}
     </span>
     <div className="has-text-left">
       <strong className="is-uppercase">{title}</strong>
