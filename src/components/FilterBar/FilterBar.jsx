@@ -5,25 +5,61 @@ import './style.scss';
 
 class FilterBar extends React.Component {
   state = {
-    maxPrice: 0,
-    maxMiles: 0,
+    maxPrice: 10,
+    maxMiles: 10,
   };
+
+  handlePriceChange = e => this.setState({ maxPrice: e.target.value });
+  handleMilesChange = e => this.setState({ maxMiles: e.target.value });
 
   render() {
     const { id, make, model, year, miles, price } = this.props;
+    const { maxPrice, maxMiles } = this.state;
 
     return (
       <div className="filter-sidebar-wrapper p-md">
         <div className="field">
-          <label className="label is-uppercase has-text-weight-light">Price</label>
+          <div class="level">
+            <div class="level-left">
+              <label className="label is-uppercase has-text-weight-light">Price</label>
+            </div>
+            <div class="level-right">
+              {maxPrice}k
+            </div>
+          </div>
           <div className="control">
-            <input className="slider is-fullwidth" step="1" min="0" max="100" type="range" />
+            <input
+              className="slider is-fullwidth"
+              value={maxPrice}
+              onChange={this.handlePriceChange}
+              step="10"
+              min="10"
+              max="100"
+              type="range"
+            />
           </div>
         </div>
-        <div className="field m-t-lg">
-          <label className="label is-uppercase has-text-weight-light">Mileage</label>
+
+        <div className="field m-t-xl">
+          <div class="level">
+            <div class="level-left">
+              <label className="label is-uppercase has-text-weight-light">Mileage</label>
+            </div>
+            <div class="level-right">
+              {maxMiles}k
+              
+            </div>
+          </div>
           <div className="control">
-            <input className="slider is-fullwidth" step="1" min="0" max="100" type="range" />
+            <input
+              className="slider is-fullwidth"
+              value={maxMiles}
+              onChange={this.handleMilesChange}
+              step="10"
+              min="10"
+              max="120"
+              type="range"
+            />
           </div>
         </div>
       </div>
