@@ -120,12 +120,15 @@ module.exports = {
     new CaseSensitivePathsPlugin(),
     new WatchMissingNodeModulesPlugin(paths.appNodeModules),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    // new OptimizeCssAssetsPlugin({
-    //   assetNameRegExp: /\.scss$/,
-    //   cssProcessor: require('cssnano'),
-    //   cssProcessorOptions: { discardComments: { removeAll: true } },
-    //   canPrint: true
-    // }),
+    new ExtractTextPlugin({
+      filename: 'static/css/[name].[contenthash:8].css',
+    }),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.scss$/,
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { discardComments: { removeAll: true } },
+      canPrint: true
+    }),
   ],
   node: {
     dgram: 'empty',

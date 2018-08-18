@@ -110,7 +110,7 @@ CarDetail.defaultProps = {
   model: 'Camaro LT Coupe',
   year: 2018,
   miles: 100000,
-  price: '233,050',
+  price: 233050,
   imageURL: 'https://bulma.io/images/placeholders/1280x960.png',
 };
 

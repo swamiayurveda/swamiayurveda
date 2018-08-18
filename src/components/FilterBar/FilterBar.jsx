@@ -19,11 +19,11 @@ class FilterBar extends React.Component {
     return (
       <div className="filter-sidebar-wrapper p-md">
         <div className="field">
-          <div class="level">
-            <div class="level-left">
+          <div className="level">
+            <div className="level-left">
               <label className="label is-uppercase has-text-weight-light">Price</label>
             </div>
-            <div class="level-right">
+            <div className="level-right">
               {maxPrice}k
             </div>
           </div>
@@ -41,11 +41,11 @@ class FilterBar extends React.Component {
         </div>
 
         <div className="field m-t-xl">
-          <div class="level">
-            <div class="level-left">
+          <div className="level">
+            <div className="level-left">
               <label className="label is-uppercase has-text-weight-light">Mileage</label>
             </div>
-            <div class="level-right">
+            <div className="level-right">
               {maxMiles}k
             </div>
           </div>

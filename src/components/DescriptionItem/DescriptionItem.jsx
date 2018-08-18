@@ -5,8 +5,8 @@ import './style.scss';
 
 const DescriptionItem = ({ title, description, iconClass, iconSrc }) => (
   <div className="description-item">
-    <span class="icon is-large">
-      {iconClass && <i class={`fas fa-2x ${iconClass}`}></i>}
+    <span className="icon is-large">
+      {iconClass && <i className={`fas fa-2x ${iconClass}`}></i>}
       {iconSrc && <img src={iconSrc} alt="icon" />}
     </span>
     <div className="has-text-left">

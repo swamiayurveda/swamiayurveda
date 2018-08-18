@@ -26,7 +26,7 @@ const dummies = [
   },
 ];
 
-const cards = [...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies, ...dummies];
+const cards = [...dummies];
 
 const navbarHeight = 52;
 
@@ -64,7 +64,7 @@ class Browse extends React.Component {
             <SearchBar ref={ref => { this.searchBar = ref }} />
             <div className="columns car-columns is-gapless is-multiline">
               {cards.map(card => (
-                <div className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
+                <div key={`card-${card.id}`} className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
                   <Link to={`/car/${card.id}`}>
                     <CarCard {...card} />
                   </Link>
