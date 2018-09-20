@@ -24,7 +24,7 @@ const Card = (props) => {
             <div className="level">
               <span className="level-left has-text-grey">{miles} miles</span>
               <div className="level-right is-one-fifths is-paddingless has-text-right">
-                <span className="is-size-6">{price}</span>
+                <span className="is-size-6">${price}</span>
               </div>
             </div>
           </div>

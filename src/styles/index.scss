@@ -12,11 +12,15 @@ $navbar-background-color: $white;
 @import "bulma/bulma.sass"; //TODO: break only what i need at end
 @import 'bulma-extensions/bulma-slider/dist/css/bulma-slider.sass';
 
+#root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  margin-top: $navbar-height;
+  // margin-top: $navbar-height;
   // padding: 24px 0;
 
   * {

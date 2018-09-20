@@ -26,7 +26,7 @@ const dummies = [
   },
 ];
 
-const cards = [...dummies];
+const cards = [...dummies, ...dummies, ...dummies, ...dummies, ...dummies];
 
 const navbarHeight = 52;
 
