@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 import Card from 'components/Card';
+import Footer from 'components/Footer';
 import FilterBar from 'components/FilterBar';
 import SearchBar from 'components/SearchBar';
 
@@ -70,6 +71,7 @@ class Home extends React.Component {
           {/* <img style={{ height: 60 }} src={image} alt="logo" /> */}
           <span>Coming Soon</span>
         </h2>
+        <Footer />
         <div className="is-flex" ref={ref => { this.container = ref }}>
           <div className="container card-container">
             <div style={{ marginTop: 0 }}>
@@ -78,9 +80,9 @@ class Home extends React.Component {
             <div className="columns car-columns is-multiline">
               {cards.map(card => (
                 <div key={`card-${card.id}`} className="column is-one-third-desktop is-half-tablet is-half-mobile">
-                  <Link to={`/car/${card.id}`}>
+                  <a onClick={() => alert('Coming Soon: ' + card.title)}>
                     <Card image={card.image}>{card.title}</Card>
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>
