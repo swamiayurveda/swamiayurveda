@@ -67,10 +67,10 @@ class Home extends React.Component {
   render() {
     return (
       <div style={{ marginTop: navbarHeight + 50 }}>
-        <h2 class="title is-2" style={{ fontSize: "5.2rem" }}>
+        <div class="title" style={{ fontSize: "5.2rem" }}>
           {/* <img style={{ height: 60 }} src={image} alt="logo" /> */}
           <span>Coming Soon</span>
-        </h2>
+        </div>
         <Footer />
         <div className="is-flex" ref={ref => { this.container = ref }}>
           <div className="container card-container">
@@ -79,7 +79,7 @@ class Home extends React.Component {
             </div>
             <div className="columns car-columns is-multiline">
               {cards.map(card => (
-                <div key={`card-${card.id}`} className="column is-one-third-desktop is-half-tablet is-half-mobile">
+                <div key={`card-${card.id}`} className="column is-one-third-desktop is-half-tablet is-one-mobile">
                   <a onClick={() => alert('Coming Soon: ' + card.title)}>
                     <Card image={card.image}>{card.title}</Card>
                   </a>
