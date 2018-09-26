@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import { Link } from "react-router-dom";
 
 import { setNavbarToggler } from './util';
-// import image from '../../images/logo.png';
+import image from '../../images/icon-tertiary.png';
 import './style.scss';
 
 class Navbar extends React.Component {
@@ -16,7 +16,8 @@ class Navbar extends React.Component {
       <nav className="navbar has-shadow is-fixed-top">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img className="navbar-logo" src={'https://automaxutah.com/Dealers/14001_15000/14010/images/logo.png'} alt="logo" />
+            <img className="navbar-logo" src={image} alt="logo" />
+            <span className="m-l-md">Swami Ayurveda</span>
           </Link>
           <div className="navbar-burger burger" data-target="navbarMenu">
             <span></span>
@@ -29,7 +30,6 @@ class Navbar extends React.Component {
           <div className="navbar-end">
             <a className="navbar-item" onClick={() => alert('open favs')}><i className="far fa-star"></i></a>
             <Link className="navbar-item" to="/">Browse</Link>
-            <Link className="navbar-item" to="/finance">Finance</Link>
             <Link className="navbar-item" to="/about">About Us</Link>
           </div>
         </div>

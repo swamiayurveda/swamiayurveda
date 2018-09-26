@@ -1,0 +1,11 @@
+@import "../../styles/index.scss";
+
+.car-browse-container {
+  position: relative;
+  width: calc(100% - #{$filter-sidebar-width});
+  background: $light;
+
+  .columns.car-columns {
+    margin-top: 80px;
+  }
+}

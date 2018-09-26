@@ -5,8 +5,11 @@
 $navbar-height: 3.25rem;
 // $background: $dark;
 $filter-sidebar-width: 300px;
-$navbar-background-color: $white;
-// $navbar-item-color: $white;
+$navbar-background-color: #27AE60;
+$navbar-item-color: rgba(255, 255, 255, 0.7);
+$navbar-box-shadow-size: 0 1px 0 0;
+$navbar-box-shadow-color: #2FC16D;
+$title-color: $white;
 // $family-sans-serif: "Nunito", sans-serif;
 
 @import "bulma/bulma.sass"; //TODO: break only what i need at end
@@ -20,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #27AE60;
   // margin-top: $navbar-height;
   // padding: 24px 0;
 
