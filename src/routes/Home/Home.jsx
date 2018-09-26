@@ -89,7 +89,7 @@ class Home extends React.Component {
           </div>
         </div>
         <SubscribeForm />
-        <div className="subtitle em-b-lg" style={{ color: 'white' }}>Sign up to get early notification of our launch date</div>
+        <div className="subtitle em-b-lg" style={{ color: 'white' }}>Sign up to get early notifications and beta features</div>
       </div>
     );
   }
