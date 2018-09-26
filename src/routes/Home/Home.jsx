@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Card from 'components/Card';
 import Footer from 'components/Footer';
-import FilterBar from 'components/FilterBar';
+import SubscribeForm from 'components/SubscribeForm';
 import SearchBar from 'components/SearchBar';
 
 import image from '../../images/icon-tertiary.png';
@@ -88,6 +88,8 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <SubscribeForm />
+        <div className="subtitle em-b-lg" style={{ color: 'white' }}>Sign up to get early notification of our launch date</div>
       </div>
     );
   }

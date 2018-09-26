@@ -1,0 +1,46 @@
+// @import "../../styles/index.scss";
+
+.email-input-area {
+  margin: 40px auto;
+  position: relative;
+  max-width: 450px;
+  width: 90%;
+  height: 53px;
+}
+
+.email-input-area .email-input{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 40px;
+  border: 0;
+  outline: 0;
+  padding: 0 140px 0 25px;
+  transition: all .2s;
+  background: #F1F2F3;
+  font-size: 1.2em;
+  box-shadow: inset 0 0 1px rgba(0,0,0,.1), 0px 0px 0px 5px rgba(255,255,255,.3);
+  border: 1px solid transparent;
+}
+
+.email-input-area .email-input:focus{
+  border-color: #f89fbc;
+}
+
+
+.email-input-area .submit-btn{
+  height: 100%;
+  width: 120px;
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  font-size: .9em;
+  border-radius: 40px;
+  transition: all .3s;background: #F84982;color: #fff;
+}
+
+.email-input-area .submit-btn:hover{
+  background: #e40b52;
+}
