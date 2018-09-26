@@ -1,4 +1,4 @@
-@import "../../styles/index.scss";
+// @import "../../styles/index.scss";
 
 .search-control .no-focus {
   border: 0;
@@ -12,19 +12,13 @@
 }
 
 .search-bar {
-  position: absolute;
   height: 60px;
   top: 0;
-  border-bottom: 1px solid #dbdbdb;
+  padding: 0 15%;
   width: 100%;
-  background: $white;
+}
 
-  &.sticky {
-    position: fixed;
-    top: $navbar-height;
-    z-index: 2;
-    background: white;
-    width: calc(100% - #{$filter-sidebar-width});
-    box-shadow: 7px -1px 7px $dark;
-  }
+.search-icon {
+  display: flex;
+  justify-content: center;
 }

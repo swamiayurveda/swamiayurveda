@@ -11,11 +11,8 @@ class SearchBar extends React.Component {
       <div ref={ref => { this.container = ref }} className="search-bar">
         <div className="control search-control has-icons-left has-icons-right">
           <input className="input is-large no-focus" type="email" placeholder="Search keywords" />
-          <span className="icon is-medium is-left">
+          <span className="icon is-medium is-left search-icon">
             <i className="fas fa-search"></i>
-          </span>
-          <span className="icon is-medium is-right">
-            <i className="fas fa-times has-text-red"></i>
           </span>
         </div>
       </div>

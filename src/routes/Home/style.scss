@@ -1,11 +1,10 @@
-@import "../../styles/index.scss";
+// @import "../../styles/index.scss";
 
-.car-browse-container {
+.card-container {
   position: relative;
-  width: calc(100% - #{$filter-sidebar-width});
-  background: $light;
+  width: 100%;
 
   .columns.car-columns {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }

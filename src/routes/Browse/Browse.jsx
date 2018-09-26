@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import CarCard from 'components/CarCard';
+// import CarCard from 'components/CarCard';
 import FilterBar from 'components/FilterBar';
 import SearchBar from 'components/SearchBar';
 
