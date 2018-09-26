@@ -1,6 +1,12 @@
 {
-  "main.js": "/swamiayurveda/build/static/js/main.da62b5ce.js",
-  "main.js.map": "/swamiayurveda/build/static/js/main.da62b5ce.js.map",
+  "main.js": "/swamiayurveda/build/static/js/main.96f70cd6.js",
+  "main.js.map": "/swamiayurveda/build/static/js/main.96f70cd6.js.map",
   "static/media/icon-tertiary.png": "/swamiayurveda/build/static/media/icon-tertiary.0896ed50.png",
+  "static/media/books.svg": "/swamiayurveda/build/static/media/books.48364365.svg",
+  "static/media/plant.svg": "/swamiayurveda/build/static/media/plant.69c9b02b.svg",
+  "static/media/recipe.svg": "/swamiayurveda/build/static/media/recipe.6ea09685.svg",
+  "static/media/mortar.svg": "/swamiayurveda/build/static/media/mortar.4dbdd332.svg",
+  "static/media/body.svg": "/swamiayurveda/build/static/media/body.0c26d0b7.svg",
+  "static/media/pill.svg": "/swamiayurveda/build/static/media/pill.6ebbb9af.svg",
   "index.html": "/swamiayurveda/build/index.html"
 }
