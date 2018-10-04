@@ -5,10 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1e9a53;
+  background-color: white;
   box-shadow: none !important;
   transition: .3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   border: 1px solid rgba(101, 101, 101, 0.1);
+  border: 1px solid #1e9a53;
   overflow: hidden;
   padding: 30px;
 
@@ -24,7 +25,7 @@
 
   .card-header-title {
     display: block;
-    color: #fff;
+    color: #1e9a53;
     overflow: hidden;
     font-weight: lighter;
     line-height: 1.6rem;

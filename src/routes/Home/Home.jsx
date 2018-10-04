@@ -31,7 +31,7 @@ class Home extends React.Component {
         <section class="hero home-hero">
           <div class="hero-body">
             <div class="container">
-              <div class="title" style={{ fontSize: "5.2rem" }}>
+              <div style={{ color: 'white', fontSize: "5.2rem", fontWeight: 'bolder' }}>
                 {/* <img style={{ height: 60 }} src={image} alt="logo" /> */}
                 <span>Coming Soon</span>
 
