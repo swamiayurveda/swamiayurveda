@@ -29,11 +29,6 @@ export default [
     title: 'My Dosha',
   },
   {
-    id: 5,
-    image: booksIcon,
-    title: 'Learn Ayurveda',
-  },
-  {
     id: 6,
     image: pillIcon,
     title: 'Supplements',

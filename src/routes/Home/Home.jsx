@@ -27,16 +27,25 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div style={{ marginTop: navbarHeight + 50 }}>
-        <div class="title" style={{ fontSize: "5.2rem" }}>
-          {/* <img style={{ height: 60 }} src={image} alt="logo" /> */}
-          <span>Coming Soon</span>
-        </div>
-        <Footer />
+      <div style={{ marginTop: navbarHeight }}>
+        <section class="hero home-hero">
+          <div class="hero-body">
+            <div class="container">
+              <div class="title" style={{ fontSize: "5.2rem" }}>
+                {/* <img style={{ height: 60 }} src={image} alt="logo" /> */}
+                <span>Coming Soon</span>
+
+                {/* <SearchBar /> */}
+              </div>
+              <Footer />
+              <SubscribeForm />
+              <div className="subtitle m-b-lg" style={{ color: 'white' }}>Sign up to get early notifications and beta features</div>
+            </div>
+          </div>
+        </section>
         <div className="is-flex" ref={ref => { this.container = ref }}>
           <div className="container card-container">
             <div style={{ marginTop: 0 }}>
-              <SearchBar />
             </div>
             <div className="columns car-columns is-multiline">
               {navItems.map(item => (
@@ -49,8 +58,6 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <SubscribeForm />
-        <div className="subtitle m-b-lg" style={{ color: 'white' }}>Sign up to get early notifications and beta features</div>
       </div>
     );
   }
