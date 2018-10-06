@@ -10,19 +10,23 @@ import './style.scss';
 const dummies = [
   {
     id: 1,
-    imageURL: "https://cdn04.carsforsale.com/3/544555/13255311/1056070313.jpg",
+    title: 'Ashwaghanda',
+    imageURL: "https://www.healthline.com/hlcmsresource/images/topic_centers/Food-Nutrition/1296x728_HEADER_Ashwagandha_Health-Benefits-and-Side-Effects.jpg",
   },
   {
     id: 2,
-    imageURL: "https://cdn04.carsforsale.com/3/544555/18877910/1054729045.jpg",
+    title: 'Herb',
+    imageURL: "https://5.imimg.com/data5/UX/NU/MY-35858390/pure-turmeric-powder-500x500.jpg",
   },
   {
     id: 3,
-    imageURL: "https://cdn04.carsforsale.com/3/544555/19746068/thumb/1054745774.jpg",
+    title: 'Ghee',
+    imageURL: "https://southcoastsun.co.za/wp-content/uploads/sites/39/2015/08/honey_666944763.jpg",
   },
   {
     id: 4,
-    imageURL: "https://shiftcars1.imgix.net/content/con15fv9tmZtEmboPF8ETUZ0wBvlxch8Ta1WP9lm9sF5hJxKgQuaQA?fit=crop&w=666&h=494&auto=format%2Ccompress",
+    title: 'Honey',
+    imageURL: "http://www.pachaa.in/image/cache/catalog/buy-carom-seeds-100gms-500x500.jpg",
   },
 ];
 
@@ -49,7 +53,7 @@ class Browse extends React.Component {
         <FilterBar />
         <div className="car-browse-container">
           <SearchBar ref={ref => { this.searchBar = ref }} />
-          <div className="columns car-columns is-gapless is-multiline">
+          <div className="columns car-columns is-multiline">
             {cards.map(card => (
               <div key={`card-${card.id}`} className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
                 <Link to={`/car/${card.id}`}>

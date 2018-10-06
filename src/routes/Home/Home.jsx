@@ -3,12 +3,8 @@ import { Link } from "react-router-dom";
 
 import Browse from 'routes/Browse';
 
-import Card from 'components/Card';
 import Footer from 'components/Footer';
 import SubscribeForm from 'components/SubscribeForm';
-import SearchBar from 'components/SearchBar';
-
-import navItems from '../../data';
 
 import './style.scss';
 

@@ -1,6 +1,9 @@
 @import '../../styles/spacing';
 
 .car-card {
+  position: relative;
+  // height: 300px;
+  width: 300px;
   box-shadow: none !important;
   transition: .3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   // border: 1px solid white;
@@ -8,6 +11,11 @@
   overflow: hidden;
 
   .card-image {
+    img {
+      object-fit: cover;
+      // width: 300px;
+      // height: 300px;
+    }
     // padding: 1px;
     border-radius: 10px;
   }
@@ -27,6 +35,22 @@
     // border-color: gray;
     z-index: 1;
   }
+
+  .favorite {
+    position: absolute;
+    background: url('../../images/heart-gray-unfilled.svg');
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    transition: .1s ease-in-out;
+
+    &:hover {
+      background: url('../../images/heart-red-filled.svg');
+      transform: scale(1.2);
+    }
+  }
 }
 
 .hvr-underline {
@@ -43,7 +67,7 @@
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: #2098D1;
+    background: #1e9a53;
     height: 4px;
     transition-property: left, right;
     transition-duration: 0.3s;
@@ -65,5 +89,26 @@
 
   &:hover, &:focus, &:active {
     transform: scale(0.99);
+  }
+}
+
+
+.detail-list {
+  .detail-item {
+    display: flex;
+    text-align: left;
+
+    .item-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    .item-text {
+
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }

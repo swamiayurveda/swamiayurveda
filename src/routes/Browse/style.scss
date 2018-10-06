@@ -6,6 +6,7 @@ $filter-sidebar-width: 300px;
   position: relative;
   width: calc(100% - #{$filter-sidebar-width});
   background: white;
+  padding: 10px;
 
   .columns.car-columns {
     margin-top: 80px;

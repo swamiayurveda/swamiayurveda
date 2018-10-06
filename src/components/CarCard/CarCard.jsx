@@ -1,20 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import plantIcon from '../../images/plant.svg';
+import bodyIcon from '../../images/body.svg';
+import mortarIcon from '../../images/mortar.svg';
 
 import './style.scss';
 
 const Card = (props) => {
-  const { make, model, year, miles, price, imageURL } = props;
+  const { title, imageURL } = props;
 
   return (
     <div className="card car-card hvr-shrink hvr-underline">
-      <header className="card-header">
+      {/* <header className="card-header">
         <p className="card-header-title">
           <strong>{year}</strong>&nbsp;<span className="car-title">{`${make} ${model}`}</span>
         </p>
-      </header>
+      </header> */}
+      <div class="favorite"></div>
       <div className="card-image">
-        <figure className="image is-4by3">
+        <figure className="image is-square">
           <img src={imageURL} alt="Plaimage" />
         </figure>
       </div>
@@ -22,9 +26,23 @@ const Card = (props) => {
         <div className="content columns">
           <div className="column is-paddingless">
             <div className="level">
-              <span className="level-left has-text-grey">{miles} miles</span>
-              <div className="level-right is-one-fifths is-paddingless has-text-right">
+              <div className="is-size-4 has-text-grey">{title}</div>
+              {/* <div className="level-right is-one-fifths is-paddingless has-text-right">
                 <span className="is-size-6">${price}</span>
+              </div> */}
+            </div>
+            <div class="detail-list">
+              <div className="detail-item">
+                <img className="item-icon" src={plantIcon} />
+                <span className="item-text">Light, Punget</span>
+              </div>
+              <div className="detail-item">
+                <img className="item-icon" src={bodyIcon} />
+                <span className="item-text">Vata, Pita, Kapha</span>
+              </div>
+              <div className="detail-item">
+                <img className="item-icon" src={mortarIcon} />
+                <span className="item-text">Take with warm water with warm water</span>
               </div>
             </div>
           </div>
@@ -36,21 +54,13 @@ const Card = (props) => {
 
 Card.defaultProps = {
   id: 0,
-  make: 'Chevrolet',
-  model: 'Camaro LT Coupe',
-  year: 2018,
-  miles: 100000,
-  price: 233050,
+  title: 'Chevrolet',
   imageURL: 'https://bulma.io/images/placeholders/1280x960.png',
 };
 
 Card.propTypes = {
   id: PropTypes.number,
-  make: PropTypes.string,
-  model: PropTypes.string,
-  year: PropTypes.number,
-  miles: PropTypes.number,
-  price: PropTypes.number,
+  title: PropTypes.string,
   imageURL: PropTypes.string,
 };
 
