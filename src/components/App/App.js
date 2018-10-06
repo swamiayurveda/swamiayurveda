@@ -6,7 +6,7 @@ import Footer from 'components/Footer';
 // import ComingSoon from 'routes/ComingSoon';
 import Home from 'routes/Home';
 import Browse from 'routes/Browse';
-// import About from 'routes/About';
+import Detail from 'routes/Detail';
 import Terms from 'routes/Terms';
 import PrivacyPolicy from 'routes/PrivacyPolicy';
 
@@ -23,7 +23,7 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Home} />
             <Route path="/browse" component={Browse} />
-            {/* <Route path="/about" component={About} /> */}
+            <Route path="/remedy/:name" component={Detail} />
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={PrivacyPolicy} />
           </div>

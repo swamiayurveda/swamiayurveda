@@ -56,7 +56,7 @@ class Browse extends React.Component {
           <div className="columns car-columns is-multiline">
             {cards.map(card => (
               <div key={`card-${card.id}`} className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
-                <Link to={`/car/${card.id}`}>
+                <Link to={`/remedy/${card.id}`}>
                   <CarCard {...card} />
                 </Link>
               </div>
