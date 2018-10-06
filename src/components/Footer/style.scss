@@ -1,10 +1,15 @@
 // @import "../../styles/index.scss";
 
+.social-item {
+  list-style: none;
+  display: inline-block;
+}
+
 .social-btn {
   margin: 24px 0;
 }
 
-.social-btn > li > a > svg {
+.social-btn > .social-item > a > svg {
   display: inline-block;
   height: 35px;
   width: 35px !important;;
@@ -16,22 +21,22 @@
   color: white;
 }
 
-.social-btn > li > a > svg:hover {
+.social-btn > .social-item > a > svg:hover {
   transform: scale(1.1);
 }
 
-.social-btn > li > a > [class*="facebook"] {
+.social-btn > .social-item > a > [class*="facebook"] {
   background: #2A61D6;
 }
-.social-btn > li > a > [class*="twitter"] {
+.social-btn > .social-item > a > [class*="twitter"] {
   background: #3AA4F8;
 }
-.social-btn > li > a > [class*="google"] {
+.social-btn > .social-item > a > [class*="google"] {
   background: #F43846;
 }
-.social-btn > li > a > [class*="instagram"] {
+.social-btn > .social-item > a > [class*="instagram"] {
   background: #8F614A;
 }
-.social-btn > li > a > [class*="pinterest"] {
+.social-btn > .social-item > a > [class*="pinterest"] {
   background: #ce0004;
 }

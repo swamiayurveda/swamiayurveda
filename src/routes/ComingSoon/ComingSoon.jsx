@@ -26,10 +26,10 @@ class ComingSoon extends React.Component {
             <h1 className="company-tagline"><b>Mind. Body. Soul.</b></h1>
             <br />
             <ul className="social-btn">
-              <li><a target="_blank" href={socialLinks.instagram}><i className="fab fa-instagram"></i></a></li>
-              <li><a target="_blank" href={socialLinks.facebook}><i className="fab fa-facebook-f"></i></a></li>
-              <li><a target="_blank" href={socialLinks.twitter}><i className="fab fa-twitter"></i></a></li>
-              <li><a target="_blank" href={socialLinks.pinterest}><i className="fab fa-pinterest-p"></i></a></li>
+              <li className="social-item"><a target="_blank" href={socialLinks.instagram}><i className="fab fa-instagram"></i></a></li>
+              <li className="social-item"><a target="_blank" href={socialLinks.facebook}><i className="fab fa-facebook-f"></i></a></li>
+              <li className="social-item"><a target="_blank" href={socialLinks.twitter}><i className="fab fa-twitter"></i></a></li>
+              <li className="social-item"><a target="_blank" href={socialLinks.pinterest}><i className="fab fa-pinterest-p"></i></a></li>
             </ul>
             {/* <p className="desc font-white">{i18n.message}</p> */}
             {/* <div className="email-input-area">

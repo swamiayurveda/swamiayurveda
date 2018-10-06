@@ -1,5 +1,10 @@
 // @import "../../styles/index.scss";
 
+
+$navbar-height: 3.25rem;
+$filter-sidebar-width: 300px;
+$dark: hsl(0, 0%, 21%);
+
 .search-control .no-focus {
   border: 0;
   box-shadow: none;
@@ -12,13 +17,19 @@
 }
 
 .search-bar {
+  position: absolute;
   height: 60px;
   top: 0;
-  padding: 0 15%;
+  border-bottom: 1px solid #dbdbdb;
   width: 100%;
-}
+  background: white;
 
-.search-icon {
-  display: flex;
-  justify-content: center;
+  &.sticky {
+    position: fixed;
+    top: $navbar-height;
+    z-index: 2;
+    background: white;
+    width: calc(100% - #{$filter-sidebar-width});
+    box-shadow: 7px -1px 7px $dark;
+  }
 }

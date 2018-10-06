@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-// import CarCard from 'components/CarCard';
+import CarCard from 'components/CarCard';
 import FilterBar from 'components/FilterBar';
 import SearchBar from 'components/SearchBar';
 
@@ -45,32 +45,18 @@ class Browse extends React.Component {
 
   render() {
     return (
-      <div>
-        <section className="hero is-medium is-info is-bold">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title">
-                Primary bold title
-              </h1>
-              <h2 className="subtitle">
-                Primary bold subtitle
-              </h2>
-            </div>
-          </div>
-        </section>
-        <div className="is-flex" ref={ref => { this.container = ref }}>
-          <FilterBar />
-          <div className="car-browse-container">
-            <SearchBar ref={ref => { this.searchBar = ref }} />
-            <div className="columns car-columns is-gapless is-multiline">
-              {cards.map(card => (
-                <div key={`card-${card.id}`} className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
-                  <Link to={`/car/${card.id}`}>
-                    <CarCard {...card} />
-                  </Link>
-                </div>
-              ))}
-            </div>
+      <div className="is-flex" ref={ref => { this.container = ref }}>
+        <FilterBar />
+        <div className="car-browse-container">
+          <SearchBar ref={ref => { this.searchBar = ref }} />
+          <div className="columns car-columns is-gapless is-multiline">
+            {cards.map(card => (
+              <div key={`card-${card.id}`} className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
+                <Link to={`/car/${card.id}`}>
+                  <CarCard {...card} />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </div>

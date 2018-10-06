@@ -1,227 +1,219 @@
-// @import "../../styles/index.scss";
+// // @import "../../styles/index.scss";
 
 
-html { font-size: 100%;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  margin: 0px;
-   padding: 0px;
-  touch-action: manipulation;
-}
+// html { font-size: 100%;
+//   height: 100%;
+//   width: 100%;
+//   overflow-x: hidden;
+//   margin: 0px;
+//    padding: 0px;
+//   touch-action: manipulation;
+// }
 
 
-body{
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  font-weight: 400;
-  word-wrap: break-word;
-  overflow-x: hidden;
-  color: #333;
-}
+// body{
+//   font-size: 16px;
+//   font-family: 'Open Sans', sans-serif;
+//   width: 100%;
+//   height: 100%;
+//   margin: 0;
+//   font-weight: 400;
+//   word-wrap: break-word;
+//   overflow-x: hidden;
+//   color: #333;
+// }
 
 
-li{ list-style: none;
-  display: inline-block;
-}
 
 
-.icon{ font-size: 1.1em;
-  display: inline-block;
-  line-height: inherit;
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before{ line-height: inherit;
-}
+// // [class^="icon-"]:before, [class*=" icon-"]:before{ line-height: inherit;
+// // }
 
 
-.center-text {
-  text-align: center;
-}
+// .center-text {
+//   text-align: center;
+// }
 
-.display-table {
-  display: table;
-  height: 100%;
-  width: 100%;
-  padding-top: 100px;
+// .display-table {
+//   display: table;
+//   height: 100%;
+//   width: 100%;
+//   padding-top: 100px;
 
-  @media only screen and (max-width: 767px) {
-    padding: 24px;
-    padding-top: 40px;
-  }
-}
+//   @media only screen and (max-width: 767px) {
+//     padding: 24px;
+//     padding-top: 40px;
+//   }
+// }
 
-.display-table-cell{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* ---------------------------------
-3. MAIN SECTION
---------------------------------- */
-
-.company-title {
-  font-size: 24px;
-}
-
-.company-tagline {
-  font-size: 18px;
-}
-
-.coming-soon {
-  margin-top: 0px;
-  font-size: 2.2rem;
-  color: #fff;
-  position: absolute;
-  bottom: 20px;
-  // text-shadow:
-  //  -1px -1px 0 green,
-  //   1px -1px 0 green,
-  //   -1px 1px 0 green,
-  //    1px 1px 0 green;
-}
-
-.logo {
-  width: 250px;
-}
-
-.main-area {
-  position: relative;
-  z-index: 1;
-  min-height: 100%;
-  background-size: cover;
-  box-shadow: 2px 5px 30px rgba(0,0,0,.3);
-  color: #fff;
-}
-
-.main-area:after{
-  content:'';
-  position: absolute;
-  top: 0;
-  bottom: 0;left: 0;
-  right: 0;
-  z-index: -1;
-  opacity: .7;
-  background: linear-gradient(-9deg, #6a82fb 0%, #6a82fb 40%, #fc5c7d 100%);
-  background: linear-gradient(-9deg, #4db33a 0%, #00a9b5 40%, #fe3c42 100%);
-  background: linear-gradient(-9deg, #00a9b5 0%, #4db33a 40%, #fe3c42 100%);
-}
-
-.main-area .desc{
-  margin: 20px auto;
-  max-width: 500px;
-}
-
-.main-area .notify-btn{
-  margin: 20px 0;
-  padding: 13px 35px;
-  border-radius: 50px;
-  border: 2px solid #F84982;
-  color: #fff;
-  background: #F84982;
-}
-
-.main-area .notify-btn:hover{
-  background: none;
-}
+// .display-table-cell{
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 
-/* EMAIL INPUT */
+// /* ---------------------------------
+// 3. MAIN SECTION
+// --------------------------------- */
 
-.main-area .email-input-area {
-  margin: 40px auto;
-  position: relative;
-  max-width: 450px;
-  width: 100%;
-  height: 53px;
-}
+// .company-title {
+//   font-size: 24px;
+// }
 
-.main-area .email-input-area .email-input{
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 40px;
-  border: 0;
-  outline: 0;
-  padding: 0 140px 0 25px;
-  transition: all .2s;
-  background: #F1F2F3;
-  box-shadow: inset 0 0 1px rgba(0,0,0,.1), 0px 0px 0px 5px rgba(255,255,255,.3);
-  border: 1px solid transparent;
-}
+// .company-tagline {
+//   font-size: 18px;
+// }
 
-.main-area .email-input-area .email-input:focus{
-  border-color: #f89fbc;
-}
+// .coming-soon {
+//   margin-top: 0px;
+//   font-size: 2.2rem;
+//   color: #fff;
+//   position: absolute;
+//   bottom: 20px;
+//   // text-shadow:
+//   //  -1px -1px 0 green,
+//   //   1px -1px 0 green,
+//   //   -1px 1px 0 green,
+//   //    1px 1px 0 green;
+// }
+
+// // .logo {
+// //   width: 250px;
+// // }
+
+// .main-area {
+//   position: relative;
+//   z-index: 1;
+//   min-height: 100%;
+//   background-size: cover;
+//   box-shadow: 2px 5px 30px rgba(0,0,0,.3);
+//   color: #fff;
+// }
+
+// .main-area:after{
+//   content:'';
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;left: 0;
+//   right: 0;
+//   z-index: -1;
+//   opacity: .7;
+//   background: linear-gradient(-9deg, #6a82fb 0%, #6a82fb 40%, #fc5c7d 100%);
+//   background: linear-gradient(-9deg, #4db33a 0%, #00a9b5 40%, #fe3c42 100%);
+//   background: linear-gradient(-9deg, #00a9b5 0%, #4db33a 40%, #fe3c42 100%);
+// }
+
+// .main-area .desc{
+//   margin: 20px auto;
+//   max-width: 500px;
+// }
+
+// .main-area .notify-btn{
+//   margin: 20px 0;
+//   padding: 13px 35px;
+//   border-radius: 50px;
+//   border: 2px solid #F84982;
+//   color: #fff;
+//   background: #F84982;
+// }
+
+// .main-area .notify-btn:hover{
+//   background: none;
+// }
 
 
-.main-area .email-input-area .submit-btn{ width: 120px;
-  text-align: center;
-  position: absolute;
-  top: 5px;
-  bottom: 5px;
-  right: 5px;
-  font-size: .9em;
-  border-radius: 40px;
-  transition: all .3s;background: #F84982;color: #fff;
-}
+// /* EMAIL INPUT */
 
-.main-area .email-input-area .submit-btn:hover{
-  background: #e40b52;
-}
+// .main-area .email-input-area {
+//   margin: 40px auto;
+//   position: relative;
+//   max-width: 450px;
+//   width: 100%;
+//   height: 53px;
+// }
 
-/* SOCIAL BTN */
+// .main-area .email-input-area .email-input{
+//   width: 100%;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   border-radius: 40px;
+//   border: 0;
+//   outline: 0;
+//   padding: 0 140px 0 25px;
+//   transition: all .2s;
+//   background: #F1F2F3;
+//   box-shadow: inset 0 0 1px rgba(0,0,0,.1), 0px 0px 0px 5px rgba(255,255,255,.3);
+//   border: 1px solid transparent;
+// }
 
-.main-area .social-btn{
-  // position: absolute;
-  // bottom: 30px;
-  // width: 100%;
-  // left: 50%;
-  // transform: translateX(-50%);
-}
+// .main-area .email-input-area .email-input:focus{
+//   border-color: #f89fbc;
+// }
 
 
-.main-area .social-btn .list-heading {
-  display: block;
-  margin-bottom: 15px;
-}
+// .main-area .email-input-area .submit-btn{ width: 120px;
+//   text-align: center;
+//   position: absolute;
+//   top: 5px;
+//   bottom: 5px;
+//   right: 5px;
+//   font-size: .9em;
+//   border-radius: 40px;
+//   transition: all .3s;background: #F84982;color: #fff;
+// }
 
-.main-area .social-btn > li > a > svg {
-  display: inline-block;
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  border-radius: 40px;
-  font-size: 1.04em;
-  padding: 8px;
-  margin: 0 5px;
-  color: white;
-}
+// .main-area .email-input-area .submit-btn:hover{
+//   background: #e40b52;
+// }
 
-.main-area .social-btn > li > a > svg:hover {
-  transform: scale(1.1);
-}
+// /* SOCIAL BTN */
 
-.main-area .social-btn > li > a > [class*="facebook"] {
-  background: #2A61D6;
-}
-.main-area .social-btn > li > a > [class*="twitter"] {
-  background: #3AA4F8;
-}
-.main-area .social-btn > li > a > [class*="google"] {
-  background: #F43846;
-}
-.main-area .social-btn > li > a > [class*="instagram"] {
-  background: #8F614A;
-}
-.main-area .social-btn > li > a > [class*="pinterest"] {
-  background: #ce0004;
-}
+// .main-area .social-btn{
+//   // position: absolute;
+//   // bottom: 30px;
+//   // width: 100%;
+//   // left: 50%;
+//   // transform: translateX(-50%);
+// }
+
+
+// .main-area .social-btn .list-heading {
+//   display: block;
+//   margin-bottom: 15px;
+// }
+
+// .main-area .social-btn > li > a > svg {
+//   display: inline-block;
+//   height: 35px;
+//   width: 35px;
+//   line-height: 35px;
+//   border-radius: 40px;
+//   font-size: 1.04em;
+//   padding: 8px;
+//   margin: 0 5px;
+//   color: white;
+// }
+
+// .main-area .social-btn > li > a > svg:hover {
+//   transform: scale(1.1);
+// }
+
+// .main-area .social-btn > li > a > [class*="facebook"] {
+//   background: #2A61D6;
+// }
+// .main-area .social-btn > li > a > [class*="twitter"] {
+//   background: #3AA4F8;
+// }
+// .main-area .social-btn > li > a > [class*="google"] {
+//   background: #F43846;
+// }
+// .main-area .social-btn > li > a > [class*="instagram"] {
+//   background: #8F614A;
+// }
+// .main-area .social-btn > li > a > [class*="pinterest"] {
+//   background: #ce0004;
+// }

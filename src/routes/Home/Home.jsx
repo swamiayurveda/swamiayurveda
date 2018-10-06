@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+import Browse from 'routes/Browse';
+
 import Card from 'components/Card';
 import Footer from 'components/Footer';
 import SubscribeForm from 'components/SubscribeForm';
@@ -43,21 +45,7 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
-        <div className="is-flex" ref={ref => { this.container = ref }}>
-          <div className="container card-container">
-            <div style={{ marginTop: 0 }}>
-            </div>
-            <div className="columns car-columns is-multiline">
-              {navItems.map(item => (
-                <div key={`item-${item.id}`} className="column is-one-third-desktop is-half-tablet is-one-mobile">
-                  <a onClick={() => alert('Coming Soon: ' + item.title)}>
-                    <Card image={item.image}>{item.title}</Card>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <Browse />
       </div>
     );
   }
