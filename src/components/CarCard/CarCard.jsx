@@ -23,7 +23,7 @@ const Card = (props) => {
         </figure>
       </div>
       <div className="card-content">
-        <div className="content columns">
+        <div className="content">
           <div className="column is-paddingless">
             <div className="level">
               <div className="is-size-4 has-text-grey">{title}</div>
