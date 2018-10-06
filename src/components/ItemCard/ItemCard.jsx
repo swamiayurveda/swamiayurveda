@@ -6,11 +6,11 @@ import mortarIcon from '../../images/mortar.svg';
 
 import './style.scss';
 
-const Card = (props) => {
+const ItemCard = (props) => {
   const { title, imageURL } = props;
 
   return (
-    <div className="card car-card hvr-shrink hvr-underline">
+    <div className="card item-card hvr-shrink hvr-underline">
       {/* <header className="card-header">
         <p className="card-header-title">
           <strong>{year}</strong>&nbsp;<span className="car-title">{`${make} ${model}`}</span>
@@ -52,17 +52,17 @@ const Card = (props) => {
   );
 };
 
-Card.defaultProps = {
+ItemCard.defaultProps = {
   id: 0,
   title: 'Chevrolet',
   imageURL: 'https://bulma.io/images/placeholders/1280x960.png',
 };
 
-Card.propTypes = {
+ItemCard.propTypes = {
   id: PropTypes.number,
   title: PropTypes.string,
   imageURL: PropTypes.string,
 };
 
 
-export default Card;
+export default ItemCard;

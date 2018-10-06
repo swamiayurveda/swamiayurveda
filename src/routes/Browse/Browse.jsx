@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import CarCard from 'components/CarCard';
+import ItemCard from 'components/ItemCard';
 import FilterBar from 'components/FilterBar';
 import SearchBar from 'components/SearchBar';
 
@@ -57,7 +57,7 @@ class Browse extends React.Component {
             {cards.map(card => (
               <div key={`card-${card.id}`} className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
                 <Link to={`/remedy/${card.id}`}>
-                  <CarCard {...card} />
+                  <ItemCard {...card} />
                 </Link>
               </div>
             ))}
