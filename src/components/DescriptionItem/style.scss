@@ -1,1 +1,11 @@
 // @import "../../styles/index.scss";
+
+.description-item {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin-right: 16px;
+    align-self: end;
+  }
+}

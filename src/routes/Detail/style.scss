@@ -1,0 +1,22 @@
+// @import "../../styles/index.scss";
+
+$grey-lighter: hsl(0, 0%, 86%);
+
+.car-detail-container {
+  .car-banner {
+    background: white;
+    width: 100%;
+    padding: 12px 20px;
+    border-bottom: 1px solid $grey-lighter;
+  }
+
+  .column {
+    margin-bottom: 25px;
+  }
+}
+
+.detail-image {
+  img {
+    object-fit: cover;
+  }
+}
