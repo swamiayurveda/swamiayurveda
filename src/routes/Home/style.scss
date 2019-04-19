@@ -33,7 +33,7 @@
 }
 
 .intro-section {
-  height: calc(100vh - 52px - 56px);
+  min-height: calc(100vh - 52px - 56px);
 }
 
 .overview-section {
@@ -42,6 +42,7 @@
 }
 
 .pitch-section {
+  padding-top: 144px;
   background: #8BC34A;
 }
 

@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
-// import image from '../../images/plants.png'
+import flower from '../../images/flower.svg'
 
 import Browse from 'routes/Browse';
 
@@ -70,6 +70,11 @@ const Intro = () => {
           >
             Learn more
           </Button>
+        </Col>
+      </Row>
+      <Row className="mt-3">
+        <Col>
+          <img src={flower} />
         </Col>
       </Row>
     </Container>
@@ -147,8 +152,16 @@ const Footer = () => {
 
 const Pitch = () => {
   return(
-    <div className="pitch-section pt-5 pb-3">
+    <div className="pitch-section pb-3">
       <Container>
+        <Row>
+          <Col className="mb-4 text-light" xs={12}>
+            <h1>Bloom Protocol</h1>
+            <p class="description">The Bloom Protocol provides solutions allowing any lender authorized
+              by a borrower to safely and securely issue credit to that borrower.</p>
+            <p class="description">The three main components of the Bloom Protocol are:</p>
+          </Col>
+        </Row>
         <Row>
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card className="text-center">
