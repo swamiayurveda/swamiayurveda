@@ -74,7 +74,7 @@ const Intro = () => {
       </Row>
       <Row className="mt-3">
         <Col>
-          <img src={flower} />
+          {/* <img src={flower} /> */}
         </Col>
       </Row>
     </Container>
