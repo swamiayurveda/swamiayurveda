@@ -1,6 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from "react-router-dom";
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from 'react-bootstrap';
 
 import { setNavbarToggler } from './util';
 import navItems from '../../data';
@@ -11,40 +19,37 @@ import './style.scss';
 
 
 
-class Navbar extends React.Component {
+class Navbarr extends React.Component {
   componentDidMount() {
     setNavbarToggler();
   }
 
   render() {
     return (
-      <nav className="navbar has-shadow is-fixed-top">
-        <div className="navbar-brand">
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home">
           <Link className="navbar-item" to="/">
             <img className="navbar-logo" src={image} alt="logo" />
             <span className="title is-5 m-l-md">Swami Ayurveda</span>
           </Link>
-          <div className="navbar-burger burger" data-target="navbarMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div id="navbarMenu" className="navbar-menu">
-          <div className="navbar-end">
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
             {navItems.map(item => (
-              <a className="navbar-item" onClick={() => alert('Coming Soon')}>
-                <img style={{ height: 20 }} src={item.image} alt="logo" />
-                <span className="m-l-sm">{item.title}</span>
-              </a>
+              <Nav.Item onClick={() => alert('Coming Soon')}>
+                <Nav.Link href="#home">
+                  <img className="mr-2" style={{ height: 20 }} src={item.image} alt="logo" />
+                  {item.title}
+                </Nav.Link>
+              </Nav.Item>
             ))}
-          </div>
-        </div>
-      </nav>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 };
 
 
-export default withRouter(Navbar);
+export default withRouter(Navbarr);

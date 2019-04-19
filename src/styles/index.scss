@@ -1,19 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700');
 
-@import "bulma/sass/utilities/_all.sass";
-
-$navbar-height: 3.25rem;
-// $background: $dark;
-$filter-sidebar-width: 300px;
-$navbar-background-color: white;
-$navbar-item-color: rgba(7, 5, 5, 0.9);
-$navbar-box-shadow-size: 0 1px 0 0;
-$navbar-box-shadow-color: whitesmoke;
-// $title-color: $white;
-// $family-sans-serif: "Nunito", sans-serif;
-
-@import "bulma/bulma.sass"; //TODO: break only what i need at end
-@import 'bulma-extensions/bulma-slider/dist/css/bulma-slider.sass';
 
 #root {
   height: 100%;
@@ -28,6 +15,6 @@ body {
   // padding: 24px 0;
 
   * {
-    font-family: "Karla", sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 }
