@@ -22,7 +22,7 @@
 
 .big-header {
   font-size: 46px;
-  color: #218838;
+  color: #4CAF50;
   font-weight: 700;
 }
 
@@ -30,6 +30,19 @@
   font-size: 20px;
   color: #9198b2;
   font-weight: 300;
+}
+
+.intro-section {
+  height: calc(100vh - 52px - 56px);
+}
+
+.overview-section {
+  margin-top: 130px;
+  margin-bottom: 352px;
+}
+
+.pitch-section {
+  background: #8BC34A;
 }
 
 .footer {
@@ -44,7 +57,7 @@
 }
 
 .footer-list-header {
-  color: #8fca91;
+  color: #8BC34A;
 }
 
 .footer-list-header {
@@ -53,7 +66,7 @@
 }
 
 .footer-list-item {
-  color: #8fca91;
+  color: #8BC34A;
 }
 
 .footer-list-item {

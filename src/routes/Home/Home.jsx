@@ -36,9 +36,49 @@ const navbarHeight = 52;
     // </div>
   // </section>
 
+const Intro = () => {
+  return(
+    <Container className="intro-section">
+      <Row className="mt-5">
+        <Col>
+          <h1 className="big-header">
+            <div>Take control of</div>
+            <div>your credit and identity</div>
+          </h1>
+          <div class="header-desc mt-4">
+            <div>Create a cryptographically secured identity</div>
+            <div>powered by the blockchain</div>
+          </div>
+        </Col>
+      </Row>
+      <Row className="mt-5">
+        <Col>
+          <Button
+            className="rounded-pill px-5"
+            variant="success"
+            size="lg"
+          >
+            Get Started
+          </Button>
+        </Col>
+      </Row>
+      <Row className="mt-3">
+        <Col>
+          <Button
+            className="rounded-pill"
+            variant="outline-secondary"
+          >
+            Learn more
+          </Button>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
 const Overview = () => {
   return(
-    <Container>
+    <Container className="overview-section">
       <Row className="mt-5">
         <Col>
         </Col>
@@ -105,57 +145,59 @@ const Footer = () => {
   );
 };
 
-const StatusQuo = () => {
+const Pitch = () => {
   return(
-    <Container>
-      <Row>
-        <Col xs={12} md={6} lg={4} className="mb-5">
-          <Card className="text-center">
-            <Card.Body>
-              <div class="text-center mb-4">
-                <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
-              </div>
-              <Card.Title>
-                <h2>Vata</h2>
-              </Card.Title>
-              <Card.Text class="mt-4">
-                With supporting text below as a natural lead-in to additional content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col xs={12} md={6} lg={4} className="mb-5">
-          <Card className="text-center">
-            <Card.Body>
-              <div class="text-center mb-4">
-                <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
-              </div>
-              <Card.Title>
-                <h2>Kapha</h2>
-              </Card.Title>
-              <Card.Text class="mt-4">
-                With supporting text below as a natural lead-in to additional content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col xs={12} md={6} lg={4} className="mb-5">
-          <Card className="text-center">
-            <Card.Body>
-              <div class="text-center mb-4">
-                <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
-              </div>
-              <Card.Title>
-                <h2>Pitta</h2>
-              </Card.Title>
-              <Card.Text class="mt-4">
-                With supporting text below as a natural lead-in to additional content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div className="pitch-section pt-5 pb-3">
+      <Container>
+        <Row>
+          <Col xs={12} md={6} lg={4} className="mb-5">
+            <Card className="text-center">
+              <Card.Body>
+                <div class="text-center mb-4">
+                  <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
+                </div>
+                <Card.Title>
+                  <h2>Vata</h2>
+                </Card.Title>
+                <Card.Text class="mt-4">
+                  With supporting text below as a natural lead-in to additional content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={12} md={6} lg={4} className="mb-5">
+            <Card className="text-center">
+              <Card.Body>
+                <div class="text-center mb-4">
+                  <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
+                </div>
+                <Card.Title>
+                  <h2>Kapha</h2>
+                </Card.Title>
+                <Card.Text class="mt-4">
+                  With supporting text below as a natural lead-in to additional content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={12} md={6} lg={4} className="mb-5">
+            <Card className="text-center">
+              <Card.Body>
+                <div class="text-center mb-4">
+                  <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
+                </div>
+                <Card.Title>
+                  <h2>Pitta</h2>
+                </Card.Title>
+                <Card.Text class="mt-4">
+                  With supporting text below as a natural lead-in to additional content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
@@ -163,43 +205,11 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Container>
-          <div style={{ marginTop: navbarHeight }}>
-            <h1 className="big-header">
-              <div>Take control of</div>
-              <div>your credit and identity</div>
-            </h1>
-            <div class="header-desc mt-4">
-              <div>Create a cryptographically secured identity</div>
-              <div>powered by the blockchain</div>
-            </div>
-            <Container>
-              <Row className="mt-5">
-                <Col>
-                  <Button
-                    className="rounded-pill px-5"
-                    variant="success"
-                    size="lg"
-                  >
-                    Get Started
-                  </Button>
-                </Col>
-              </Row>
-              <Row className="mt-3">
-                <Col>
-                  <Button
-                    className="rounded-pill"
-                    variant="outline-secondary"
-                  >
-                    Learn more
-                  </Button>
-                </Col>
-              </Row>
-            </Container>
-            <Overview />
-            <StatusQuo />
-          </div>
-        </Container>
+        <div style={{ marginTop: navbarHeight }}>
+          <Intro />
+          <Overview />
+          <Pitch />
+        </div>
         <Footer />
       </React.Fragment>
     );
