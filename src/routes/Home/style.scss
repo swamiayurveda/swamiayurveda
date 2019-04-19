@@ -20,7 +20,6 @@
   }
 }
 
-
 .big-header {
   font-size: 46px;
   color: #218838;
@@ -31,4 +30,32 @@
   font-size: 20px;
   color: #9198b2;
   font-weight: 300;
+}
+
+.footer {
+  background: #F1F8E9;
+}
+
+.footer-list {
+  list-style: none;
+  line-height: 2;
+  text-align: left;
+  padding-left: 0;
+}
+
+.footer-list-header {
+  color: #8fca91;
+}
+
+.footer-list-header {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-list-item {
+  color: #8fca91;
+}
+
+.footer-list-item {
+  text-decoration: none;
 }
