@@ -5,6 +5,18 @@
 }
 
 .navbar.navbar-light {
+  .navbar-nav {
+    border: 1px solid #C8E6C9;
+    border-radius: 3rem;
+    border-top-right-radius: 0;
+    margin-top: 6px;
+    overflow: hidden;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid #C8E6C9;
+  }
+
   .navbar-brand {
     a {
       color: #4CAF50;

@@ -11,34 +11,17 @@ import fire from '../../images/doshas/fire.svg';
 import earth from '../../images/doshas/earth.svg';
 import ether from '../../images/doshas/ether.svg';
 import water from '../../images/doshas/water.svg';
+import i18n from '../../i18n';
 
 import Browse from 'routes/Browse';
 
-// import Footer from 'components/Footer';
+import Footer from 'components/Footer';
 import SubscribeForm from 'components/SubscribeForm';
 
 import './style.scss';
 
 const navbarHeight = 52;
-const i18n = {
-  swami_ayurveda: 'Swami Ayurveda',
-  header: 'Lorem ipsum dolor',
-  header2: 'consectetur adipiscing elit',
-  subheader: 'Lorem ipsum dolor',
-  subheader2: 'consectetur adipiscing elit',
-  get_started: 'Get Started',
-  learn_more: 'Learn More',
-  what_is_ayurveda: 'What is Ayurveda?',
-  ayurveda_desc: 'Bloom is an end-to-end protocol for identity attestation, risk assessment, and credit scoring; entirely on the blockchain. Bloom allows both traditional and digital currency lenders to serve billions of people who currently cannot obtain a bank account or credit score.',
-  doshas: 'Doshas',
-  dosha_desc: 'The Bloom Protocol provides solutions allowing any lender authorized by a borrower to safely and securely issue credit to that borrower.',
-  dosha_desc2: 'The three main components of the Bloom Protocol are:',
-  earth: 'Earth',
-  fire: 'Fire',
-  air: 'Air',
-  ether: 'Ether',
-  water: 'Water',
-}
+
 
 const Intro = () => {
   return(
@@ -94,58 +77,6 @@ const Overview = () => {
         <Col>
           <h3 class="text-left mb-5">{i18n.what_is_ayurveda}</h3>
           <p class="text-left">{i18n.ayurveda_desc}</p>
-        </Col>
-      </Row>
-    </Container>
-  );
-};
-
-const Footer = () => {
-  return(
-    <Container className="footer pt-5 pb-3" fluid>
-      <Row>
-        <Col xs={12} md={6}>
-          <div>{i18n.swami_ayurveda}</div>
-          <p>{`${i18n.header} ${i18n.header2}`}</p>
-          <p>Copyright © {i18n.swami_ayurveda}</p>
-        </Col>
-        <Col xs={12} md={6}>
-          <Row className="p-3">
-            <Col xs={6} md={6} lg={4}>
-              <ul class="footer-list">
-                <li class="footer-list-header">Company</li>
-                <li><a class="footer-list-item" href="/about">About Us</a></li>
-                <li><a class="footer-list-item" href="https://bloom.co/blog">Blog</a></li>
-                <li><a class="footer-list-item" href="/whitepaper.pdf">White Paper</a></li>
-                <li><a class="footer-list-item" href="/careers">Careers</a></li>
-                <li><a class="footer-list-item" href="mailto:support@bloom.co">Contact Us</a></li>
-                <li><a class="footer-list-item" href="/token">Smart Token</a></li>
-              </ul>
-            </Col>
-            <Col xs={6} md={6} lg={4}>
-              <ul class="footer-list">
-                <li class="footer-list-header">Community</li>
-                <li><a class="footer-list-item" href="https://t.me/bloomprotocol">Telegram</a></li>
-                <li><a class="footer-list-item" href="https://twitter.com/bloom">Twitter</a></li>
-                <li><a class="footer-list-item" href="https://www.facebook.com/bloomtoken">Facebook</a>
-                </li>
-                <li><a class="footer-list-item" href="https://www.reddit.com/r/BloomToken/">Reddit</a>
-                </li>
-                <li><a class="footer-list-item"
-                    href="https://www.youtube.com/c/bloomprotocol">YouTube</a></li>
-              </ul>
-            </Col>
-            <Col xs={6} md={6} lg={4}>
-              <ul class="footer-list">
-                <li class="footer-list-header">Legal</li>
-                <li><a class="footer-list-item" href="/legal/privacy">Privacy Policy</a></li>
-                <li><a class="footer-list-item" href="/legal/terms">Terms of Service</a></li>
-                <li><a class="footer-list-item" href="/legal/cookies">Cookie Policy</a></li>
-                <li><a class="footer-list-item" href="/legal/affiliate-disclosures">Affiliate
-                    Disclosures</a></li>
-              </ul>
-            </Col>
-          </Row>
         </Col>
       </Row>
     </Container>
