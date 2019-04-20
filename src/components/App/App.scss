@@ -23,7 +23,8 @@
 }
 
 .page-container {
-  min-height: calc(100vh - 72px - 320px - 48px);
+  padding: 2rem 0;
+  min-height: calc(100vh - 72px - 200px);
 }
 
 @keyframes App-logo-spin {

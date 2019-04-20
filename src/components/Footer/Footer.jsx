@@ -16,44 +16,37 @@ const socialLinks = {
 const Footer = () => {
   return(
     <Container className="footer pt-5 pb-3" fluid>
-      <Row>
-        <Col xs={12} md={6}>
-          <div className="footer-title text-left mb-3">
-            <img className="navbar-logo" src={logo} alt="logo" />
-            <span className="ml-2">{i18n.swami_ayurveda}</span>
-          </div>
-          <div className="footer-subtitle text-left">
-            <p>{`${i18n.header} ${i18n.header2}`}</p>
-            <p>Copyright © {i18n.swami_ayurveda}</p>
+      <Row className="align-items-center justify-content-center  mb-3">
+        <div className="footer-divider" />
+        <div className="footer-title text-left">
+          <img className="navbar-logo" src={logo} alt="logo" />
+        </div>
+        <div className="footer-divider" />
+      </Row>
+      <Row className="align-items-center justify-content-center  mb-3">
+        <Col lg={4}>
+          <ul class="footer-list">
+            <li><a class="footer-list-item" href="/about">About Us</a></li>
+            <li><a class="footer-list-item" href="mailto:support@bloom.co">Contact Us</a></li>
+          </ul>
+        </Col>
+        <Col lg={4}>
+          <div className="social-btn">
+            <div className="social-item"><a target="_blank" href={socialLinks.instagram}><i className="fab fa-instagram"></i></a></div>
+            <div className="social-item"><a target="_blank" href={socialLinks.facebook}><i className="fab fa-facebook-f"></i></a></div>
+            <div className="social-item"><a target="_blank" href={socialLinks.twitter}><i className="fab fa-twitter"></i></a></div>
+            <div className="social-item"><a target="_blank" href={socialLinks.pinterest}><i className="fab fa-pinterest-p"></i></a></div>
           </div>
         </Col>
-        <Col xs={12} md={6}>
-          <Row>
-            <Col xs={6} md={6} lg={4}>
-              <ul class="footer-list">
-                <li class="footer-list-header">Company</li>
-                <li><a class="footer-list-item" href="/about">About Us</a></li>
-                <li><a class="footer-list-item" href="mailto:support@bloom.co">Contact Us</a></li>
-              </ul>
-            </Col>
-            <Col xs={6} md={6} lg={4}>
-              <ul class="footer-list">
-                <li class="footer-list-header">Community</li>
-                  <li><a class="footer-list-item" href="https://twitter.com/bloom">Twitter</a></li>
-                  <li><a class="footer-list-item" href="https://www.facebook.com/bloomtoken">Facebook</a>
-                  <li><a class="footer-list-item" href="https://www.youtube.com/c/bloomprotocol">YouTube</a></li>
-                </li>
-              </ul>
-            </Col>
-            <Col xs={6} md={6} lg={4}>
-              <ul class="footer-list">
-                <li class="footer-list-header">Legal</li>
-                <li><a class="footer-list-item" href="/legal/privacy">Privacy Policy</a></li>
-                <li><a class="footer-list-item" href="/legal/terms">Terms of Service</a></li>
-              </ul>
-            </Col>
-          </Row>
+        <Col lg={4}>
+          <ul class="footer-list">
+            <li><a class="footer-list-item" href="/legal/privacy">Privacy Policy</a></li>
+            <li><a class="footer-list-item" href="/legal/terms">Terms of Service</a></li>
+          </ul>
         </Col>
+      </Row>
+      <Row className="justify-content-center">
+        
       </Row>
     </Container>
   );

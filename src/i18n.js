@@ -18,4 +18,6 @@ export default {
   water: 'Water',
   sign_up_subscribe: 'Sign up to get early notifications and beta features',
   about_us: 'About Us',
+  book_online: 'Book Online',
+  book_appointment: 'Book Appointment',
 };
