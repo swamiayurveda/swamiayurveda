@@ -6,7 +6,11 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
-import flower from '../../images/flower.svg'
+import air from '../../images/doshas/air.svg';
+import fire from '../../images/doshas/fire.svg';
+import earth from '../../images/doshas/earth.svg';
+import ether from '../../images/doshas/ether.svg';
+import water from '../../images/doshas/water.svg';
 
 import Browse from 'routes/Browse';
 
@@ -16,25 +20,25 @@ import SubscribeForm from 'components/SubscribeForm';
 import './style.scss';
 
 const navbarHeight = 52;
-// <section class="hero home-hero">
-  // <div class="hero-body">
-    // <div class="container">
-      // <div style={{ color: 'white', fontSize: "5.2rem", fontWeight: 'bolder' }}>
-        // {/* <img style={{ height: 60 }} src={image} alt="logo" /> */}
-        // <span>Coming Soon</span>
-
-        // {/*
-        // <SearchBar /> */}
-        // </div>
-      //
-      // <Footer />
-      //
-      // <SubscribeForm />
-      // <div className="subtitle m-b-lg" style={{ color: 'white' }}>Sign up to get early notifications and beta
-        // features</div>
-      // </div>
-    // </div>
-  // </section>
+const i18n = {
+  swami_ayurveda: 'Swami Ayurveda',
+  header: 'Lorem ipsum dolor',
+  header2: 'consectetur adipiscing elit',
+  subheader: 'Lorem ipsum dolor',
+  subheader2: 'consectetur adipiscing elit',
+  get_started: 'Get Started',
+  learn_more: 'Learn More',
+  what_is_ayurveda: 'What is Ayurveda?',
+  ayurveda_desc: 'Bloom is an end-to-end protocol for identity attestation, risk assessment, and credit scoring; entirely on the blockchain. Bloom allows both traditional and digital currency lenders to serve billions of people who currently cannot obtain a bank account or credit score.',
+  doshas: 'Doshas',
+  dosha_desc: 'The Bloom Protocol provides solutions allowing any lender authorized by a borrower to safely and securely issue credit to that borrower.',
+  dosha_desc2: 'The three main components of the Bloom Protocol are:',
+  earth: 'Earth',
+  fire: 'Fire',
+  air: 'Air',
+  ether: 'Ether',
+  water: 'Water',
+}
 
 const Intro = () => {
   return(
@@ -42,12 +46,12 @@ const Intro = () => {
       <Row className="mt-5">
         <Col>
           <h1 className="big-header">
-            <div>Take control of</div>
-            <div>your credit and identity</div>
+            <div>{i18n.header}</div>
+            <div>{i18n.header2}</div>
           </h1>
           <div class="header-desc mt-4">
-            <div>Create a cryptographically secured identity</div>
-            <div>powered by the blockchain</div>
+            <div>{i18n.subheader}</div>
+            <div>{i18n.subheader2}</div>
           </div>
         </Col>
       </Row>
@@ -58,7 +62,7 @@ const Intro = () => {
             variant="success"
             size="lg"
           >
-            Get Started
+            {i18n.get_started}
           </Button>
         </Col>
       </Row>
@@ -68,7 +72,7 @@ const Intro = () => {
             className="rounded-pill"
             variant="outline-secondary"
           >
-            Learn more
+            {i18n.learn_more}
           </Button>
         </Col>
       </Row>
@@ -88,8 +92,8 @@ const Overview = () => {
         <Col>
         </Col>
         <Col>
-          <h3 class="text-left mb-5">What is Ayurveda?</h3>
-          <p class="text-left">Bloom is an end-to-end protocol for identity attestation, risk assessment, and credit scoring; entirely on the blockchain. Bloom allows both traditional and digital currency lenders to serve billions of people who currently cannot obtain a bank account or credit score.</p>
+          <h3 class="text-left mb-5">{i18n.what_is_ayurveda}</h3>
+          <p class="text-left">{i18n.ayurveda_desc}</p>
         </Col>
       </Row>
     </Container>
@@ -101,11 +105,9 @@ const Footer = () => {
     <Container className="footer pt-5 pb-3" fluid>
       <Row>
         <Col xs={12} md={6}>
-          <div>
-            Swami Ayurveda
-          </div>
-          <p>Take control of your credit and identity</p>
-          <p>Copyright © Bloom Protocol</p>
+          <div>{i18n.swami_ayurveda}</div>
+          <p>{`${i18n.header} ${i18n.header2}`}</p>
+          <p>Copyright © {i18n.swami_ayurveda}</p>
         </Col>
         <Col xs={12} md={6}>
           <Row className="p-3">
@@ -156,10 +158,9 @@ const Pitch = () => {
       <Container>
         <Row>
           <Col className="mb-4 text-light" xs={12}>
-            <h1>Bloom Protocol</h1>
-            <p class="description">The Bloom Protocol provides solutions allowing any lender authorized
-              by a borrower to safely and securely issue credit to that borrower.</p>
-            <p class="description">The three main components of the Bloom Protocol are:</p>
+            <h1>{i18n.doshas}</h1>
+            <p class="description">{i18n.dosha_desc}</p>
+            <p class="description">{i18n.dosha_desc2}</p>
           </Col>
         </Row>
         <Row>
@@ -167,7 +168,16 @@ const Pitch = () => {
             <Card className="text-center">
               <Card.Body>
                 <div class="text-center mb-4">
-                  <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
+                  <Row noGutters>
+                    <Col>
+                      <small>{i18n.ether}</small>
+                      <Image src={ether} roundedCircle />
+                    </Col>
+                    <Col>
+                      <small>{i18n.air}</small>
+                      <Image src={air} roundedCircle />
+                    </Col>
+                  </Row>
                 </div>
                 <Card.Title>
                   <h2>Vata</h2>
@@ -182,7 +192,16 @@ const Pitch = () => {
             <Card className="text-center">
               <Card.Body>
                 <div class="text-center mb-4">
-                  <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
+                  <Row noGutters>
+                    <Col>
+                      <small>{i18n.earth}</small>
+                      <Image src={earth} roundedCircle />
+                    </Col>
+                    <Col>
+                      <small>{i18n.water}</small>
+                      <Image src={water} roundedCircle />
+                    </Col>
+                  </Row>
                 </div>
                 <Card.Title>
                   <h2>Kapha</h2>
@@ -197,7 +216,16 @@ const Pitch = () => {
             <Card className="text-center">
               <Card.Body>
                 <div class="text-center mb-4">
-                  <Image src="http://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" roundedCircle />
+                  <Row noGutters>
+                    <Col>
+                      <small>{i18n.earth}</small>
+                      <Image src={earth} roundedCircle />
+                    </Col>
+                    <Col>
+                      <small>{i18n.fire}</small>
+                      <Image src={fire} roundedCircle />
+                    </Col>
+                  </Row>
                 </div>
                 <Card.Title>
                   <h2>Pitta</h2>
