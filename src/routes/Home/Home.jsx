@@ -15,7 +15,6 @@ import i18n from '../../i18n';
 
 import Browse from 'routes/Browse';
 
-import Footer from 'components/Footer';
 import SubscribeForm from 'components/SubscribeForm';
 
 import './style.scss';
@@ -198,7 +197,6 @@ class Home extends React.Component {
           <Pitch />
           <PreFooter />
         </div>
-        <Footer />
       </React.Fragment>
     );
   }

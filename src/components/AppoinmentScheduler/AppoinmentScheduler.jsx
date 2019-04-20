@@ -88,10 +88,6 @@ export default class App extends Component {
 
     this.setState({
       schedule,
-      siteTitle: configs.site_title,
-      aboutPageUrl: configs.about_page_url,
-      contactPageUrl: configs.contact_page_url,
-      homePageUrl: configs.home_page_url,
       loading: false
     })
   }
@@ -133,18 +129,15 @@ export default class App extends Component {
   }
 
   renderConfirmationString() {
-    const spanStyle = {color: '#00bcd4'}
-    return this.state.confirmationTextVisible ? <h2 style={{ textAlign: this.state.smallScreen ? 'center' : 'left', color: '#bdbdbd', lineHeight: 1.5, padding: '0 10px', fontFamily: 'Roboto'}}>
-      { <span>
-        Scheduling a
-
-          <span style={spanStyle}> 1 hour </span>
-
-        appointment {this.state.appointmentDate && <span>
-          on <span style={spanStyle}>{moment(this.state.appointmentDate).format('dddd[,] MMMM Do')}</span>
-      </span>} {Number.isInteger(this.state.appointmentSlot) && <span>at <span style={spanStyle}>{moment().hour(9).minute(0).add(this.state.appointmentSlot, 'hours').format('h:mm a')}</span></span>}
-      </span>}
-    </h2> : null
+    return this.state.confirmationTextVisible && (
+      <h5 className="text-secondary mt-5">
+        { <span>
+          Scheduling a <span className="text-info"> 1 hour </span>
+          appointment {this.state.appointmentDate && <span> on <span className="text-info">{moment(this.state.appointmentDate).format('dddd[,] MMMM Do')}</span>
+        </span>} {Number.isInteger(this.state.appointmentSlot) && <span>at <span className="text-info">{moment().hour(9).minute(0).add(this.state.appointmentSlot, 'hours').format('h:mm a')}</span></span>}
+        </span>}
+      </h5>
+    )
   }
 
   renderAppointmentTimes() {
@@ -339,7 +332,6 @@ export default class App extends Component {
       <div>
         <section>
           <Card className="p-4">
-            {this.renderConfirmationString()}
             <Stepper
               activeStep={currentStep}
               steps={[
@@ -348,9 +340,10 @@ export default class App extends Component {
                 { title: 'Fill Info' },
               ]}
             />
-            <br />
-            <br />
-            {this.renderContent()}
+            {this.renderConfirmationString()}
+            <div className="my-5">
+              {this.renderContent()}
+            </div>
           </Card>
           {/* <SnackBar
             open={confirmationSnackbarOpen || loading}

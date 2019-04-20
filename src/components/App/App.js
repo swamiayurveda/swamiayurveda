@@ -29,6 +29,7 @@ class App extends Component {
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={PrivacyPolicy} />
           </div>
+          <Footer />
         </div>
       </Router>
     );

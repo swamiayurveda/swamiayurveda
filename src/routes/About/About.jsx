@@ -6,7 +6,7 @@ import AppoinmentScheduler from '../../components/AppoinmentScheduler';
 
 const About = () => {
   return (
-    <Container className="intro-section">
+    <Container className="page-container">
       <Row className="mt-5">
         <Col>
           <h1 className="page-header">
@@ -14,7 +14,7 @@ const About = () => {
           </h1>
         </Col>
       </Row>
-      <Row>
+      <Row className="mt-5">
         <Col>
           <AppoinmentScheduler />
         </Col>
