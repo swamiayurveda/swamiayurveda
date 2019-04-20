@@ -10,6 +10,7 @@ import Detail from 'routes/Detail';
 import Terms from 'routes/Terms';
 import PrivacyPolicy from 'routes/PrivacyPolicy';
 import About from 'routes/About';
+import BookOnline from 'routes/BookOnline';
 
 import './App.scss';
 
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/browse" component={Browse} />
             <Route path="/remedy/:name" component={Detail} />
+            <Route path="/book" component={BookOnline} />
             <Route path="/about" component={About} />
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={PrivacyPolicy} />

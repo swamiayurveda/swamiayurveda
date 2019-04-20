@@ -40,12 +40,16 @@ const Intro = () => {
       <Row className="mt-5">
         <Col>
           <Button
+            as={Link}
+            to="/book"
             className="rounded-pill px-5"
             variant="success"
             size="lg"
+            type
           >
-            {i18n.get_started}
+            {i18n.book_appointment}
           </Button>
+
         </Col>
       </Row>
       <Row className="mt-3">

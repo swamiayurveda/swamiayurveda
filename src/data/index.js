@@ -16,7 +16,7 @@ export default [
     id: 2,
     image: plantIcon,
     title: 'Book Online',
-    to: '/herbs',
+    to: '/book',
   },
   {
     id: 4,
