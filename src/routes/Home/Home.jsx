@@ -83,6 +83,21 @@ const Overview = () => {
   );
 };
 
+const PreFooter = () => {
+  return(
+    <Container className="pre-footer-section">
+      <Row className="my-5">
+        <Col className="my-5">
+          <div class="header-desc mt-4">
+            {i18n.sign_up_subscribe}
+          </div>
+          <SubscribeForm />
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
 const Pitch = () => {
   return(
     <div className="pitch-section pb-3">
@@ -94,7 +109,7 @@ const Pitch = () => {
             <p class="description">{i18n.dosha_desc2}</p>
           </Col>
         </Row>
-        <Row>
+        <Row className="justify-content-center">
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card className="text-center">
               <Card.Body>
@@ -181,6 +196,7 @@ class Home extends React.Component {
           <Intro />
           <Overview />
           <Pitch />
+          <PreFooter />
         </div>
         <Footer />
       </React.Fragment>

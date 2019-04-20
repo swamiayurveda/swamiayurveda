@@ -16,4 +16,5 @@ export default {
   air: 'Air',
   ether: 'Ether',
   water: 'Water',
+  sign_up_subscribe: 'Sign up to get early notifications and beta features',
 };

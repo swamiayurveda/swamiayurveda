@@ -9,12 +9,9 @@ import {
 
 import { setNavbarToggler } from './util';
 import navItems from '../../data';
-
 import image from '../../images/icon-tertiary.png';
 
 import './style.scss';
-
-
 
 class Navbarr extends React.Component {
   componentDidMount() {
