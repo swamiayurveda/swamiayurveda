@@ -46,7 +46,9 @@ const Footer = () => {
         </Col>
       </Row>
       <Row className="justify-content-center">
-        
+        <small className="footer-subtitle text-secondary">
+          Copyright © {i18n.swami_ayurveda}
+        </small>
       </Row>
     </Container>
   );
