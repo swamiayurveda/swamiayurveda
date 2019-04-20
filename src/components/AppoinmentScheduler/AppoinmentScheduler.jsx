@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import injectTapEventPlugin from 'react-tap-event-plugin'
 // import axios from 'axios'
 // import async from 'async'
 import moment from 'moment';
@@ -11,15 +10,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
-
-import {
-  Step,
-  Stepper,
-  StepContent,
-  StepButton
-} from 'material-ui/Stepper'
-
-// injectTapEventPlugin()
+import Stepper from 'react-stepper-horizontal';
 
 // const HOST = PRODUCTION ? '/' : 'http://localhost:3000/'
 
@@ -30,14 +21,14 @@ export default class App extends Component {
       loading: true,
       confirmationModalOpen: false,
       confirmationTextVisible: false,
-      stepIndex: 0,
       appointmentDateSelected: false,
       appointmentMeridiem: 0,
       validEmail: true,
       validPhone: true,
       smallScreen: window.innerWidth < 768,
       confirmationSnackbarOpen: false,
-      schedule: {}
+      currentStep: 0,
+      schedule: {},
     }
 
     this.handleNextStep = this.handleNextStep.bind(this)
@@ -55,8 +46,9 @@ export default class App extends Component {
   }
 
   handleNextStep() {
-    const { stepIndex } = this.state
-    return (stepIndex < 3) ? this.setState({ stepIndex: stepIndex + 1}) : null
+    const { currentStep } = this.state
+    console.log('handleSetAppointmentDate', currentStep);
+    return (currentStep < 3) ? this.setState({ currentStep: currentStep + 1}) : null
   }
 
   handleSetAppointmentDate(date) {
@@ -217,9 +209,98 @@ export default class App extends Component {
     window.removeEventListener('resize', this.resize)
   }
 
-  render() {
-    const { stepIndex, loading, smallScreen, confirmationModalOpen, confirmationSnackbarOpen, ...data } = this.state
+  renderContent() {
+    const { currentStep, loading, smallScreen, confirmationModalOpen, confirmationSnackbarOpen, ...data } = this.state
     const contactFormFilled = data.firstName && data.lastName && data.phone && data.email && data.validPhone && data.validEmail
+
+    console.log(currentStep)
+    switch (currentStep) {
+      case 0: return (
+        <React.Fragment>
+          <DayPickerInput
+            value={data.appointmentDate}
+            onDayChange={day => this.handleSetAppointmentDate(day)}
+          />
+        </React.Fragment>
+      )
+      case 1: return (
+        <React.Fragment>
+          <Form.Group as={Col}>
+            <Form.Label>AM or PM</Form.Label>s
+            <Form.Control
+              as="select"
+              value={data.appointmentMeridiem}
+              onChange={e => this.handleSetAppointmentMeridiem(e.target.value)}
+            >
+              <option value={0}>AM</option>
+              <option value={1}>PM</option>
+            </Form.Control>
+          </Form.Group>
+          <Form.Group as={Row}>
+            <Col sm={10}>
+              {this.renderAppointmentTimes()}
+            </Col>
+          </Form.Group>
+        </React.Fragment>
+      )
+      case 2: return (
+        <section>
+          <Form.Group>
+            <Form.Control
+              type="text"
+              name="first_name"
+              placeholder="First Name"
+              onChange={e => this.setState({ firstName: e.target.value })}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              type="text"
+              name="last_name"
+              placeholder="Last Name"
+              onChange={e => this.setState({ lastName: e.target.value })}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={e => this.validateEmail(e.target.value)}
+            />
+            <Form.Control.Feedback type="invalid">
+              {data.validEmail ? null : 'Enter a valid email address'}
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              type="phone"
+              name="phone"
+              placeholder="Phone"
+              onChange={e => this.validatePhone(e.target.value)}
+            />
+            <Form.Control.Feedback type="invalid">
+              {data.validPhone ? null: 'Enter a valid phone number'}
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Button
+            className="mt-5"
+            disabled={!contactFormFilled || data.processed }
+            onClick={() => this.setState({ confirmationModalOpen: !this.state.confirmationModalOpen })}
+            variant="primary"
+            size="lg"
+            block
+          >
+            {contactFormFilled ? 'Schedule' : 'Fill out your information to schedule'}
+          </Button>
+        </section>
+
+      )
+    }
+  }
+
+  render() {
+    const { currentStep, loading, smallScreen, confirmationModalOpen, confirmationSnackbarOpen, ...data } = this.state
     const modalActions = [
       <Button
         variant="outline-danger"
@@ -242,113 +323,18 @@ export default class App extends Component {
             marginTop: !smallScreen ? 20 : 0,
           }}>
           {this.renderConfirmationString()}
-          <Card style={{
-              padding: '10px 10px 25px 10px',
-              height: smallScreen ? '100vh' : null
-            }}>
+          <Card className="p-4">
             <Stepper
-              activeStep={stepIndex}
-              linear={false}
-              orientation="vertical">
-              <Step disabled={loading}>
-                <StepButton onClick={() => this.setState({ stepIndex: 0 })}>
-                  Choose an available day for your appointment
-                </StepButton>
-                <StepContent>
-                  <DayPickerInput
-                    value={data.appointmentDate}
-                    onDayChange={day => this.handleSetAppointmentDate(day)}
-                  />
-                  {/* <DatePicker
-                      value={data.appointmentDate}
-                      // hintText="Select a date"
-                      // mode={smallScreen ? 'portrait' : 'landscape'}
-                      // onChange={(n, date) => this.handleSetAppointmentDate(date)}
-                      // shouldDisableDate={day => this.checkDisableDate(day)}
-                       /> */}
-                  </StepContent>
-              </Step>
-              <Step disabled={ !data.appointmentDate }>
-                <StepButton onClick={() => this.setState({ stepIndex: 1 })}>
-                  Choose an available time for your appointment
-                </StepButton>
-                <StepContent>
-                  {console.log('data.appointmentMeridiem', data.appointmentMeridiem)}
-                  <Form.Group as={Col}>
-                    <Form.Label>AM or PM</Form.Label>s
-                    <Form.Control
-                      as="select"
-                      value={data.appointmentMeridiem}
-                      onChange={e => this.handleSetAppointmentMeridiem(e.target.value)}
-                    >
-                      <option value={0}>AM</option>
-                      <option value={1}>PM</option>
-                    </Form.Control>
-                  </Form.Group>
-                  <Form.Group as={Row}>
-                    <Col sm={10}>
-                      {this.renderAppointmentTimes()}
-                    </Col>
-                  </Form.Group>
-                </StepContent>
-              </Step>
-              <Step disabled={ !Number.isInteger(this.state.appointmentSlot) }>
-                <StepButton onClick={() => this.setState({ stepIndex: 2 })}>
-                  Share your contact information with us and we'll send you a reminder
-                </StepButton>
-                <StepContent>
-                  <section>
-                    <Form.Group>
-                      <Form.Control
-                        type="text"
-                        name="first_name"
-                        placeholder="First Name"
-                        onChange={e => this.setState({ firstName: e.target.value })}
-                      />
-                    </Form.Group>
-                    <Form.Group>
-                      <Form.Control
-                        type="text"
-                        name="last_name"
-                        placeholder="Last Name"
-                        onChange={e => this.setState({ lastName: e.target.value })}
-                      />
-                    </Form.Group>
-                    <Form.Group>
-                      <Form.Control
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        onChange={e => this.validateEmail(e.target.value)}
-                      />
-                      <Form.Control.Feedback type="invalid">
-                        {data.validEmail ? null : 'Enter a valid email address'}
-                      </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group>
-                      <Form.Control
-                        type="phone"
-                        name="phone"
-                        placeholder="Phone"
-                        onChange={e => this.validatePhone(e.target.value)}
-                      />
-                      <Form.Control.Feedback type="invalid">
-                        {data.validPhone ? null: 'Enter a valid phone number'}
-                      </Form.Control.Feedback>
-                    </Form.Group>
-                    <Button
-                      className="mt-5"
-                      disabled={!contactFormFilled || data.processed }
-                      onClick={() => this.setState({ confirmationModalOpen: !this.state.confirmationModalOpen })}
-                      variant="primary"
-                      size="lg"
-                      block>
-                      {contactFormFilled ? 'Schedule' : 'Fill out your information to schedule'}
-                    </Button>
-                  </section>
-                </StepContent>
-              </Step>
-            </Stepper>
+              activeStep={currentStep}
+              steps={[
+                { title: 'Choose Date' },
+                { title: 'Choose Time' },
+                { title: 'Fill Info' },
+              ]}
+            />
+            <br />
+            <br />
+            {this.renderContent()}
           </Card>
           <Modal
             show={confirmationModalOpen}

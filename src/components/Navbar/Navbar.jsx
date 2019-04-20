@@ -22,7 +22,7 @@ class Navbarr extends React.Component {
     return (
       <Navbar bg="white" expand="lg">
         <Container className="mt-3">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <Link className="navbar-item" to="/">
               <img className="navbar-logo" src={image} alt="logo" />
               <span className="title is-5 m-l-md">Swami Ayurveda</span>
