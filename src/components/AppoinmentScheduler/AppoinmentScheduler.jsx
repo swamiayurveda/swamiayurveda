@@ -8,9 +8,9 @@ import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Stepper from 'react-stepper-horizontal';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
-import Stepper from 'react-stepper-horizontal';
 
 // const HOST = PRODUCTION ? '/' : 'http://localhost:3000/'
 
@@ -70,10 +70,10 @@ export default class App extends Component {
     const { configs, appointments } = response
     const initSchedule = {}
     const today = moment().startOf('day')
-    initSchedule[today.format('YYYY-DD-MM')] = true
+    initSchedule[today.format('DD-MM-YYYY')] = true
     const schedule = !appointments.length ? initSchedule : appointments.reduce((currentSchedule, appointment) => {
       const { date, slot } = appointment
-      const dateString = moment(date, 'YYYY-DD-MM').format('YYYY-DD-MM')
+      const dateString = moment(date, 'DD-MM-YYYY').format('DD-MM-YYYY')
       !currentSchedule[date] ? currentSchedule[dateString] = Array(8).fill(false) : null
       Array.isArray(currentSchedule[dateString]) ?
         currentSchedule[dateString][slot] = true : null
@@ -103,7 +103,7 @@ export default class App extends Component {
 
   handleSubmit() {
     const appointment = {
-      date: moment(this.state.appointmentDate).format('YYYY-DD-MM'),
+      date: moment(this.state.appointmentDate).format('DD-MM-YYYY'),
       slot: this.state.appointmentSlot,
       name: this.state.firstName + ' ' + this.state.lastName,
       email: this.state.email,
@@ -128,7 +128,7 @@ export default class App extends Component {
   }
 
   checkDisableDate(day) {
-    const dateString = moment(day).format('YYYY-DD-MM')
+    const dateString = moment(day).format('DD-MM-YYYY')
     return this.state.schedule[dateString] === true || moment(day).startOf('day').diff(moment().startOf('day')) < 0
   }
 
@@ -151,10 +151,10 @@ export default class App extends Component {
     if (true) {
       const slots = [...Array(8).keys()]
       return slots.map(slot => {
-        const appointmentDateString = moment(this.state.appointmentDate).format('YYYY-DD-MM')
+        const appointmentDateString = moment(this.state.appointmentDate).format('DD-MM-YYYY')
         const t1 = moment().hour(9).minute(0).add(slot, 'hours')
         const t2 = moment().hour(9).minute(0).add(slot + 1, 'hours')
-        const scheduleDisabled = this.state.schedule[appointmentDateString] ? this.state.schedule[moment(this.state.appointmentDate).format('YYYY-DD-MM')][slot] : false
+        const scheduleDisabled = this.state.schedule[appointmentDateString] ? this.state.schedule[moment(this.state.appointmentDate).format('DD-MM-YYYY')][slot] : false
         const meridiemDisabled = this.state.appointmentMeridiem ? t1.format('a') === 'am' : t1.format('a') === 'pm'
         return(
           <Form.Check
@@ -212,14 +212,29 @@ export default class App extends Component {
   renderContent() {
     const { currentStep, loading, smallScreen, confirmationModalOpen, confirmationSnackbarOpen, ...data } = this.state
     const contactFormFilled = data.firstName && data.lastName && data.phone && data.email && data.validPhone && data.validEmail
+    const modalActions = [
+      <Button
+        variant="outline-danger"
+        onClick={() => this.setState({ confirmationModalOpen : false})}
+      >
+        Cancel
+      </Button>,
+      <Button
+        variant="outline-success"
+        onClick={() => this.handleSubmit()}
+      >
+        Confirm
+      </Button>,
+    ]
 
-    console.log(currentStep)
     switch (currentStep) {
       case 0: return (
         <React.Fragment>
           <DayPickerInput
+            placeholder="Select to enter date"
             value={data.appointmentDate}
             onDayChange={day => this.handleSetAppointmentDate(day)}
+            component={props => <Form.Control {...props} />}
           />
         </React.Fragment>
       )
@@ -244,98 +259,57 @@ export default class App extends Component {
         </React.Fragment>
       )
       case 2: return (
-        <section>
-          <Form.Group>
-            <Form.Control
-              type="text"
-              name="first_name"
-              placeholder="First Name"
-              onChange={e => this.setState({ firstName: e.target.value })}
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Control
-              type="text"
-              name="last_name"
-              placeholder="Last Name"
-              onChange={e => this.setState({ lastName: e.target.value })}
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Control
-              type="email"
-              name="email"
-              placeholder="Email"
-              onChange={e => this.validateEmail(e.target.value)}
-            />
-            <Form.Control.Feedback type="invalid">
-              {data.validEmail ? null : 'Enter a valid email address'}
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group>
-            <Form.Control
-              type="phone"
-              name="phone"
-              placeholder="Phone"
-              onChange={e => this.validatePhone(e.target.value)}
-            />
-            <Form.Control.Feedback type="invalid">
-              {data.validPhone ? null: 'Enter a valid phone number'}
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Button
-            className="mt-5"
-            disabled={!contactFormFilled || data.processed }
-            onClick={() => this.setState({ confirmationModalOpen: !this.state.confirmationModalOpen })}
-            variant="primary"
-            size="lg"
-            block
-          >
-            {contactFormFilled ? 'Schedule' : 'Fill out your information to schedule'}
-          </Button>
-        </section>
-
-      )
-    }
-  }
-
-  render() {
-    const { currentStep, loading, smallScreen, confirmationModalOpen, confirmationSnackbarOpen, ...data } = this.state
-    const modalActions = [
-      <Button
-        variant="outline-danger"
-        onClick={() => this.setState({ confirmationModalOpen : false})}
-      >
-        Cancel
-      </Button>,
-      <Button
-        variant="outline-success"
-        onClick={() => this.handleSubmit()}
-      >
-        Confirm
-      </Button>,
-    ]
-    return (
-      <div>
-        <section style={{
-            maxWidth: !smallScreen ? '80%' : '100%',
-            margin: 'auto',
-            marginTop: !smallScreen ? 20 : 0,
-          }}>
-          {this.renderConfirmationString()}
-          <Card className="p-4">
-            <Stepper
-              activeStep={currentStep}
-              steps={[
-                { title: 'Choose Date' },
-                { title: 'Choose Time' },
-                { title: 'Fill Info' },
-              ]}
-            />
-            <br />
-            <br />
-            {this.renderContent()}
-          </Card>
+        <React.Fragment>
+          <section>
+            <Form.Group>
+              <Form.Control
+                type="text"
+                name="first_name"
+                placeholder="First Name"
+                onChange={e => this.setState({ firstName: e.target.value })}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Control
+                type="text"
+                name="last_name"
+                placeholder="Last Name"
+                onChange={e => this.setState({ lastName: e.target.value })}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="Email"
+                onChange={e => this.validateEmail(e.target.value)}
+              />
+              <Form.Control.Feedback type="invalid">
+                {data.validEmail ? null : 'Enter a valid email address'}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group>
+              <Form.Control
+                type="phone"
+                name="phone"
+                placeholder="Phone"
+                onChange={e => this.validatePhone(e.target.value)}
+              />
+              <Form.Control.Feedback type="invalid">
+                {data.validPhone ? null: 'Enter a valid phone number'}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Button
+              className="mt-5"
+              disabled={!contactFormFilled || data.processed }
+              onClick={() => this.setState({ confirmationModalOpen: !this.state.confirmationModalOpen })}
+              variant="primary"
+              size="lg"
+              block
+            >
+              {contactFormFilled ? 'Schedule' : 'Fill out your information to schedule'}
+            </Button>
+          </section>
           <Modal
             show={confirmationModalOpen}
             dialogClassName="modal-90w"
@@ -353,6 +327,31 @@ export default class App extends Component {
               {modalActions}
             </Modal.Footer>
           </Modal>
+        </React.Fragment>
+      )
+    }
+  }
+
+  render() {
+    const { currentStep, loading, smallScreen, confirmationModalOpen, confirmationSnackbarOpen, ...data } = this.state
+
+    return (
+      <div>
+        <section>
+          <Card className="p-4">
+            {this.renderConfirmationString()}
+            <Stepper
+              activeStep={currentStep}
+              steps={[
+                { title: 'Choose Date' },
+                { title: 'Choose Time' },
+                { title: 'Fill Info' },
+              ]}
+            />
+            <br />
+            <br />
+            {this.renderContent()}
+          </Card>
           {/* <SnackBar
             open={confirmationSnackbarOpen || loading}
             message={loading ? 'Loading... ' : data.confirmationSnackbarMessage || ''}
