@@ -40,3 +40,39 @@
 .social-btn > .social-item > a > [class*="pinterest"] {
   background: #ce0004;
 }
+
+.footer {
+  background: #E8F5E9;
+}
+
+.footer-title {
+  color: #388E3C;
+}
+
+.footer-subtitle {
+  color: #4CAF50;
+}
+
+.footer-list {
+  list-style: none;
+  line-height: 2;
+  text-align: left;
+  padding-left: 0;
+}
+
+.footer-list-header {
+  color: #4CAF50;
+}
+
+.footer-list-header {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-list-item {
+  color: #4CAF50;
+}
+
+.footer-list-item {
+  text-decoration: none;
+}
