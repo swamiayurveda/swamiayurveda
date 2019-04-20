@@ -24,4 +24,10 @@ export default [
     title: 'My Dosha',
     to: '/herbs',
   },
+  {
+    id: 4,
+    image: bodyIcon,
+    title: 'About Us',
+    to: '/about',
+  },
 ];

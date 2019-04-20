@@ -32,11 +32,11 @@ class Navbarr extends React.Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               {navItems.map(item => (
-                <Nav.Item onClick={() => alert('Coming Soon')}>
-                  <Nav.Link href="#home">
+                <Nav.Item>
+                  <Link className="nav-link" to={item.to}>
                     <img className="mr-2" style={{ height: 20 }} src={item.image} alt="logo" />
                     {item.title}
-                  </Nav.Link>
+                  </Link>
                 </Nav.Item>
               ))}
             </Nav>

@@ -28,7 +28,7 @@ const Intro = () => {
     <Container className="intro-section">
       <Row className="mt-5">
         <Col>
-          <h1 className="big-header">
+          <h1 className="page-header">
             <div>{i18n.header}</div>
             <div>{i18n.header2}</div>
           </h1>
