@@ -19,21 +19,9 @@ export default [
     to: '/herbs',
   },
   {
-    id: 3,
-    image: recipeIcon,
-    title: 'Recipes',
-    to: '/herbs',
-  },
-  {
     id: 4,
     image: bodyIcon,
     title: 'My Dosha',
-    to: '/herbs',
-  },
-  {
-    id: 6,
-    image: pillIcon,
-    title: 'Supplements',
     to: '/herbs',
   },
 ];

@@ -11,8 +11,6 @@
     "babel-preset-react-app": "^3.1.1",
     "babel-runtime": "6.26.0",
     "bootstrap": "^4.3.1",
-    "bulma": "^0.7.1",
-    "bulma-extensions": "^2.2.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
     "classnames": "^2.2.6",
