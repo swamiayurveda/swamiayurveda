@@ -331,7 +331,7 @@ export default class App extends Component {
     return (
       <div>
         <section>
-          <Card className="p-4">
+          <Card className="p-4 text-center">
             <Stepper
               activeStep={currentStep}
               steps={[

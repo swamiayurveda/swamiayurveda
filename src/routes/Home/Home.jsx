@@ -195,7 +195,7 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div style={{ marginTop: navbarHeight }}>
+        <div className="page-container">
           <Intro />
           <Overview />
           <Pitch />

@@ -23,6 +23,7 @@
 }
 
 .page-container {
+  animation: fadein .6s;
 }
 
 .page-header {
@@ -46,4 +47,10 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
