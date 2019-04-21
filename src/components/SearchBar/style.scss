@@ -5,9 +5,12 @@ $dark: hsl(0, 0%, 21%);
   position: absolute;
   height: 50px;
   top: 0;
+  border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
   width: 100%;
   background: white;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 
   &.sticky {
     position: fixed;
@@ -16,6 +19,7 @@ $dark: hsl(0, 0%, 21%);
     background: white;
     width: calc(100% - #{$filter-sidebar-width});
     box-shadow: 7px -1px 7px $dark;
+    border-bottom: 0px;
   }
 
   .search-control {

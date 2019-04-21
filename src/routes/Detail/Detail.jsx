@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Container, Col, Row, Image, Nav } from 'react-bootstrap';
+
 import plantIcon from '../../images/plant.svg';
 import bodyIcon from '../../images/body.svg';
 import mortarIcon from '../../images/mortar.svg';
@@ -9,29 +11,29 @@ import DescriptionItem from 'components/DescriptionItem';
 import './style.scss';
 
 const Overview = () => (
-  <div className="columns is-multiline">
-    <div className="column is-one-third-desktop is-half-tablet is-half-mobile">
+  <Row>
+    <Col>
       <DescriptionItem
         title="Dosha"
         description="100,000"
         iconSrc={bodyIcon}
       />
-    </div>
-    <div className="column is-one-third-desktop is-half-tablet">
+    </Col>
+    <Col>
       <DescriptionItem
         title="Plant"
         description="28/35"
         iconSrc={plantIcon}
       />
-    </div>
-    <div className="column is-one-third-desktop is-half-tablet">
+    </Col>
+    <Col>
       <DescriptionItem
         title="Benefits"
         description="100,000"
         iconSrc={mortarIcon}
       />
-    </div>
-  </div>
+    </Col>
+  </Row>
 );
 
 const Detail = (props) => {
@@ -39,50 +41,50 @@ const Detail = (props) => {
 
   return (
     <div className="car-detail-container">
-      <div className="car-banner level m-b-none">
-        <div className="level-left">
-          <span className="is-size-5">
+      <Row className="car-banner" noGutters>
+        <Col>
+          <h5>
             <strong>{year}</strong>&nbsp;<span className="car-title">{`${make} ${model}`}</span>
-          </span>
-        </div>
-        <div className="level-right">
-          <div>
-            <p className="is-size-6">
-              ${price}
-            </p>
-            <p className="is-size-7 has-text-grey">
-              {miles} miles
-            </p>
-          </div>
-        </div>
-      </div>
+          </h5>
+        </Col>
+        <Col className="text-right">
+          <h5>${price}</h5>
+          <h6>{miles} miles</h6>
+        </Col>
+      </Row>
 
-      <div className="columns">
-        <div className="column is-three-fifths-desktop">
-          <figure className="detail-image image is-square">
-            <img src={imageURL} alt="car-sample" />
-          </figure>
-        </div>
-        <div className="column is-two-fifths-desktop">
-          <div className="tabs is-centered">
-            <ul>
-              <li className="is-active"><a>Overview</a></li>
-              <li><a>Pricing</a></li>
-              <li><a>Features</a></li>
-            </ul>
-          </div>
+      <Row noGutters>
+        <Col lg={4}>
+          <Image src={imageURL} alt="car-sample" fluid/>
+        </Col>
+        <Col lg={6}>
+          <Nav variant="tabs" defaultActiveKey="/home" fill>
+            <Nav.Item>
+              <Nav.Link>Overview</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link>Pricing</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link>Features</Nav.Link>
+            </Nav.Item>
+          </Nav>
           <Overview />
-        </div>
-      </div>
-      <div className="column is-full">
-        <div className="title is-size-3">Description</div>
-      </div>
-      <div className="column is-full">
-        <div className="title is-size-3">Recommendations</div>
-        <a rel="noopener noreferrer" href="https://www.amazon.com/Organic-Ashwagandha-Root-Powder-Resealable/dp/B01D9OS7SK/ref=as_li_ss_il?s=home-garden&ie=UTF8&qid=1538894325&sr=1-6&keywords=ashwagandha&refinements=p_72:1248915011&th=1&linkCode=li2&tag=ayurveda009-20&linkId=aba8cdebb072436f6ca45e91a29a6099&language=en_US" target="_blank">
-          <img alt="produt" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D9OS7SK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ayurveda009-20&language=en_US" />
-        </a>
-      </div>
+        </Col>
+      </Row>
+      <Row noGutters>
+        <Col>
+          <h3>Description</h3>
+        </Col>
+      </Row>
+      <Row noGutters>
+        <Col>
+          <h3>Recommendations</h3>
+          <a rel="noopener noreferrer" href="https://www.amazon.com/Organic-Ashwagandha-Root-Powder-Resealable/dp/B01D9OS7SK/ref=as_li_ss_il?s=home-garden&ie=UTF8&qid=1538894325&sr=1-6&keywords=ashwagandha&refinements=p_72:1248915011&th=1&linkCode=li2&tag=ayurveda009-20&linkId=aba8cdebb072436f6ca45e91a29a6099&language=en_US" target="_blank">
+            <img alt="produt" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D9OS7SK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ayurveda009-20&language=en_US" />
+          </a>
+        </Col>
+      </Row>
     </div>
   );
 };
