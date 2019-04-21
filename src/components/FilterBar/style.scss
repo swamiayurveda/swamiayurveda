@@ -6,12 +6,15 @@ $navbar-background-color: white;
 $grey-lighter: hsl(0, 0%, 86%);
 
 .filter-sidebar-wrapper {
+  background: #f9f8f8;
   text-align: left;
   width: $filter-sidebar-width;
   height: 100vh;
   position: sticky;
-  top: $navbar-height;
+  // top: $navbar-height;
+  top: 0;
   overflow: hidden;
+  border-top: 1px solid $grey-lighter;
   border-right: 1px solid $grey-lighter;
 }
 

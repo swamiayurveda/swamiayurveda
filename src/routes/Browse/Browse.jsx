@@ -48,9 +48,9 @@ class Browse extends React.Component {
 
   render() {
     return (
-      <div className="d-flex" ref={ref => { this.container = ref }}>
+      <div className="browse-container d-flex" ref={ref => { this.container = ref }}>
         <FilterBar />
-        <div className="browse-container">
+        <div className="browse-inner-container">
           <SearchBar ref={ref => { this.searchBar = ref }} />
           <Row className="catalog-row" noGutters>
             {cards.map(card => (

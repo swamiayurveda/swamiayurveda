@@ -12,7 +12,7 @@ const ItemCard = (props) => {
   const { title, imageURL } = props;
 
   return (
-    <Card className="item-card hvr-shrink hvr-underline">
+    <Card className="item-card hvr-underline">
       <div className="favorite"></div>
       <Card.Img class="item-card_image" variant="top" src={imageURL} />
       <Card.Body>
