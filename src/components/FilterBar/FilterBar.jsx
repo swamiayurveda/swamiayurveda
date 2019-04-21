@@ -65,7 +65,9 @@ class FilterBar extends React.Component {
           </Col>
         </Row>
         <div className="toggle-button" onClick={toggleSidebar}>
-          {closed ? '>' : '<'}
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
         </div>
       </div>
     );

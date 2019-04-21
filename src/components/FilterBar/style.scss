@@ -20,6 +20,7 @@ $grey-lighter: hsl(0, 0%, 86%);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
