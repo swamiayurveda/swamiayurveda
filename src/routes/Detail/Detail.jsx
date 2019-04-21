@@ -11,7 +11,7 @@ import DescriptionItem from 'components/DescriptionItem';
 import './style.scss';
 
 const Overview = () => (
-  <Row>
+  <Row noGutters>
     <Col>
       <DescriptionItem
         title="Dosha"
@@ -54,10 +54,10 @@ const Detail = (props) => {
       </Row>
 
       <Row noGutters>
-        <Col lg={4}>
+        <Col lg={5}>
           <Image src={imageURL} alt="car-sample" fluid/>
         </Col>
-        <Col lg={6}>
+        <Col lg={7}>
           <Nav variant="tabs" defaultActiveKey="/home" fill>
             <Nav.Item>
               <Nav.Link>Overview</Nav.Link>
@@ -72,19 +72,21 @@ const Detail = (props) => {
           <Overview />
         </Col>
       </Row>
-      <Row noGutters>
-        <Col>
-          <h3>Description</h3>
-        </Col>
-      </Row>
-      <Row noGutters>
-        <Col>
-          <h3>Recommendations</h3>
-          <a rel="noopener noreferrer" href="https://www.amazon.com/Organic-Ashwagandha-Root-Powder-Resealable/dp/B01D9OS7SK/ref=as_li_ss_il?s=home-garden&ie=UTF8&qid=1538894325&sr=1-6&keywords=ashwagandha&refinements=p_72:1248915011&th=1&linkCode=li2&tag=ayurveda009-20&linkId=aba8cdebb072436f6ca45e91a29a6099&language=en_US" target="_blank">
-            <img alt="produt" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D9OS7SK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ayurveda009-20&language=en_US" />
-          </a>
-        </Col>
-      </Row>
+      <Container className="mt-4">
+        <Row noGutters>
+          <Col>
+            <h3>Description</h3>
+          </Col>
+        </Row>
+        <Row noGutters>
+          <Col>
+            <h3>Recommendations</h3>
+            <a rel="noopener noreferrer" href="https://www.amazon.com/Organic-Ashwagandha-Root-Powder-Resealable/dp/B01D9OS7SK/ref=as_li_ss_il?s=home-garden&ie=UTF8&qid=1538894325&sr=1-6&keywords=ashwagandha&refinements=p_72:1248915011&th=1&linkCode=li2&tag=ayurveda009-20&linkId=aba8cdebb072436f6ca45e91a29a6099&language=en_US" target="_blank">
+              <img alt="produt" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D9OS7SK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ayurveda009-20&language=en_US" />
+            </a>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
