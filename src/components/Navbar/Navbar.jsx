@@ -5,10 +5,12 @@ import {
   Navbar,
   Nav,
   Container,
+  Dropdown,
 } from 'react-bootstrap';
 
 import { setNavbarToggler } from './util';
 import navItems from '../../data';
+import bodyIcon from '../../images/body.svg';
 import image from '../../images/icon-tertiary.png';
 
 import './style.scss';
@@ -23,23 +25,44 @@ class Navbarr extends React.Component {
       <Navbar bg="white" expand="lg">
         <Container className="mt-3">
           <Navbar.Brand className="navbar-item" as={Link} to="/">
-            {/* <Link className="navbar-item" to="/"> */}
-              <img className="navbar-logo" src={image} alt="logo" />
-              <span className="title ml-3">Swami Ayurveda</span>
-            {/* </Link> */}
+            <img className="navbar-logo" src={image} alt="logo" />
+            <span className="title ml-3">Swami Ayurveda</span>
           </Navbar.Brand>
           <Navbar.Toggle className="rounded-pill" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
+            <Nav>
               {navItems.map(item => (
                 <Nav.Item key={item.to}>
                   <Link className="nav-link" to={item.to}>
-                    <img className="mr-2" style={{ height: 20 }} src={item.image} alt="logo" />
+                    {/* <img className="mr-2" style={{ height: 20 }} src={item.image} alt="logo" /> */}
                     <span>{item.title}</span>
                   </Link>
                 </Nav.Item>
               ))}
+              <Dropdown className="nav-avatar-dropdown">
+                <Dropdown.Toggle class="nav-avatar-toggle" as="div">
+                  <Nav.Item className="navbar-avatar">
+                    <i class="far fa-user text-success"></i>
+                  </Nav.Item>
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="nav-avatar-menu" alignRight>
+                  <div className="nav-avatar-container mb-3">
+                    <div className="nav-avatar-item">Pauras Swami</div>
+                    <div className="nav-avatar-item">pauras53@yahoo.com</div>
+                  </div>
+                  <Dropdown.Item href="">
+                    <i class="fas fa-cog mr-2" />
+                    My Profile
+                  </Dropdown.Item>
+                  <Dropdown.Item href="">
+                    <i class="fas fa-sign-out-alt mr-2" />
+                    Logout
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </Nav>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>
