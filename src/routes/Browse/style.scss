@@ -2,11 +2,11 @@
 
 $filter-sidebar-width: 300px;
 
-.car-browse-container {
+.browse-container {
   position: relative;
   width: calc(100% - #{$filter-sidebar-width});
   background: white;
-  padding: 10px;
+  // padding: 10px;
 
   .catalog-row {
     margin-top: 80px;

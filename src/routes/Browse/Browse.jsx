@@ -33,13 +33,11 @@ const dummies = [
 
 const cards = [...dummies];
 
-const navbarHeight = 52;
-
 class Browse extends React.Component {
   componentDidMount() {
     window.onscroll = () => {
       if (this.container) {
-        if (window.pageYOffset > (this.container.offsetTop - navbarHeight)) {
+        if (window.pageYOffset > (this.container.offsetTop)) {
           this.searchBar.container.classList.add("sticky")
         } else {
           this.searchBar.container.classList.remove("sticky");
@@ -52,7 +50,7 @@ class Browse extends React.Component {
     return (
       <div className="d-flex" ref={ref => { this.container = ref }}>
         <FilterBar />
-        <div className="car-browse-container">
+        <div className="browse-container">
           <SearchBar ref={ref => { this.searchBar = ref }} />
           <Row className="catalog-row" noGutters>
             {cards.map(card => (
