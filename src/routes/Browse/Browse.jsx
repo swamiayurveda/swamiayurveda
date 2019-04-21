@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import cx from 'classnames';
 import { Container, Col, Row, Card } from 'react-bootstrap';
 
 import ItemCard from 'components/ItemCard';
@@ -34,6 +35,16 @@ const dummies = [
 const cards = [...dummies];
 
 class Browse extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      sidebarClosed: false,
+    };
+  }
+
+  toggleSidebar = () => this.setState(prevProps => ({ sidebarClosed: !prevProps.sidebarClosed }))
+
   componentDidMount() {
     window.onscroll = () => {
       if (this.container) {
@@ -47,10 +58,12 @@ class Browse extends React.Component {
   }
 
   render() {
+    const { sidebarClosed } = this.state;
+
     return (
       <div className="page-container browse-container d-flex" ref={ref => { this.container = ref }}>
-        <FilterBar />
-        <div className="browse-inner-container">
+        <FilterBar closed={sidebarClosed} toggleSidebar={this.toggleSidebar} />
+        <div className={cx('browse-inner-container', { 'sidebard-closed': sidebarClosed })}>
           <SearchBar ref={ref => { this.searchBar = ref }} />
           <Row className="catalog-row" noGutters>
             {cards.map(card => (

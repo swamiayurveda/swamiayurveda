@@ -10,9 +10,19 @@ $filter-sidebar-width: 300px;
   position: relative;
   width: calc(100% - #{$filter-sidebar-width});
   background: white;
-  // padding: 10px;
 
   .catalog-row {
     margin-top: 80px;
+  }
+
+  &.sidebard-closed {
+    width: unset;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  .browse-inner-container {
+    // width: unset;
   }
 }

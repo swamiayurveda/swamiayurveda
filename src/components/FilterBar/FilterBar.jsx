@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { Card, Row, Col, ListGroup } from 'react-bootstrap';
 
 import './style.scss';
@@ -14,11 +15,11 @@ class FilterBar extends React.Component {
   handleMilesChange = e => this.setState({ maxMiles: e.target.value });
 
   render() {
-    // const { id, make, model, year, miles, price } = this.props;
     const { maxPrice, maxMiles } = this.state;
+    const { closed, toggleSidebar } = this.props;
 
     return (
-      <div className="filter-sidebar-wrapper p-md margined-rows">
+      <div className={cx('filter-sidebar-wrapper', 'p-md', 'margined-rows', { close: closed })}>
         <Row>
           <Col>
             <Card>
@@ -63,6 +64,9 @@ class FilterBar extends React.Component {
             </Card>
           </Col>
         </Row>
+        <div className="toggle-button" onClick={toggleSidebar}>
+          {closed ? '>' : '<'}
+        </div>
       </div>
     );
   }

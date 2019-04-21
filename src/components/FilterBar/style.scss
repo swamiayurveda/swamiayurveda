@@ -11,11 +11,32 @@ $grey-lighter: hsl(0, 0%, 86%);
   width: $filter-sidebar-width;
   height: 100vh;
   position: sticky;
-  // top: $navbar-height;
   top: 0;
   overflow: hidden;
   border-top: 1px solid $grey-lighter;
   border-right: 1px solid $grey-lighter;
+
+  .toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 16px;
+    cursor: pointer;
+    font-weight: 900;
+
+    &:hover {
+      background: #EFEBE9;
+    }
+  }
+
+  &.close {
+    margin-left: -16px;
+    width: 0;
+  }
 }
 
 .filter-sidebar-inner-wrapper {
@@ -25,4 +46,10 @@ $grey-lighter: hsl(0, 0%, 86%);
   // top: 0px;
   // background: #000;
   // min-height: 100vh;
+}
+
+@media (max-width: 991.98px) {
+  .filter-sidebar-wrapper {
+    // width: 0px;
+  }
 }
