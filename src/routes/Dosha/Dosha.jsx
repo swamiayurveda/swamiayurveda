@@ -30,23 +30,34 @@ const Dosha = () => {
       </Row>
       <Row className="pt-5">
         <Col className="mt-3" lg={6}>
-          <Card border="success">
-            <Card.Body>
-              <Card.Title>Attributes</Card.Title>
-              <Form.Group>
-                <Form.Label>Vata</Form.Label>
-                <ProgressBar variant="success" now={30} />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Kapha</Form.Label>
-                <ProgressBar variant="warning" now={50} />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Pitta</Form.Label>
-                <ProgressBar variant="danger" now={20} />
-              </Form.Group>
-            </Card.Body>
-          </Card>
+          <Row>
+            <Col lg={12}>
+              <Card border="success">
+                <Card.Body>
+                  <Card.Title>Attributes</Card.Title>
+                  <Form.Group>
+                    <Form.Label>Vata</Form.Label>
+                    <ProgressBar variant="success" now={30} />
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>Kapha</Form.Label>
+                    <ProgressBar variant="warning" now={50} />
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>Pitta</Form.Label>
+                    <ProgressBar variant="danger" now={20} />
+                  </Form.Group>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={12} className="mt-3">
+              <Card border="success">
+                <Card.Body>
+                  <Card.Title>Characteristics</Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Col>
         <Col className="mt-3" lg={6}>
           <Card border="success">
