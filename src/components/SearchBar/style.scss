@@ -33,3 +33,11 @@ $dark: hsl(0, 0%, 21%);
     }
   }
 }
+
+@media (max-width: 991.98px) {
+  .search-bar {
+    &.sticky {
+      width: calc(100% - 16px);
+    }
+  }
+}
