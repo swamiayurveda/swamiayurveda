@@ -10,7 +10,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Stepper from 'react-stepper-horizontal';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
+
 import 'react-day-picker/lib/style.css';
+import './style.scss';
 
 // const HOST = PRODUCTION ? '/' : 'http://localhost:3000/'
 
@@ -47,7 +49,6 @@ export default class App extends Component {
 
   handleNextStep() {
     const { currentStep } = this.state
-    console.log('handleSetAppointmentDate', currentStep);
     return (currentStep < 3) ? this.setState({ currentStep: currentStep + 1}) : null
   }
 
@@ -142,13 +143,13 @@ export default class App extends Component {
 
   renderConfirmationString() {
     return this.state.confirmationTextVisible && (
-      <h5 className="text-secondary mt-5">
-        { <span>
+      <div className="appt-confirm-message text-secondary mt-5">
+        {<span>
           Scheduling a <span className="text-info"> 1 hour </span>
-          appointment {this.state.appointmentDate && <span> on <span className="text-info">{moment(this.state.appointmentDate).format('dddd[,] MMMM Do')}</span>
+          appointment {this.state.appointmentDate && <span> on <span className="text-info">{moment(this.state.appointmentDate).format('dddd[,] MMMM Do 2019')}</span>
         </span>} {Number.isInteger(this.state.appointmentSlot) && <span>at <span className="text-info">{moment().hour(9).minute(0).add(this.state.appointmentSlot, 'hours').format('h:mm a')}</span></span>}
         </span>}
-      </h5>
+      </div>
     )
   }
 
