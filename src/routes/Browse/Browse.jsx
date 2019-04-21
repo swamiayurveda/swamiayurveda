@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { Container, Col, Row, Card } from 'react-bootstrap';
 
 import ItemCard from 'components/ItemCard';
 import FilterBar from 'components/FilterBar';
@@ -49,19 +50,25 @@ class Browse extends React.Component {
 
   render() {
     return (
-      <div className="is-flex" ref={ref => { this.container = ref }}>
+      <div className="d-flex" ref={ref => { this.container = ref }}>
         <FilterBar />
         <div className="car-browse-container">
           <SearchBar ref={ref => { this.searchBar = ref }} />
-          <div className="columns car-columns is-multiline">
+          <Row className="catalog-row" noGutters>
             {cards.map(card => (
-              <div key={`card-${card.id}`} className="column is-one-fifth-desktop is-one-half-tablet is-half-mobile">
-                <Link to={`/remedy/${card.id}`}>
-                  <ItemCard {...card} />
-                </Link>
-              </div>
+              <Col
+                className="item-col"
+                as={Link}
+                key={`card-${card.id}`}
+                to={`/remedy/${card.id}`}
+                lg={4}
+                md={6}
+                sm={12}
+              >
+                <ItemCard {...card} />
+              </Col>
             ))}
-          </div>
+          </Row>
         </div>
       </div>
     );
