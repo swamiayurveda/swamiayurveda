@@ -5,6 +5,11 @@
 }
 
 .navbar.navbar-light {
+  .navbar-item, .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
   @media (max-width: 991.98px) {
     .navbar-nav {
       border: 1px solid #C8E6C9;

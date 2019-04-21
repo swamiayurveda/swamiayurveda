@@ -35,7 +35,7 @@ class Navbarr extends React.Component {
                 <Nav.Item>
                   <Link className="nav-link" to={item.to}>
                     <img className="mr-2" style={{ height: 20 }} src={item.image} alt="logo" />
-                    {item.title}
+                    <span>{item.title}</span>
                   </Link>
                 </Nav.Item>
               ))}
