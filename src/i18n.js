@@ -20,4 +20,5 @@ export default {
   about_us: 'About Us',
   book_online: 'Book Online',
   book_appointment: 'Book Appointment',
+  my_dosha: 'My Dosha',
 };

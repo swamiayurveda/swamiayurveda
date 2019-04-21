@@ -22,7 +22,7 @@ export default [
     id: 4,
     image: bodyIcon,
     title: 'My Dosha',
-    to: '/herbs',
+    to: '/dosha',
   },
   {
     id: 4,

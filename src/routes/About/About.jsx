@@ -6,7 +6,7 @@ import AppoinmentScheduler from '../../components/AppoinmentScheduler';
 
 const About = () => {
   return (
-    <Container>
+    <Container className="page-container">
       <Row className="pt-5">
         <Col>
           <h1 className="page-header">

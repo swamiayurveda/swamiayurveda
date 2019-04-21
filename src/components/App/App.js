@@ -11,6 +11,7 @@ import Terms from 'routes/Terms';
 import PrivacyPolicy from 'routes/PrivacyPolicy';
 import About from 'routes/About';
 import BookOnline from 'routes/BookOnline';
+import Dosha from 'routes/Dosha';
 
 import './App.scss';
 
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path="/browse" component={Browse} />
             <Route path="/remedy/:name" component={Detail} />
             <Route path="/book" component={BookOnline} />
+            <Route path="/dosha" component={Dosha} />
             <Route path="/about" component={About} />
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={PrivacyPolicy} />
