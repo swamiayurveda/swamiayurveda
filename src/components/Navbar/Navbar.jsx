@@ -22,17 +22,17 @@ class Navbarr extends React.Component {
     return (
       <Navbar bg="white" expand="lg">
         <Container className="mt-3">
-          <Navbar.Brand href="/">
-            <Link className="navbar-item" to="/">
+          <Navbar.Brand className="navbar-item" as={Link} to="/">
+            {/* <Link className="navbar-item" to="/"> */}
               <img className="navbar-logo" src={image} alt="logo" />
-              <span className="title is-5 m-l-md">Swami Ayurveda</span>
-            </Link>
+              <span className="title ml-3">Swami Ayurveda</span>
+            {/* </Link> */}
           </Navbar.Brand>
           <Navbar.Toggle className="rounded-pill" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               {navItems.map(item => (
-                <Nav.Item>
+                <Nav.Item key={item.to}>
                   <Link className="nav-link" to={item.to}>
                     <img className="mr-2" style={{ height: 20 }} src={item.image} alt="logo" />
                     <span>{item.title}</span>

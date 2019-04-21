@@ -16,7 +16,7 @@ const ItemCard = (props) => {
           <strong>{year}</strong>&nbsp;<span className="car-title">{`${make} ${model}`}</span>
         </p>
       </header> */}
-      <div class="favorite"></div>
+      <div className="favorite"></div>
       <div className="card-image">
         <figure className="image is-square">
           <img src={imageURL} alt="Plaimage" />
@@ -31,17 +31,17 @@ const ItemCard = (props) => {
                 <span className="is-size-6">${price}</span>
               </div> */}
             </div>
-            <div class="detail-list">
+            <div className="detail-list">
               <div className="detail-item">
-                <img className="item-icon" src={plantIcon} />
+                <img alt="plant" className="item-icon" src={plantIcon} />
                 <span className="item-text">Light, Punget</span>
               </div>
               <div className="detail-item">
-                <img className="item-icon" src={bodyIcon} />
+                <img alt="body" className="item-icon" src={bodyIcon} />
                 <span className="item-text">Vata, Pita, Kapha</span>
               </div>
               <div className="detail-item">
-                <img className="item-icon" src={mortarIcon} />
+                <img alt="mortar" className="item-icon" src={mortarIcon} />
                 <span className="item-text">Take with warm water with warm water</span>
               </div>
             </div>

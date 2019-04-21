@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Row, Card, ProgressBar, Form, Image } from 'react-bootstrap';
+import { Container, Col, Row, Card, ProgressBar, Form } from 'react-bootstrap';
 
 import i18n from '../../i18n';
 

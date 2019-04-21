@@ -79,8 +79,8 @@ const Detail = (props) => {
       </div>
       <div className="column is-full">
         <div className="title is-size-3">Recommendations</div>
-        <a href="https://www.amazon.com/Organic-Ashwagandha-Root-Powder-Resealable/dp/B01D9OS7SK/ref=as_li_ss_il?s=home-garden&ie=UTF8&qid=1538894325&sr=1-6&keywords=ashwagandha&refinements=p_72:1248915011&th=1&linkCode=li2&tag=ayurveda009-20&linkId=aba8cdebb072436f6ca45e91a29a6099&language=en_US" target="_blank">
-          <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D9OS7SK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ayurveda009-20&language=en_US" />
+        <a rel="noopener noreferrer" href="https://www.amazon.com/Organic-Ashwagandha-Root-Powder-Resealable/dp/B01D9OS7SK/ref=as_li_ss_il?s=home-garden&ie=UTF8&qid=1538894325&sr=1-6&keywords=ashwagandha&refinements=p_72:1248915011&th=1&linkCode=li2&tag=ayurveda009-20&linkId=aba8cdebb072436f6ca45e91a29a6099&language=en_US" target="_blank">
+          <img alt="produt" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D9OS7SK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ayurveda009-20&language=en_US" />
         </a>
       </div>
     </div>

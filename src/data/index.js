@@ -1,9 +1,9 @@
 import booksIcon from '../images/books.svg';
-import plantIcon from '../images/plant.svg';
-import recipeIcon from '../images/recipe.svg';
 import mortarIcon from '../images/mortar.svg';
 import bodyIcon from '../images/body.svg';
-import pillIcon from '../images/pill.svg';
+// import plantIcon from '../images/plant.svg';
+// import recipeIcon from '../images/recipe.svg';
+// import pillIcon from '../images/pill.svg';
 
 export default [
   {
@@ -14,7 +14,7 @@ export default [
   },
   {
     id: 2,
-    image: plantIcon,
+    image: booksIcon,
     title: 'Book Online',
     to: '/book',
   },

@@ -13,14 +13,9 @@ import ether from '../../images/doshas/ether.svg';
 import water from '../../images/doshas/water.svg';
 import i18n from '../../i18n';
 
-import Browse from 'routes/Browse';
-
 import SubscribeForm from 'components/SubscribeForm';
 
 import './style.scss';
-
-const navbarHeight = 52;
-
 
 const Intro = () => {
   return(
@@ -31,7 +26,7 @@ const Intro = () => {
             <div>{i18n.header}</div>
             <div>{i18n.header2}</div>
           </h1>
-          <div class="page-subheader mt-4">
+          <div className="page-subheader mt-4">
             <div>{i18n.subheader}</div>
             <div>{i18n.subheader2}</div>
           </div>
@@ -78,8 +73,8 @@ const Overview = () => {
         <Col>
         </Col>
         <Col>
-          <h3 class="text-left mb-5">{i18n.what_is_ayurveda}</h3>
-          <p class="text-left">{i18n.ayurveda_desc}</p>
+          <h3 className="text-left mb-5">{i18n.what_is_ayurveda}</h3>
+          <p className="text-left">{i18n.ayurveda_desc}</p>
         </Col>
       </Row>
     </Container>
@@ -91,7 +86,7 @@ const PreFooter = () => {
     <Container className="pre-footer-section">
       <Row className="my-5">
         <Col className="my-5">
-          <div class="page-subheader mt-4">
+          <div className="page-subheader mt-4">
             {i18n.sign_up_subscribe}
           </div>
           <SubscribeForm />
@@ -108,15 +103,15 @@ const Pitch = () => {
         <Row>
           <Col className="mb-4 text-light" xs={12}>
             <h1>{i18n.doshas}</h1>
-            <p class="description">{i18n.dosha_desc}</p>
-            <p class="description">{i18n.dosha_desc2}</p>
+            <p className="description">{i18n.dosha_desc}</p>
+            <p className="description">{i18n.dosha_desc2}</p>
           </Col>
         </Row>
         <Row className="justify-content-center">
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card className="text-center">
               <Card.Body>
-                <div class="text-center mb-4">
+                <div className="text-center mb-4">
                   <Row noGutters>
                     <Col>
                       <small>{i18n.ether}</small>
@@ -131,7 +126,7 @@ const Pitch = () => {
                 <Card.Title>
                   <h2>Vata</h2>
                 </Card.Title>
-                <Card.Text class="mt-4">
+                <Card.Text className="mt-4">
                   With supporting text below as a natural lead-in to additional content.
                 </Card.Text>
               </Card.Body>
@@ -140,7 +135,7 @@ const Pitch = () => {
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card className="text-center">
               <Card.Body>
-                <div class="text-center mb-4">
+                <div className="text-center mb-4">
                   <Row noGutters>
                     <Col>
                       <small>{i18n.earth}</small>
@@ -155,7 +150,7 @@ const Pitch = () => {
                 <Card.Title>
                   <h2>Kapha</h2>
                 </Card.Title>
-                <Card.Text class="mt-4">
+                <Card.Text className="mt-4">
                   With supporting text below as a natural lead-in to additional content.
                 </Card.Text>
               </Card.Body>
@@ -164,7 +159,7 @@ const Pitch = () => {
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card className="text-center">
               <Card.Body>
-                <div class="text-center mb-4">
+                <div className="text-center mb-4">
                   <Row noGutters>
                     <Col>
                       <small>{i18n.earth}</small>
@@ -179,7 +174,7 @@ const Pitch = () => {
                 <Card.Title>
                   <h2>Pitta</h2>
                 </Card.Title>
-                <Card.Text class="mt-4">
+                <Card.Text className="mt-4">
                   With supporting text below as a natural lead-in to additional content.
                 </Card.Text>
               </Card.Body>

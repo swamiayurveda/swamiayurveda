@@ -25,23 +25,23 @@ const Footer = () => {
       </Row>
       <Row className="align-items-center justify-content-center  mb-3">
         <Col lg={4}>
-          <ul class="footer-list">
-            <li><a class="footer-list-item" href="/about">About Us</a></li>
-            <li><a class="footer-list-item" href="mailto:support@bloom.co">Contact Us</a></li>
+          <ul className="footer-list">
+            <li><a className="footer-list-item" href="/about">About Us</a></li>
+            <li><a className="footer-list-item" href="mailto:support@bloom.co">Contact Us</a></li>
           </ul>
         </Col>
         <Col lg={4}>
           <div className="social-btn">
-            <div className="social-item"><a target="_blank" href={socialLinks.instagram}><i className="fab fa-instagram"></i></a></div>
-            <div className="social-item"><a target="_blank" href={socialLinks.facebook}><i className="fab fa-facebook-f"></i></a></div>
-            <div className="social-item"><a target="_blank" href={socialLinks.twitter}><i className="fab fa-twitter"></i></a></div>
-            <div className="social-item"><a target="_blank" href={socialLinks.pinterest}><i className="fab fa-pinterest-p"></i></a></div>
+            <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.instagram}><i className="fab fa-instagram"></i></a></div>
+            <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.facebook}><i className="fab fa-facebook-f"></i></a></div>
+            <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.twitter}><i className="fab fa-twitter"></i></a></div>
+            <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.pinterest}><i className="fab fa-pinterest-p"></i></a></div>
           </div>
         </Col>
         <Col lg={4}>
-          <ul class="footer-list">
-            <li><a class="footer-list-item" href="/legal/privacy">Privacy Policy</a></li>
-            <li><a class="footer-list-item" href="/legal/terms">Terms of Service</a></li>
+          <ul className="footer-list">
+            <li><a className="footer-list-item" href="/legal/privacy">Privacy Policy</a></li>
+            <li><a className="footer-list-item" href="/legal/terms">Terms of Service</a></li>
           </ul>
         </Col>
       </Row>

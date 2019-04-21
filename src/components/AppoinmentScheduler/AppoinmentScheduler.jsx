@@ -67,23 +67,35 @@ export default class App extends Component {
   }
 
   handleFetch(response) {
-    const { configs, appointments } = response
+    const { appointments } = response;
+    // const { configs } = response;
     const initSchedule = {}
     const today = moment().startOf('day')
     initSchedule[today.format('DD-MM-YYYY')] = true
     const schedule = !appointments.length ? initSchedule : appointments.reduce((currentSchedule, appointment) => {
       const { date, slot } = appointment
       const dateString = moment(date, 'DD-MM-YYYY').format('DD-MM-YYYY')
-      !currentSchedule[date] ? currentSchedule[dateString] = Array(8).fill(false) : null
-      Array.isArray(currentSchedule[dateString]) ?
-        currentSchedule[dateString][slot] = true : null
-      return currentSchedule
+
+      if (!currentSchedule[date]) {
+        Array(8).fill(false)
+      }
+
+      if (Array.isArray(currentSchedule[dateString])) {
+        currentSchedule[dateString][slot] = true
+      }
+
+      return currentSchedule;
     }, initSchedule)
 
     //Imperative x 100, but no regrets
     for (let day in schedule) {
       let slots = schedule[day]
-      slots.length ? (slots.every(slot => slot === true)) ? schedule[day] = true : null : null
+
+      if (slots.length) {
+        if (slots.every(slot => slot === true)) {
+          schedule[day] = true
+        }
+      }
     }
 
     this.setState({
@@ -98,13 +110,13 @@ export default class App extends Component {
   }
 
   handleSubmit() {
-    const appointment = {
-      date: moment(this.state.appointmentDate).format('DD-MM-YYYY'),
-      slot: this.state.appointmentSlot,
-      name: this.state.firstName + ' ' + this.state.lastName,
-      email: this.state.email,
-      phone: this.state.phone
-    }
+    // const appointment = {
+    //   date: moment(this.state.appointmentDate).format('DD-MM-YYYY'),
+    //   slot: this.state.appointmentSlot,
+    //   name: this.state.firstName + ' ' + this.state.lastName,
+    //   email: this.state.email,
+    //   phone: this.state.phone
+    // }
     // axios.post(HOST + 'api/appointments', appointment)
     // .then(response => this.setState({ confirmationSnackbarMessage: "Appointment succesfully added!", confirmationSnackbarOpen: true, processed: true }))
     // .catch(err => {
@@ -180,7 +192,7 @@ export default class App extends Component {
     this.setState({ smallScreen: window.innerWidth < 768 })
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     // async.series({
     //   configs(callback) {
     //     axios.get(HOST + 'api/config').then(res =>
@@ -322,11 +334,12 @@ export default class App extends Component {
           </Modal>
         </React.Fragment>
       )
+      default: return(null)
     }
   }
 
   render() {
-    const { currentStep, loading, smallScreen, confirmationModalOpen, confirmationSnackbarOpen, ...data } = this.state
+    const { currentStep } = this.state
 
     return (
       <div>
