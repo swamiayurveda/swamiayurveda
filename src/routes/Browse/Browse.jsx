@@ -48,7 +48,7 @@ class Browse extends React.Component {
 
   render() {
     return (
-      <div className="browse-container d-flex" ref={ref => { this.container = ref }}>
+      <div className="page-container browse-container d-flex" ref={ref => { this.container = ref }}>
         <FilterBar />
         <div className="browse-inner-container">
           <SearchBar ref={ref => { this.searchBar = ref }} />

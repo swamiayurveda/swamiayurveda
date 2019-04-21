@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col, ListGroup } from 'react-bootstrap';
 
 import './style.scss';
 
@@ -23,18 +23,19 @@ class FilterBar extends React.Component {
           <Col>
             <Card>
               <Card.Body>
-                <Card.Title>Price</Card.Title>
+                <Card.Title>Conditions</Card.Title>
                 <Card.Text>
-                  <div>{maxPrice}k</div>
-                  <input
-                    className="slider is-fullwidth"
-                    value={maxPrice}
-                    onChange={this.handlePriceChange}
-                    step="10"
-                    min="10"
-                    max="100"
-                    type="range"
-                  />
+                <ListGroup variant="flush">
+                  <ListGroup.Item action href="#link1">
+                    Link 1
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link2">
+                    Link 2
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link2">
+                    Link 3
+                  </ListGroup.Item>
+                </ListGroup>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -44,18 +45,19 @@ class FilterBar extends React.Component {
           <Col>
             <Card>
               <Card.Body>
-                <Card.Title>Mileage</Card.Title>
+                <Card.Title>Conditions</Card.Title>
                 <Card.Text>
-                  <div>{maxMiles}k</div>
-                  <input
-                    className="slider is-fullwidth"
-                    value={maxMiles}
-                    onChange={this.handleMilesChange}
-                    step="10"
-                    min="10"
-                    max="120"
-                    type="range"
-                  />
+                <ListGroup variant="flush">
+                  <ListGroup.Item action href="#link1">
+                    Link 1
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link2">
+                    Link 2
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link2">
+                    Link 3
+                  </ListGroup.Item>
+                </ListGroup>
                 </Card.Text>
               </Card.Body>
             </Card>
