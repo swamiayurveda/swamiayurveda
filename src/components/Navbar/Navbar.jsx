@@ -30,7 +30,7 @@ class Navbarr extends React.Component {
           </Navbar.Brand>
           <Navbar.Toggle className="rounded-pill" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="ml-auto">
               {navItems.map(item => (
                 <Nav.Item>
                   <Link className="nav-link" to={item.to}>

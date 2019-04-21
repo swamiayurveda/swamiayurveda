@@ -333,11 +333,12 @@ export default class App extends Component {
         <section>
           <Card className="p-4 text-center">
             <Stepper
+              activeColor="#21a6b3"
               activeStep={currentStep}
               steps={[
-                { title: 'Choose Date' },
-                { title: 'Choose Time' },
-                { title: 'Fill Info' },
+                { title: 'Choose Date', onClick: () => this.setState({ currentStep: 0 }) },
+                { title: 'Choose Time', onClick: () => this.setState({ currentStep: 1 }) },
+                { title: 'Fill Info', onClick: () => this.setState({ currentStep: 2 }) },
               ]}
             />
             {this.renderConfirmationString()}
