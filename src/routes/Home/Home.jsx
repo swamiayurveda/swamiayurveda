@@ -31,7 +31,7 @@ const Intro = () => {
             <div>{i18n.header}</div>
             <div>{i18n.header2}</div>
           </h1>
-          <div class="header-desc mt-4">
+          <div class="page-subheader mt-4">
             <div>{i18n.subheader}</div>
             <div>{i18n.subheader2}</div>
           </div>
@@ -91,7 +91,7 @@ const PreFooter = () => {
     <Container className="pre-footer-section">
       <Row className="my-5">
         <Col className="my-5">
-          <div class="header-desc mt-4">
+          <div class="page-subheader mt-4">
             {i18n.sign_up_subscribe}
           </div>
           <SubscribeForm />

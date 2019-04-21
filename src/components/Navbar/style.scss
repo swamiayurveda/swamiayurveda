@@ -8,14 +8,18 @@
   @media (max-width: 991.98px) {
     .navbar-nav {
       border: 1px solid #C8E6C9;
-      border-radius: 3rem;
+      border-radius: 1rem;
       border-top-right-radius: 0;
       margin-top: 6px;
       overflow: hidden;
     }
 
     .nav-item {
-      border-bottom: 1px solid #C8E6C9;
+      padding-left: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #C8E6C9;
+      }
     }
   }
 
