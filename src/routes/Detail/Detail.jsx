@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Col, Row, Image, Nav } from 'react-bootstrap';
+import { Container, Col, Row, Image, Nav, Card } from 'react-bootstrap';
 
 import plantIcon from '../../images/plant.svg';
 import bodyIcon from '../../images/body.svg';
@@ -43,9 +43,7 @@ const Detail = (props) => {
     <div className="car-detail-container">
       <Row className="car-banner" noGutters>
         <Col>
-          <h5>
-            <strong>{year}</strong>&nbsp;<span className="car-title">{`${make} ${model}`}</span>
-          </h5>
+          <h5>Ashwagandha</h5>
         </Col>
         <Col className="text-right">
           <h5>${price}</h5>
@@ -72,18 +70,32 @@ const Detail = (props) => {
           <Overview />
         </Col>
       </Row>
-      <Container className="mt-4">
+      <Container className="margined-rows mt-4">
         <Row noGutters>
           <Col>
-            <h3>Description</h3>
+            <Card>
+              <Card.Body>
+                <Card.Title><h3>Description</h3></Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
         <Row noGutters>
           <Col>
-            <h3>Recommendations</h3>
-            <a rel="noopener noreferrer" href="https://www.amazon.com/Organic-Ashwagandha-Root-Powder-Resealable/dp/B01D9OS7SK/ref=as_li_ss_il?s=home-garden&ie=UTF8&qid=1538894325&sr=1-6&keywords=ashwagandha&refinements=p_72:1248915011&th=1&linkCode=li2&tag=ayurveda009-20&linkId=aba8cdebb072436f6ca45e91a29a6099&language=en_US" target="_blank">
-              <img alt="produt" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D9OS7SK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ayurveda009-20&language=en_US" />
-            </a>
+            <Card>
+              <Card.Body>
+                <Card.Title><h3>Recommendations</h3></Card.Title>
+                <Card.Text>
+                  <a rel="noopener noreferrer" href="https://www.amazon.com/Organic-Ashwagandha-Root-Powder-Resealable/dp/B01D9OS7SK/ref=as_li_ss_il?s=home-garden&ie=UTF8&qid=1538894325&sr=1-6&keywords=ashwagandha&refinements=p_72:1248915011&th=1&linkCode=li2&tag=ayurveda009-20&linkId=aba8cdebb072436f6ca45e91a29a6099&language=en_US" target="_blank">
+                    <img alt="produt" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D9OS7SK&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=ayurveda009-20&language=en_US" />
+                  </a>
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
       </Container>
