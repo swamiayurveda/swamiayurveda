@@ -50,6 +50,8 @@ const Intro = () => {
       <Row className="mt-3">
         <Col>
           <Button
+            as={Link}
+            to="/about"
             className="rounded-pill"
             variant="outline-secondary"
           >
