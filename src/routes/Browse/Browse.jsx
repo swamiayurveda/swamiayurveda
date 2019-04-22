@@ -72,7 +72,7 @@ class Browse extends React.Component {
                 as={Link}
                 key={`card-${card.id}`}
                 to={`/remedy/${card.id}`}
-                lg={4}
+                lg={3}
                 md={6}
                 sm={12}
               >
