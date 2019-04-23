@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Container, Col, Row } from 'react-bootstrap';
 
 import i18n from '../../i18n';
@@ -26,8 +27,8 @@ const Footer = () => {
       <Row className="align-items-center justify-content-center  mb-3">
         <Col lg={4}>
           <ul className="footer-list">
-            <li><a className="footer-list-item" href="/about">About Us</a></li>
-            <li><a className="footer-list-item" href="mailto:support@bloom.co">Contact Us</a></li>
+            <li><Link className="footer-list-item" to="/about">About Us</Link></li>
+            {/* <li><Link className="footer-list-item" to="mailto:support@bloom.co">Contact Us</Link></li> */}
           </ul>
         </Col>
         <Col lg={4}>
@@ -40,8 +41,8 @@ const Footer = () => {
         </Col>
         <Col lg={4}>
           <ul className="footer-list">
-            <li><a className="footer-list-item" href="/legal/privacy">Privacy Policy</a></li>
-            <li><a className="footer-list-item" href="/legal/terms">Terms of Service</a></li>
+            <li><Link className="footer-list-item" to="/terms">Privacy Policy</Link></li>
+            <li><Link className="footer-list-item" to="/privacy">Terms of Service</Link></li>
           </ul>
         </Col>
       </Row>
