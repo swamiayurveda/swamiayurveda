@@ -21,6 +21,8 @@ class Navbarr extends React.Component {
   }
 
   render() {
+    const isLoginAvailable = false;
+
     return (
       <Navbar className="app-navbar" bg="white" expand="lg">
         <Navbar.Brand className="navbar-item" as={Link} to="/">
@@ -38,28 +40,30 @@ class Navbarr extends React.Component {
                 </Link>
               </Nav.Item>
             ))}
-            <Dropdown className="nav-avatar-dropdown">
-              <Dropdown.Toggle class="nav-avatar-toggle" as="div">
-                <Nav.Item className="navbar-avatar">
-                  <i class="far fa-user text-success"></i>
-                </Nav.Item>
-              </Dropdown.Toggle>
+            {isLoginAvailable &&
+              <Dropdown className="nav-avatar-dropdown">
+                <Dropdown.Toggle class="nav-avatar-toggle" as="div">
+                  <Nav.Item className="navbar-avatar">
+                    <i class="far fa-user text-success"></i>
+                  </Nav.Item>
+                </Dropdown.Toggle>
 
-              <Dropdown.Menu className="nav-avatar-menu" alignRight>
-                <div className="nav-avatar-container mb-3">
-                  <div className="nav-avatar-item">Pauras Swami</div>
-                  <div className="nav-avatar-item">pauras53@yahoo.com</div>
-                </div>
-                <Dropdown.Item href="">
-                  <i class="fas fa-cog mr-2" />
-                  My Profile
-                </Dropdown.Item>
-                <Dropdown.Item href="">
-                  <i class="fas fa-sign-out-alt mr-2" />
-                  Logout
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+                <Dropdown.Menu className="nav-avatar-menu" alignRight>
+                  <div className="nav-avatar-container mb-3">
+                    <div className="nav-avatar-item">Pauras Swami</div>
+                    <div className="nav-avatar-item">pauras53@yahoo.com</div>
+                  </div>
+                  <Dropdown.Item href="">
+                    <i class="fas fa-cog mr-2" />
+                    My Profile
+                  </Dropdown.Item>
+                  <Dropdown.Item href="">
+                    <i class="fas fa-sign-out-alt mr-2" />
+                    Logout
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            }
           </Nav>
         </Navbar.Collapse>
       </Navbar>
