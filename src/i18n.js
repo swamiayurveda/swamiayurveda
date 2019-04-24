@@ -21,4 +21,5 @@ export default {
   book_online: 'Book Online',
   book_appointment: 'Book Appointment',
   my_dosha: 'My Dosha',
+  services: 'Services',
 };

@@ -13,6 +13,12 @@ export default [
   //   to: '/browse',
   // },
   {
+    id: 1,
+    image: booksIcon,
+    title: 'Services',
+    to: '/services',
+  },
+  {
     id: 2,
     image: booksIcon,
     title: 'Book Online',
