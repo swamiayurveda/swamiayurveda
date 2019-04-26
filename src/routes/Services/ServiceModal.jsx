@@ -4,9 +4,12 @@ import { withRouter } from 'react-router';
 
 
 import i18n from '../../i18n';
+import services from '../../data/services';
 import './style.scss';
 
-const ServiceModal = ({ history }) => {
+const ServiceModal = ({ history, match }) => {
+  const { params } = match;
+  const service = services[params.name];
   const onClose = () => history.push('/services');
 
   return (
@@ -19,16 +22,24 @@ const ServiceModal = ({ history }) => {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          {service.title}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-          ac consectetur ac, vestibulum at eros.
-        </p>
+        <h4>Overview</h4>
+        <p>{service.overview}</p>
+        <h4>Benfits</h4>
+        <ul>
+          {service.benefits.map(benefit => (
+            <li>{benefit}</li>
+          ))}
+        </ul>
+        <h4>Resources</h4>
+        <ul>
+          {service.resources.map(resource => (
+            <li><a href={resource.url}>{resource.name}</a></li>
+          ))}
+        </ul>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={onClose}>Close</Button>

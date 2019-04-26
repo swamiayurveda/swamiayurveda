@@ -9,6 +9,8 @@ import i18n from '../../i18n';
 import './style.scss';
 
 const Services = () => {
+  const serviceKeys = Object.keys(services);
+
   return (
     <Container className="page-container">
       <Row className="pt-5">
@@ -23,26 +25,30 @@ const Services = () => {
         </Col>
       </Row>
       <Row className="pt-5">
-        {services.map(service => (
-          <Col className="mt-3" lg={6}>
-            <Card className="service-card" border="success" as={Link} to="/services/abhyanga">
-              <Card.Body>
-                <Card.Title>{service.title}</Card.Title>
-                <Card.Text>
-                  {service.brief}
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                {service.rates.map((rate, idx) => (
-                  <React.Fragment>
-                    <span>{`${rate.time}: ${rate.cost}`}</span>
-                    {idx != service.rates.length - 1 && <b> | </b>}
-                  </React.Fragment>
-                ))}
-              </Card.Footer>
-            </Card>
-          </Col>
-        ))}
+        {serviceKeys.map(key => {
+          const service = services[key];
+
+          return (
+            <Col className="mt-3" lg={6}>
+              <Card className="service-card" border="success" as={Link} to={`/services/${key}`}>
+                <Card.Body>
+                  <Card.Title>{service.title}</Card.Title>
+                  <Card.Text>
+                    {service.brief}
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                  {service.rates.map((rate, idx) => (
+                    <React.Fragment>
+                      <span>{`${rate.time}: ${rate.cost}`}</span>
+                      {idx != service.rates.length - 1 && <b> | </b>}
+                    </React.Fragment>
+                  ))}
+                </Card.Footer>
+              </Card>
+            </Col>
+          );
+        })}
       </Row>
     </Container>
   );
