@@ -42,7 +42,6 @@ const ServiceModal = ({ history, match }) => {
         </ul>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={onClose}>Close</Button>
       </Modal.Footer>
     </Modal>
   );

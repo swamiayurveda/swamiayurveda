@@ -12,6 +12,7 @@
 .service-card {
   @include no-anchor-style;
   height: 244px;
+  transition: .2s ease-in-out;
 
   .card-footer{
     background: none;
