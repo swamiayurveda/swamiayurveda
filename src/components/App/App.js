@@ -11,6 +11,7 @@ import Terms from 'routes/Terms';
 import PrivacyPolicy from 'routes/PrivacyPolicy';
 import About from 'routes/About';
 import Services from 'routes/Services';
+import ServiceModal from 'routes/Services/ServiceModal';
 import BookOnline from 'routes/BookOnline';
 import Dosha from 'routes/Dosha';
 
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path="/browse" component={Browse} />
             <Route path="/remedy/:name" component={Detail} />
             <Route path="/services" component={Services} />
+            <Route path="/services/:name" component={ServiceModal} />
             <Route path="/book" component={BookOnline} />
             <Route path="/dosha" component={Dosha} />
             <Route path="/about" component={About} />

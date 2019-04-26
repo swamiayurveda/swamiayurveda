@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Container, Col, Row, Card } from 'react-bootstrap';
+
+import ServiceModal from './ServiceModal';
 
 import i18n from '../../i18n';
 import './style.scss';
@@ -20,7 +23,7 @@ const Services = () => {
       </Row>
       <Row className="pt-5">
         <Col className="mt-3" lg={6}>
-          <Card className="service-card" border="success">
+          <Card className="service-card" border="success" as={Link} to="/services/abhyanga">
             <Card.Body>
               <Card.Title>Abhyanga</Card.Title>
               <Card.Text>
@@ -33,7 +36,7 @@ const Services = () => {
           </Card>
         </Col>
         <Col className="mt-3" lg={6}>
-          <Card className="service-card" border="success">
+          <Card className="service-card" border="success" as={Link} to="/services/marma">
             <Card.Body>
               <Card.Title>Marma Balancing</Card.Title>
               <Card.Text>
@@ -46,7 +49,7 @@ const Services = () => {
           </Card>
         </Col>
         <Col className="mt-3" lg={6}>
-          <Card className="service-card" border="success">
+          <Card className="service-card" border="success" as={Link} to="/services/marma">
             <Card.Body>
               <Card.Title>Marma Balancing</Card.Title>
               <Card.Text>
