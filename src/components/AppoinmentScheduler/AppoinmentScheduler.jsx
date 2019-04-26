@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 // import axios from 'axios'
 // import async from 'async'
 import moment from 'moment';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card'
-import Form from 'react-bootstrap/Form'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import {
+  Modal,
+  Button,
+  Card,
+  Form,
+  Row,
+  Col,
+} from 'react-bootstrap';
 import Stepper from 'react-stepper-horizontal';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 
