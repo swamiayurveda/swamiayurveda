@@ -9,7 +9,7 @@ import {
 } from 'react-bootstrap';
 
 import { setNavbarToggler } from './util';
-import navItems from '../../data';
+import navItems from '../../routes';
 import bodyIcon from '../../images/body.svg';
 import image from '../../images/icon-tertiary.png';
 
