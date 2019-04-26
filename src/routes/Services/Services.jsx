@@ -4,6 +4,7 @@ import { Container, Col, Row, Card } from 'react-bootstrap';
 
 import ServiceModal from './ServiceModal';
 
+import services from '../../data/services';
 import i18n from '../../i18n';
 import './style.scss';
 
@@ -22,45 +23,26 @@ const Services = () => {
         </Col>
       </Row>
       <Row className="pt-5">
-        <Col className="mt-3" lg={6}>
-          <Card className="service-card" border="success" as={Link} to="/services/abhyanga">
-            <Card.Body>
-              <Card.Title>Abhyanga</Card.Title>
-              <Card.Text>
-                <div>Long, ﬂowing strokes with light to moderate pressure help restore the balance of vital energy, deeply nourish the body, and relax the nervous system, enhancing lymphatic and arterial circulation.</div>
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              50 minutes: <b>$95</b> | 80 minutes: <b>$155</b>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col className="mt-3" lg={6}>
-          <Card className="service-card" border="success" as={Link} to="/services/marma">
-            <Card.Body>
-              <Card.Title>Marma Balancing</Card.Title>
-              <Card.Text>
-                <div>This gentle treatment uses light pressure to focus on energy points, soothing and aligning the physical and subtle bodies.</div>
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              50 minutes: <b>$95</b> | 80 minutes: <b>$155</b>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col className="mt-3" lg={6}>
-          <Card className="service-card" border="success" as={Link} to="/services/marma">
-            <Card.Body>
-              <Card.Title>Marma Balancing</Card.Title>
-              <Card.Text>
-                <div>This gentle treatment uses light pressure to focus on energy points, soothing and aligning the physical and subtle bodies.</div>
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              50 minutes: <b>$95</b> | 80 minutes: <b>$155</b>
-            </Card.Footer>
-          </Card>
-        </Col>
+        {services.map(service => (
+          <Col className="mt-3" lg={6}>
+            <Card className="service-card" border="success" as={Link} to="/services/abhyanga">
+              <Card.Body>
+                <Card.Title>{service.title}</Card.Title>
+                <Card.Text>
+                  {service.brief}
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                {service.rates.map((rate, idx) => (
+                  <React.Fragment>
+                    <span>{`${rate.time}: ${rate.cost}`}</span>
+                    {idx != service.rates.length - 1 && <b> | </b>}
+                  </React.Fragment>
+                ))}
+              </Card.Footer>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
