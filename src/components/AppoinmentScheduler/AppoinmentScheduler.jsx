@@ -11,6 +11,8 @@ import Col from 'react-bootstrap/Col'
 import Stepper from 'react-stepper-horizontal';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 
+import services from '../../data/services';
+
 import 'react-day-picker/lib/style.css';
 import './style.scss';
 
@@ -25,6 +27,7 @@ export default class App extends Component {
       confirmationTextVisible: false,
       appointmentDateSelected: false,
       appointmentMeridiem: 0,
+      appointmentService: undefined,
       validEmail: true,
       validPhone: true,
       smallScreen: window.innerWidth < 768,
@@ -34,6 +37,7 @@ export default class App extends Component {
     }
 
     this.handleNextStep = this.handleNextStep.bind(this)
+    this.handleSetAppointmentService = this.handleSetAppointmentService.bind(this)
     this.handleSetAppointmentDate = this.handleSetAppointmentDate.bind(this)
     this.handleSetAppointmentSlot = this.handleSetAppointmentSlot.bind(this)
     this.handleSetAppointmentMeridiem = this.handleSetAppointmentMeridiem.bind(this)
@@ -50,6 +54,11 @@ export default class App extends Component {
   handleNextStep() {
     const { currentStep } = this.state
     return (currentStep < 3) ? this.setState({ currentStep: currentStep + 1}) : null
+  }
+
+  handleSetAppointmentService(service) {
+    this.handleNextStep()
+    this.setState({ appointmentService: service })
   }
 
   handleSetAppointmentDate(date) {
@@ -185,6 +194,7 @@ export default class App extends Component {
       <p>Name: <span style={spanStyle}>{this.state.firstName} {this.state.lastName}</span></p>
       <p>Number: <span style={spanStyle}>{this.state.phone}</span></p>
       <p>Email: <span style={spanStyle}>{this.state.email}</span></p>
+      <p>Service: <span style={spanStyle}>{services[this.state.appointmentService].title}</span></p>
       <p>Appointment: <span style={spanStyle}>{moment(this.state.appointmentDate).format('dddd[,] MMMM Do[,] YYYY')}</span> at <span style={spanStyle}>{moment().hour(9).minute(0).add(this.state.appointmentSlot, 'hours').format('h:mm a')}</span></p>
     </section>
   }
@@ -236,6 +246,26 @@ export default class App extends Component {
     switch (currentStep) {
       case 0: return (
         <React.Fragment>
+          <Form.Group as={Col}>
+            <Form.Label>Service</Form.Label>s
+            {Object.keys(services).map(key => {
+              const service = services[key];
+
+              return (
+                <Form.Check
+                  type="radio"
+                  name="appointmentServices"
+                  value={key}
+                  label={service.title}
+                  onChange={e => this.handleSetAppointmentService(e.target.value)}
+                />
+              );
+            })}
+          </Form.Group>
+        </React.Fragment>
+      )
+      case 1: return (
+        <React.Fragment>
           <DayPickerInput
             placeholder="Select to enter date"
             value={data.appointmentDate}
@@ -244,10 +274,10 @@ export default class App extends Component {
           />
         </React.Fragment>
       )
-      case 1: return (
+      case 2: return (
         <React.Fragment>
           <Form.Group as={Col}>
-            <Form.Label>AM or PM</Form.Label>s
+            <Form.Label>AM or PM</Form.Label>
             <Form.Control
               as="select"
               value={data.appointmentMeridiem}
@@ -264,7 +294,7 @@ export default class App extends Component {
           </Form.Group>
         </React.Fragment>
       )
-      case 2: return (
+      case 3: return (
         <React.Fragment>
           <section>
             <Form.Group>
@@ -350,9 +380,10 @@ export default class App extends Component {
               activeColor="#21a6b3"
               activeStep={currentStep}
               steps={[
-                { title: 'Choose Date', onClick: () => this.setState({ currentStep: 0 }) },
-                { title: 'Choose Time', onClick: () => this.setState({ currentStep: 1 }) },
-                { title: 'Fill Info', onClick: () => this.setState({ currentStep: 2 }) },
+                { title: 'Choose Service', onClick: () => this.setState({ currentStep: 0 }) },
+                { title: 'Choose Date', onClick: () => this.setState({ currentStep: 1 }) },
+                { title: 'Choose Time', onClick: () => this.setState({ currentStep: 2 }) },
+                { title: 'Fill Info', onClick: () => this.setState({ currentStep: 3 }) },
               ]}
             />
             {this.renderConfirmationString()}
