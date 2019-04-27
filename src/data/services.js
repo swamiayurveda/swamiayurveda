@@ -55,4 +55,165 @@ export default {
       },
     ]
   },
+  janu_basti: {
+    title: 'Janu Basti',
+    brief: '',
+    overview: '',
+    benefits: [
+    ],
+    rates: [
+      {
+        time: '50 minutes',
+        cost: '$95',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
+  kati_basti: {
+    title: 'Kati Basti',
+    brief: '',
+    overview: '',
+    benefits: [
+    ],
+    rates: [
+      {
+        time: '50 minutes',
+        cost: '$95',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
+  greeva_basti: {
+    title: 'Greeva Basti',
+    brief: '',
+    overview: '',
+    benefits: [
+    ],
+    rates: [
+      {
+        time: '50 minutes',
+        cost: '$95',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
+  nasya: {
+    title: 'Nasya',
+    brief: '',
+    overview: '',
+    benefits: [
+    ],
+    rates: [
+      {
+        time: '50 minutes',
+        cost: '$95',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
+  shirodhara: {
+    title: 'Shirodhara',
+    brief: '',
+    overview: '',
+    benefits: [
+    ],
+    rates: [
+      {
+        time: '50 minutes',
+        cost: '$95',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
+  shali_shashtika_pinda_sweda: {
+    title: 'Shali Shashtika Pinda Sweda',
+    brief: '',
+    overview: '',
+    benefits: [
+    ],
+    rates: [
+      {
+        time: '50 minutes',
+        cost: '$95',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
+  churna_pinda_sweda: {
+    title: 'Churna Pinda Sweda',
+    brief: '',
+    overview: '',
+    benefits: [
+    ],
+    rates: [
+      {
+        time: '50 minutes',
+        cost: '$95',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
 }
