@@ -76,7 +76,7 @@ const Overview = () => {
         </Col>
         <Col>
           <h3 className="text-left mb-5">{i18n.what_is_ayurveda}</h3>
-          <p className="text-left">{i18n.ayurveda_desc}</p>
+          <p className="text-left lh-2">{i18n.ayurveda_desc}</p>
         </Col>
       </Row>
     </Container>
