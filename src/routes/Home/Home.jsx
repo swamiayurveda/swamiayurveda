@@ -129,7 +129,7 @@ const Pitch = () => {
                   <h2>Vata</h2>
                 </Card.Title>
                 <Card.Text className="mt-4">
-                  With supporting text below as a natural lead-in to additional content.
+                  {i18n.vata_desc}
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -153,7 +153,7 @@ const Pitch = () => {
                   <h2>Kapha</h2>
                 </Card.Title>
                 <Card.Text className="mt-4">
-                  With supporting text below as a natural lead-in to additional content.
+                  {i18n.kapha_desc}
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -177,7 +177,7 @@ const Pitch = () => {
                   <h2>Pitta</h2>
                 </Card.Title>
                 <Card.Text className="mt-4">
-                  With supporting text below as a natural lead-in to additional content.
+                  {i18n.pitta_desc}
                 </Card.Text>
               </Card.Body>
             </Card>
