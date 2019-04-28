@@ -1,4 +1,28 @@
 export default {
+  initial_consultation: {
+    title: 'Initial Consultation',
+    brief: '',
+    overview: '',
+    benefits: [
+      'Healthy',
+    ],
+    rates: [
+      {
+        time: '80 minutes',
+        cost: '$155',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
   abyanga: {
     title: 'Abyanga',
     brief: 'Long, ﬂowing strokes with light to moderate pressure help restore the balance of vital energy, deeply nourish the body, and relax the nervous system, enhancing lymphatic and arterial circulation.',
