@@ -11,6 +11,7 @@ import fire from '../../images/doshas/fire.svg';
 import earth from '../../images/doshas/earth.svg';
 import ether from '../../images/doshas/ether.svg';
 import water from '../../images/doshas/water.svg';
+import land from '../../images/land.svg';
 import i18n from '../../i18n';
 
 import SubscribeForm from 'components/SubscribeForm';
@@ -19,7 +20,7 @@ import './style.scss';
 
 const Intro = () => {
   return(
-    <Container className="intro-section">
+    <Container className="intro-section" fluid>
       <Row className="mt-5">
         <Col>
           <h1 className="page-header">
@@ -59,9 +60,9 @@ const Intro = () => {
           </Button>
         </Col>
       </Row>
-      <Row className="mt-3">
+      <Row className="mt-3" noGutters>
         <Col>
-          {/* <img src={flower} /> */}
+          <img style={{ width: '100%', height: '100%' }} src={land} />
         </Col>
       </Row>
     </Container>
@@ -72,7 +73,7 @@ const Overview = () => {
   return(
     <Container className="overview-section">
       <Row className="mt-5">
-        <Col>
+        <Col className="d-none d-md-block">
         </Col>
         <Col>
           <h3 className="text-left mb-5">{i18n.what_is_ayurveda}</h3>
@@ -100,13 +101,12 @@ const PreFooter = () => {
 
 const Pitch = () => {
   return(
-    <div className="pitch-section pb-3">
+    <div className="pitch-section pt-5 pb-3">
       <Container>
         <Row>
           <Col className="mb-4 text-light" xs={12}>
-            <h1>{i18n.doshas}</h1>
-            <p className="description">{i18n.dosha_desc}</p>
-            <p className="description">{i18n.dosha_desc2}</p>
+            <div className="display-3 mb-4">{i18n.doshas}</div>
+            <p className="description lh-2">{i18n.dosha_desc} {i18n.dosha_desc2}</p>
           </Col>
         </Row>
         <Row className="justify-content-center">
