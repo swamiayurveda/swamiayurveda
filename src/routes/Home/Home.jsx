@@ -82,11 +82,12 @@ const Overview = () => {
   return(
     <Container className="overview-section">
       <Row className="mt-5">
-        <Col className="d-none d-md-block">
+        <Col className="d-none d-md-flex justify-content-center align-items-center">
+          <img className="img-fluid" src={land} />
         </Col>
         <Col>
-          <h3 className="text-left mb-5">{i18n.what_is_ayurveda}</h3>
-          <p className="text-left lh-2">{i18n.ayurveda_desc}</p>
+          <h3 className="mb-5">{i18n.what_is_ayurveda}</h3>
+          <p className="lh-2">{i18n.ayurveda_desc}</p>
         </Col>
       </Row>
     </Container>
