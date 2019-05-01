@@ -17,12 +17,12 @@ const socialLinks = {
 const Footer = () => {
   return(
     <Container className="footer pt-5 pb-3" fluid>
-      <Row className="align-items-center justify-content-center  mb-3">
-        <div className="footer-divider" />
-        <div className="footer-title text-left">
+      <Row className="align-items-center justify-content-center mb-3">
+        <Col className="footer-divider" />
+        <Col className="footer-title text-left" xs={1}>
           <img className="navbar-logo" src={logo} alt="logo" />
-        </div>
-        <div className="footer-divider" />
+        </Col>
+        <Col className="footer-divider" />
       </Row>
       <Row className="align-items-center justify-content-center  mb-3">
         <Col lg={4}>

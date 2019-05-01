@@ -6,6 +6,9 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
+
+import logo from '../../images/icon-tertiary.svg';
+import logo2 from '../../images/logo-secondary-notext.png';
 import air from '../../images/doshas/air.svg';
 import fire from '../../images/doshas/fire.svg';
 import earth from '../../images/doshas/earth.svg';
@@ -20,7 +23,7 @@ import './style.scss';
 
 const Intro = () => {
   return(
-    <Container className="intro-section" fluid>
+    <Container className="intro-section d-flex flex-column" fluid>
       <Row className="mt-5">
         <Col>
           <h1 className="page-header">
@@ -60,9 +63,15 @@ const Intro = () => {
           </Button>
         </Col>
       </Row>
-      <Row className="mt-3" noGutters>
-        <Col>
-          <img style={{ width: '100%', height: '100%' }} src={land} />
+      <Row className="mt-3 flex-grow-1 align-items-center" noGutters>
+        <Col xs={5}>
+          <div className="footer-divider" />
+        </Col>
+        <Col xs={2}>
+          <img className="img-fluid" src={logo2} />
+        </Col>
+        <Col xs={5}>
+          <div className="footer-divider" />
         </Col>
       </Row>
     </Container>

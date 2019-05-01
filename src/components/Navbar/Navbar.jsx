@@ -11,7 +11,7 @@ import {
 import { setNavbarToggler } from './util';
 import navItems from '../../routes';
 import bodyIcon from '../../images/body.svg';
-import image from '../../images/icon-tertiary.png';
+import image from '../../images/icon-tertiary.svg';
 
 import './style.scss';
 
