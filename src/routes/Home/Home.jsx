@@ -38,7 +38,7 @@ const Intro = () => {
           </div>
         </Col>
       </Row>
-      <Row className="mt-3">
+      <Row className="mt-5">
         <Col>
           <Button
             as={Link}
