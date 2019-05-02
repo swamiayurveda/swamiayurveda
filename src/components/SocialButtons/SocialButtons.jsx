@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 import './style.scss';
 
@@ -9,9 +10,9 @@ const socialLinks = {
   twitter: 'https://twitter.com/SwamiAyurveda',
 };
 
-const SocialButtons = () => {
+const SocialButtons = ({ sm }) => {
   return (
-    <div className="social-btn">
+    <div className={cx('social-btn', { 'social-btn-sm': sm })}>
       <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.instagram}><i className="fab fa-instagram"></i></a></div>
       <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.facebook}><i className="fab fa-facebook-f"></i></a></div>
       <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.twitter}><i className="fab fa-twitter"></i></a></div>

@@ -18,7 +18,7 @@ const About = () => {
         </Col>
       </Row>
       <Row className="pt-5">
-        <Col className="mt-3 d-none d-md-block" lg={6}>
+        <Col className="mt-3" lg={6}>
           <Card border="success">
             <Card.Body>
               <Card.Title>About</Card.Title>

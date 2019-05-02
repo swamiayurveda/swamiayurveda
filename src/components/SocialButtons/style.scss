@@ -8,6 +8,15 @@
   display: flex;
   justify-content: center;
   margin: 1rem 0;
+
+  &.social-btn-sm {
+    & > .social-item > a > svg {
+      height: 28px;
+      width: 28px !important;;
+      line-height: 28px;
+      padding: 6px;
+    }
+  }
 }
 
 .social-btn > .social-item > a > svg {

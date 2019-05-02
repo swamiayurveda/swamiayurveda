@@ -77,7 +77,7 @@ const Intro = () => {
       </Row>
       <Row className="mb-3">
         <Col>
-          <SocialButtons />
+          <SocialButtons sm />
         </Col>
       </Row>
     </Container>
