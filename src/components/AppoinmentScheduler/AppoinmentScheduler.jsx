@@ -255,6 +255,7 @@ export default class App extends Component {
 
               return (
                 <Form.Check
+                  key={key}
                   type="radio"
                   name="appointmentServices"
                   value={key}

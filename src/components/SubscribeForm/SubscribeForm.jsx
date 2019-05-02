@@ -13,12 +13,16 @@ class SubscribeForm extends React.Component {
           name="mc-embedded-subscribe-form"
           className="validate"
           target="_blank"
-          novalidate
+          noValidate
         >
           <div id="mc_embed_signup_scroll">
             <input type="email" name="EMAIL" className="email email-input" id="mce-EMAIL" placeholder="Enter Email" required />
             <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-              <input type="text" name="b_fe6d6b902feab55f744f04531_5b8fcb37fa" tabindex="-1" value="" />
+              <input
+                type="text"
+                name="b_fe6d6b902feab55f744f04531_5b8fcb37fa"
+                tabIndex="-1"
+              />
             </div>
             <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button submit-btn" />
           </div>

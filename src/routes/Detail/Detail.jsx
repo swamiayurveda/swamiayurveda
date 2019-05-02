@@ -37,7 +37,7 @@ const Overview = () => (
 );
 
 const Detail = (props) => {
-  const { make, model, year, miles, price, imageURL } = props;
+  const { miles, price, imageURL } = props;
 
   return (
     <div className="car-detail-container">

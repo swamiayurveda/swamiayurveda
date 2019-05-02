@@ -46,7 +46,7 @@ const Intro = () => {
             className="rounded-pill px-5"
             variant="success"
             size="lg"
-            type
+            type="true"
           >
             {i18n.book_appointment}
           </Button>
@@ -69,7 +69,7 @@ const Intro = () => {
           <div className="footer-divider" />
         </Col>
         <Col xs={2}>
-          <img className="img-fluid" src={logo2} />
+          <img alt="logo" className="img-fluid" src={logo2} />
         </Col>
         <Col xs={5}>
           <div className="footer-divider" />
@@ -89,7 +89,7 @@ const Overview = () => {
     <Container className="overview-section">
       <Row className="mt-5">
         <Col className="d-none d-md-flex justify-content-center align-items-center">
-          <img className="img-fluid" src={land} />
+          <img alt="land" className="img-fluid" src={land} />
         </Col>
         <Col>
           <h3 className="mb-5">{i18n.what_is_ayurveda}</h3>
@@ -134,7 +134,7 @@ const Dosha = () => {
                 <Card.Title>
                   <h2>Kapha</h2>
                 </Card.Title>
-                <Card.Text className="mt-4">
+                <div className="mt-4">
                   <Row noGutters>
                     <Col>
                       <Image src={earth} roundedCircle />
@@ -150,7 +150,7 @@ const Dosha = () => {
                   <p>stability in the body</p>
                   <strong>Qualities</strong>
                   <p>cold · heavy · oily · soft · slow · stable</p>
-                </Card.Text>
+                </div>
               </Card.Body>
             </Card>
           </Col>
@@ -160,7 +160,7 @@ const Dosha = () => {
                 <Card.Title>
                   <h2>Vata</h2>
                 </Card.Title>
-                <Card.Text className="mt-4">
+                <div className="mt-4">
                   <Row noGutters>
                     <Col>
                       <Image src={ether} roundedCircle />
@@ -176,7 +176,7 @@ const Dosha = () => {
                   <p>movement in the body</p>
                   <strong>Qualities</strong>
                   <p>light · dry · cold · subtle · mobile</p>
-                </Card.Text>
+                </div>
               </Card.Body>
             </Card>
           </Col>
@@ -186,7 +186,7 @@ const Dosha = () => {
                 <Card.Title>
                   <h2>Pitta</h2>
                 </Card.Title>
-                <Card.Text className="mt-4">
+                <div className="mt-4">
                   <Row noGutters>
                     <Col>
                       <Image src={fire} roundedCircle />
@@ -202,7 +202,7 @@ const Dosha = () => {
                   <p>transformation in the body</p>
                   <strong>Qualities</strong>
                   <p>hot · light · quick · sharp · oily</p>
-                </Card.Text>
+                </div>
               </Card.Body>
             </Card>
           </Col>

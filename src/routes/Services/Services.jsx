@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Container, Col, Row, Card } from 'react-bootstrap';
 
-import ServiceModal from './ServiceModal';
-
 import services from '../../data/services';
 import i18n from '../../i18n';
 import './style.scss';
@@ -29,7 +27,7 @@ const Services = () => {
           const service = services[key];
 
           return (
-            <Col className="mt-3" lg={6}>
+            <Col className="mt-3" lg={6} key={key}>
               <Card className="service-card" border="success" as={Link} to={`/services/${key}`}>
                 <Card.Body>
                   <Card.Title>{service.title}</Card.Title>
@@ -39,9 +37,9 @@ const Services = () => {
                 </Card.Body>
                 <Card.Footer>
                   {service.rates.map((rate, idx) => (
-                    <React.Fragment>
+                    <React.Fragment key={rate + idx}>
                       <span>{`${rate.time}: ${rate.cost}`}</span>
-                      {idx != service.rates.length - 1 && <b> | </b>}
+                      {idx !== service.rates.length - 1 && <b> | </b>}
                     </React.Fragment>
                   ))}
                 </Card.Footer>

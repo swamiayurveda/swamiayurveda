@@ -4,13 +4,11 @@ import { Link } from "react-router-dom";
 import {
   Navbar,
   Nav,
-  Container,
   Dropdown,
 } from 'react-bootstrap';
 
 import { setNavbarToggler } from './util';
 import navItems from '../../routes';
-import bodyIcon from '../../images/body.svg';
 import image from '../../images/icon-tertiary.svg';
 
 import './style.scss';

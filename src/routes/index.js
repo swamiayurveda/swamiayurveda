@@ -1,6 +1,6 @@
 import booksIcon from '../images/books.svg';
-import mortarIcon from '../images/mortar.svg';
 import bodyIcon from '../images/body.svg';
+// import mortarIcon from '../images/mortar.svg';
 // import plantIcon from '../images/plant.svg';
 // import recipeIcon from '../images/recipe.svg';
 // import pillIcon from '../images/pill.svg';

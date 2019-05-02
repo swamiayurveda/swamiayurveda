@@ -1,9 +1,8 @@
 import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { withRouter } from 'react-router';
 
-
-import i18n from '../../i18n';
+// import i18n from '../../i18n';
 import services from '../../data/services';
 import './style.scss';
 
@@ -31,13 +30,15 @@ const ServiceModal = ({ history, match }) => {
         <h4>Benfits</h4>
         <ul>
           {service.benefits.map(benefit => (
-            <li>{benefit}</li>
+            <li key={benefit}>{benefit}</li>
           ))}
         </ul>
         <h4>Resources</h4>
         <ul>
           {service.resources.map(resource => (
-            <li><a href={resource.url}>{resource.name}</a></li>
+            <li key={resource.name}>
+              <a href={resource.url}>{resource.name}</a>
+            </li>
           ))}
         </ul>
       </Modal.Body>

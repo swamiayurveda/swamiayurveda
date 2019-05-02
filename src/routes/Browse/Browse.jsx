@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import cx from 'classnames';
-import { Container, Col, Row, Card } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 import ItemCard from 'components/ItemCard';
 import FilterBar from 'components/FilterBar';

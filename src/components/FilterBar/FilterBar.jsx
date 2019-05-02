@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Card, Row, Col, ListGroup } from 'react-bootstrap';
 
@@ -15,7 +14,6 @@ class FilterBar extends React.Component {
   handleMilesChange = e => this.setState({ maxMiles: e.target.value });
 
   render() {
-    const { maxPrice, maxMiles } = this.state;
     const { closed, toggleSidebar } = this.props;
 
     return (

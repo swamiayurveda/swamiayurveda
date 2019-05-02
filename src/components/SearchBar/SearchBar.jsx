@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { ButtonGroup, Button, Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 
 import './style.scss';
 
