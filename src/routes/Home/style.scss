@@ -35,10 +35,24 @@
   }
 }
 
-.pitch-section {
+.dosha-section {
+  position: relative;
   text-align: center;
   // padding-top: 144px;
   background: #4CAF50;
+}
+
+.dosha-section-overhead{
+  position: absolute;
+  top: -12.1rem;
+  right: 4rem;
+}
+
+.dosha-section-underhead{
+  position: absolute;
+  bottom: -8rem;
+  left: 2rem;
+  transform: rotate(155deg);
 }
 
 .pre-footer-section {

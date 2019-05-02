@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 
-import logo from '../../images/icon-tertiary.svg';
 import logo2 from '../../images/logo-secondary-notext.png';
 import air from '../../images/doshas/air.svg';
 import fire from '../../images/doshas/fire.svg';
@@ -15,6 +14,8 @@ import earth from '../../images/doshas/earth.svg';
 import ether from '../../images/doshas/ether.svg';
 import water from '../../images/doshas/water.svg';
 import land from '../../images/land.svg';
+import plant2 from '../../images/plant2.svg';
+import sunflower from '../../images/sunflower.svg';
 import i18n from '../../i18n';
 
 import SubscribeForm from 'components/SubscribeForm';
@@ -99,7 +100,7 @@ const PreFooter = () => {
     <Container className="pre-footer-section">
       <Row className="my-5">
         <Col className="my-5">
-          <div className="page-subheader mt-4">
+          <div className="page-subheader bg-white mt-4">
             {i18n.sign_up_subscribe}
           </div>
           <SubscribeForm />
@@ -109,9 +110,11 @@ const PreFooter = () => {
   );
 };
 
-const Pitch = () => {
+const Dosha = () => {
   return(
-    <div className="pitch-section pt-5 pb-3">
+    <div className="dosha-section pt-5 pb-3">
+      <Image className="dosha-section-overhead" src={sunflower} />
+      <Image className="dosha-section-underhead" src={plant2} />
       <Container>
         <Row>
           <Col className="mb-4 text-light" xs={12}>
@@ -139,7 +142,9 @@ const Pitch = () => {
                   <h2>Vata</h2>
                 </Card.Title>
                 <Card.Text className="mt-4">
-                  {i18n.vata_desc}
+                  <p>Elements: <span className="dosha-air">Air</span> and <span className="dosha-ether">Space</span></p>
+                  <p>Responsibility: movement in the body.</p>
+                  <p>Qualities: light, dry, cold, subtle, mobile.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -163,7 +168,9 @@ const Pitch = () => {
                   <h2>Kapha</h2>
                 </Card.Title>
                 <Card.Text className="mt-4">
-                  {i18n.kapha_desc}
+                  <p>Elements: <span className="dosha-water">Water</span> and <span className="dosha-earth">Earth</span></p>
+                  <p>Responsibility: stability in the body.</p>
+                  <p>Qualities: cold, heavy, oily, soft, slow, stable.</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -187,7 +194,9 @@ const Pitch = () => {
                   <h2>Pitta</h2>
                 </Card.Title>
                 <Card.Text className="mt-4">
-                  {i18n.pitta_desc}
+                  <p>Elements: <span className="dosha-water">Water</span> and <span className="dosha-fire">Fire</span></p>
+                  <p>Responsibility: transformation in the body.</p>
+                  <p>Qualities: hot, light, quick, sharp, oily</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -205,7 +214,7 @@ class Home extends React.Component {
         <div className="page-container">
           <Intro />
           <Overview />
-          <Pitch />
+          <Dosha />
           <PreFooter />
         </div>
       </React.Fragment>

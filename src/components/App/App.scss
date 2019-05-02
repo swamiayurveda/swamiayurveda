@@ -58,6 +58,31 @@ a.btn {
   -webkit-appearance: none;
 }
 
+.dosha-ether {
+  font-weight: bold;
+  color: #3F51B5
+}
+
+.dosha-air {
+  font-weight: bold;
+  color: #9E9E9E
+}
+
+.dosha-earth {
+  font-weight: bold;
+  color: #4CAF50
+}
+
+.dosha-water {
+  font-weight: bold;
+  color: #2196F3
+}
+
+.dosha-fire {
+  font-weight: bold;
+  color: #FF5722
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
