@@ -100,7 +100,7 @@ const PreFooter = () => {
     <Container className="pre-footer-section">
       <Row className="my-5">
         <Col className="my-5">
-          <div className="page-subheader bg-white mt-4">
+          <div className="page-subheader d-inline-block bg-white mt-4">
             {i18n.sign_up_subscribe}
           </div>
           <SubscribeForm />
@@ -126,51 +126,25 @@ const Dosha = () => {
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card className="text-center">
               <Card.Body>
-                <div className="text-center mb-4">
-                  <Row noGutters>
-                    <Col>
-                      <small>{i18n.ether}</small>
-                      <Image src={ether} roundedCircle />
-                    </Col>
-                    <Col>
-                      <small>{i18n.air}</small>
-                      <Image src={air} roundedCircle />
-                    </Col>
-                  </Row>
-                </div>
-                <Card.Title>
-                  <h2>Vata</h2>
-                </Card.Title>
-                <Card.Text className="mt-4">
-                  <p>Elements: <span className="dosha-air">Air</span> and <span className="dosha-ether">Space</span></p>
-                  <p>Responsibility: movement in the body.</p>
-                  <p>Qualities: light, dry, cold, subtle, mobile.</p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col xs={12} md={6} lg={4} className="mb-5">
-            <Card className="text-center">
-              <Card.Body>
-                <div className="text-center mb-4">
-                  <Row noGutters>
-                    <Col>
-                      <small>{i18n.earth}</small>
-                      <Image src={earth} roundedCircle />
-                    </Col>
-                    <Col>
-                      <small>{i18n.water}</small>
-                      <Image src={water} roundedCircle />
-                    </Col>
-                  </Row>
-                </div>
                 <Card.Title>
                   <h2>Kapha</h2>
                 </Card.Title>
                 <Card.Text className="mt-4">
-                  <p>Elements: <span className="dosha-water">Water</span> and <span className="dosha-earth">Earth</span></p>
-                  <p>Responsibility: stability in the body.</p>
-                  <p>Qualities: cold, heavy, oily, soft, slow, stable.</p>
+                  <Row noGutters>
+                    <Col>
+                      <Image src={earth} roundedCircle />
+                      <small>{i18n.earth}</small>
+                    </Col>
+                    <Col>
+                      <Image src={water} roundedCircle />
+                      <small>{i18n.water}</small>
+                    </Col>
+                  </Row>
+                  <br />
+                  <strong>Responsibility</strong>
+                  <p>stability in the body</p>
+                  <strong>Qualities</strong>
+                  <p>cold · heavy · oily · soft · slow · stable</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -178,25 +152,51 @@ const Dosha = () => {
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card className="text-center">
               <Card.Body>
-                <div className="text-center mb-4">
+                <Card.Title>
+                  <h2>Vata</h2>
+                </Card.Title>
+                <Card.Text className="mt-4">
                   <Row noGutters>
                     <Col>
-                      <small>{i18n.earth}</small>
-                      <Image src={earth} roundedCircle />
+                      <Image src={ether} roundedCircle />
+                      <small>{i18n.ether}</small>
                     </Col>
                     <Col>
-                      <small>{i18n.fire}</small>
-                      <Image src={fire} roundedCircle />
+                      <Image src={air} roundedCircle />
+                      <small>{i18n.air}</small>
                     </Col>
                   </Row>
-                </div>
+                  <br />
+                  <strong>Responsibility</strong>
+                  <p>movement in the body</p>
+                  <strong>Qualities</strong>
+                  <p>light · dry · cold · subtle · mobile</p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={12} md={6} lg={4} className="mb-5">
+            <Card className="text-center">
+              <Card.Body>
                 <Card.Title>
                   <h2>Pitta</h2>
                 </Card.Title>
                 <Card.Text className="mt-4">
-                  <p>Elements: <span className="dosha-water">Water</span> and <span className="dosha-fire">Fire</span></p>
-                  <p>Responsibility: transformation in the body.</p>
-                  <p>Qualities: hot, light, quick, sharp, oily</p>
+                  <Row noGutters>
+                    <Col>
+                      <Image src={fire} roundedCircle />
+                      <small>{i18n.fire}</small>
+                    </Col>
+                    <Col>
+                      <Image src={earth} roundedCircle />
+                      <small>{i18n.earth}</small>
+                    </Col>
+                  </Row>
+                  <br />
+                  <strong>Responsibility</strong>
+                  <p>transformation in the body</p>
+                  <strong>Qualities</strong>
+                  <p>hot · light · quick · sharp · oily</p>
                 </Card.Text>
               </Card.Body>
             </Card>
