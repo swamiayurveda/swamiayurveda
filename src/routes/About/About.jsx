@@ -19,6 +19,17 @@ const About = () => {
       </Row>
       <Row className="pt-5">
         <Col className="mt-3 d-none d-md-block" lg={6}>
+          <Card border="success">
+            <Card.Body>
+              <Card.Title>About</Card.Title>
+              <Card.Text className="lh-2">
+                Since childhood, Tejal Swami had always been interested in the medical field. As years passed by she realized that our current health system lacks expertise in the preventing disease so her interest shifted more towards holistic health. Being brought up in an Indian household, Ayurvedic Medicine seemed to be the perfect fit as her career choice. 
+              </Card.Text>
+              <Card.Text className="lh-2">
+                She pursued her Bachelors in Psychology at University of California, Santa Barbara (UCSB) and then went to Southern California University of Health Sciences (SCUHS) and received certification as an Ayurvedic Wellness Educator and Ayurvedic Practitioner. This includes a two-year Clinical Internship with intensive training on consultations, herbs, and treatments.
+              </Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
         <Col className="mt-3" lg={6}>
           <Card border="success">
