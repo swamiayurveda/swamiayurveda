@@ -248,20 +248,35 @@ export default class App extends Component {
     switch (currentStep) {
       case 0: return (
         <React.Fragment>
-          <Form.Group as={Col}>
-            <Form.Label>Service</Form.Label>s
+          <Form.Label>Services</Form.Label>
+          <Form.Group as={Row}>
             {Object.keys(services).map(key => {
               const service = services[key];
 
               return (
-                <Form.Check
-                  key={key}
-                  type="radio"
-                  name="appointmentServices"
-                  value={key}
-                  label={service.title}
-                  onChange={e => this.handleSetAppointmentService(e.target.value)}
-                />
+                <Col className="mt-3" lg={6} key={key}>
+                  <Card border="success" className="hover-grow pointer">
+                    <Form.Check
+                      className="service-form-check"
+                      key={key}
+                      type="radio"
+                      name="appointmentServices"
+                      value={key}
+                      onChange={e => this.handleSetAppointmentService(e.target.value)}
+                    />
+                    <Card.Body>
+                      <Card.Title>{service.title}</Card.Title>
+                    </Card.Body>
+                    <Card.Footer>
+                      {service.rates.map((rate, idx) => (
+                        <React.Fragment key={rate + idx}>
+                          <span>{`${rate.time}: ${rate.cost}`}</span>
+                          {idx !== service.rates.length - 1 && <b> | </b>}
+                        </React.Fragment>
+                      ))}
+                    </Card.Footer>
+                  </Card>
+                </Col>
               );
             })}
           </Form.Group>

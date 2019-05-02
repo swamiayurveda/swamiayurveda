@@ -61,6 +61,22 @@
   }
 }
 
+.pointer {
+  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hover-grow {
+  transition: .1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 .hvr-underline {
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
