@@ -19,6 +19,7 @@ import sunflower from '../../images/sunflower.svg';
 import i18n from '../../i18n';
 
 import SubscribeForm from 'components/SubscribeForm';
+import SocialButtons from 'components/SocialButtons';
 
 import './style.scss';
 
@@ -37,7 +38,7 @@ const Intro = () => {
           </div>
         </Col>
       </Row>
-      <Row className="mt-5">
+      <Row className="mt-3">
         <Col>
           <Button
             as={Link}
@@ -49,7 +50,6 @@ const Intro = () => {
           >
             {i18n.book_appointment}
           </Button>
-
         </Col>
       </Row>
       <Row className="mt-3">
@@ -73,6 +73,11 @@ const Intro = () => {
         </Col>
         <Col xs={5}>
           <div className="footer-divider" />
+        </Col>
+      </Row>
+      <Row className="mb-3">
+        <Col>
+          <SocialButtons />
         </Col>
       </Row>
     </Container>

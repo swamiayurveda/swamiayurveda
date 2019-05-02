@@ -1,18 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Container, Col, Row } from 'react-bootstrap';
+import SocialButtons from '../SocialButtons';
 
 import i18n from '../../i18n';
 import logo from '../../images/icon.png';
 
 import './style.scss';
-
-const socialLinks = {
-  facebook: 'https://www.facebook.com/Swami-Ayurveda-1261391000738608/',
-  instagram: 'https://instagram.com/swami_ayurveda/',
-  pinterest: 'https://www.pinterest.com/swamiayurveda',
-  twitter: 'https://twitter.com/SwamiAyurveda',
-};
 
 const Footer = () => {
   return(
@@ -32,12 +26,7 @@ const Footer = () => {
           </ul>
         </Col>
         <Col lg={4}>
-          <div className="social-btn">
-            <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.instagram}><i className="fab fa-instagram"></i></a></div>
-            <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.facebook}><i className="fab fa-facebook-f"></i></a></div>
-            <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.twitter}><i className="fab fa-twitter"></i></a></div>
-            <div className="social-item"><a target="_blank" rel="noopener noreferrer" href={socialLinks.pinterest}><i className="fab fa-pinterest-p"></i></a></div>
-          </div>
+          <SocialButtons />
         </Col>
         <Col lg={4}>
           <ul className="footer-list">
