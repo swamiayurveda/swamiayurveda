@@ -123,37 +123,11 @@ const Dosha = () => {
       <Container>
         <Row>
           <Col className="mb-4 text-light" xs={12}>
-            <div className="display-3 mb-4">{i18n.doshas}</div>
+            <div className="display-3 mb-4">{i18n.dosha}</div>
             <p className="description lh-2">{i18n.dosha_desc} {i18n.dosha_desc2}</p>
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col xs={12} md={6} lg={4} className="mb-5">
-            <Card className="text-center">
-              <Card.Body>
-                <Card.Title>
-                  <h2>Kapha</h2>
-                </Card.Title>
-                <div className="mt-4">
-                  <Row noGutters>
-                    <Col>
-                      <Image src={earth} roundedCircle />
-                      <small>{i18n.earth}</small>
-                    </Col>
-                    <Col>
-                      <Image src={water} roundedCircle />
-                      <small>{i18n.water}</small>
-                    </Col>
-                  </Row>
-                  <br />
-                  <strong>Responsibility</strong>
-                  <p>stability in the body</p>
-                  <strong>Qualities</strong>
-                  <p>cold · heavy · oily · soft · slow · stable</p>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card className="text-center">
               <Card.Body>
@@ -202,6 +176,32 @@ const Dosha = () => {
                   <p>transformation in the body</p>
                   <strong>Qualities</strong>
                   <p>hot · light · quick · sharp · oily</p>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={12} md={6} lg={4} className="mb-5">
+            <Card className="text-center">
+              <Card.Body>
+                <Card.Title>
+                  <h2>Kapha</h2>
+                </Card.Title>
+                <div className="mt-4">
+                  <Row noGutters>
+                    <Col>
+                      <Image src={earth} roundedCircle />
+                      <small>{i18n.earth}</small>
+                    </Col>
+                    <Col>
+                      <Image src={water} roundedCircle />
+                      <small>{i18n.water}</small>
+                    </Col>
+                  </Row>
+                  <br />
+                  <strong>Responsibility</strong>
+                  <p>stability in the body</p>
+                  <strong>Qualities</strong>
+                  <p>cold · heavy · oily · soft · slow · stable</p>
                 </div>
               </Card.Body>
             </Card>
