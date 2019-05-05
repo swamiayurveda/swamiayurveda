@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 
-import logo2 from '../../images/logo-secondary-notext.png';
+import logo2 from '../../images/icon-tertiary.png';
 import air from '../../images/doshas/air.svg';
 import fire from '../../images/doshas/fire.svg';
 import earth from '../../images/doshas/earth.svg';
@@ -43,8 +43,8 @@ const Intro = () => {
           <Button
             as={Link}
             to="/book"
-            className="rounded-pill px-5"
-            variant="success"
+            className="rounded-pill px-5 btn-outline-white"
+            variant="outline-success"
             size="lg"
             type="true"
           >
@@ -57,22 +57,16 @@ const Intro = () => {
           <Button
             as={Link}
             to="/about"
-            className="rounded-pill"
+            className="rounded-pill btn-outline-white"
             variant="outline-secondary"
           >
             {i18n.learn_more}
           </Button>
         </Col>
       </Row>
-      <Row className="mt-3 flex-grow-1 align-items-center" noGutters>
-        <Col xs={5}>
-          <div className="footer-divider" />
-        </Col>
+      <Row className="mt-3 flex-grow-1 justify-content-center align-items-center" noGutters>
         <Col xs={2}>
           <img alt="logo" className="img-fluid" src={logo2} />
-        </Col>
-        <Col xs={5}>
-          <div className="footer-divider" />
         </Col>
       </Row>
       <Row className="mb-3">
@@ -123,7 +117,7 @@ const Dosha = () => {
       <Container>
         <Row>
           <Col className="mb-4 text-light" xs={12}>
-            <div className="display-3 mb-4">{i18n.dosha}</div>
+            <div className="display-3 mb-4">{i18n.what_is_a_dosha}</div>
             <p className="description lh-2">{i18n.dosha_desc} {i18n.dosha_desc2}</p>
           </Col>
         </Row>

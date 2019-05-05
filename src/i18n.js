@@ -22,6 +22,7 @@ export default {
   swami_ayurveda: 'Swami Ayurveda',
   water: 'Water',
   what_is_ayurveda: 'What is Ayurveda?',
+  what_is_a_dosha: 'What is a Dosha?',
   vata_desc: 'Made up of Air and Space elements. Responsible for movement in the body, Qualities are light, dry, cold, subtle, mobile.',
   pitta_desc: 'Made up of Water and Fire elements. Responsible for transformation in the body. Qualities are hot, light, quick, sharp, oily.',
   kapha_desc: 'Made up of Water and Earth elements. Responsible for stability in the body. Qualities are cold, heavy, oily, soft, slow, stable.',

@@ -38,17 +38,18 @@
 .dosha-section {
   position: relative;
   text-align: center;
-  // padding-top: 144px;
-  background: #4CAF50;
+  background-image: linear-gradient(#29a745, #85db61);
 }
 
 .dosha-section-overhead{
+  z-index: -1;
   position: absolute;
   top: -12.1rem;
   right: 4rem;
 }
 
 .dosha-section-underhead{
+  z-index: -1;
   position: absolute;
   bottom: -8rem;
   left: 2rem;
