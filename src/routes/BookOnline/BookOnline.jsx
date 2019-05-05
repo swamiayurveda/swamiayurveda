@@ -5,13 +5,18 @@ import i18n from '../../i18n';
 import AppoinmentScheduler from '../../components/AppoinmentScheduler';
 
 var loadScript = function(src) {
-  const tag = document.createElement('script');
+  const script = document.createElement('script');
   const body = document.getElementById('square-scheduler');
 
-  tag.async = false;
-  tag.src = src;
-  body.innerHTML = '';
-  body.appendChild(tag);
+  script.async = false;
+  script.src = src;
+  script.onload = function() {
+    const loading = document.getElementsByClassName('spinner-border')[0];
+
+    body.removeChild(loading);
+  }
+
+  body.appendChild(script);
 }
 
 class BookOnline extends React.Component {
@@ -32,10 +37,10 @@ class BookOnline extends React.Component {
         <Row className="pt-5">
           <Col>
           <Card border="success">
-              <Card.Body id="square-scheduler">
-              <div className="spinner-border" role="status">
-                <span className="sr-only">Loading...</span>
-              </div>
+              <Card.Body id="square-scheduler" className="text-center">
+                <div className="spinner-border" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
               </Card.Body>
             </Card>
           </Col>
