@@ -10,6 +10,7 @@ export default {
   earth: 'Earth',
   ether: 'Ether',
   fire: 'Fire',
+  fundamentals: 'Fundamentals',
   get_started: 'Get Started',
   header: 'Balancing',
   header2: 'Mind · Body · Soul',

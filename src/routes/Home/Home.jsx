@@ -117,7 +117,7 @@ const Dosha = () => {
       <Container>
         <Row>
           <Col className="mb-4 text-light" xs={12}>
-            <div className="display-3 mb-4">{i18n.what_is_a_dosha}</div>
+            <div className="page-header mb-4">{i18n.fundamentals}</div>
             <p className="description lh-2">{i18n.dosha_desc} {i18n.dosha_desc2}</p>
           </Col>
         </Row>
