@@ -26,6 +26,7 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <div className="app-body">
+          <div className="page-bg"></div>
             <Route exact path="/" component={Home} />
             <Route path="/browse" component={Browse} />
             <Route path="/remedy/:name" component={Detail} />
