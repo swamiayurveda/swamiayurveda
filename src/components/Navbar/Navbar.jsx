@@ -9,7 +9,7 @@ import {
 
 import { setNavbarToggler } from './util';
 import navItems from '../../routes';
-import image from '../../images/icon-tertiary.svg';
+import image from '../../images/icon-tertiary.png';
 
 import './style.scss';
 
@@ -22,7 +22,7 @@ class Navbarr extends React.Component {
     const isLoginAvailable = false;
 
     return (
-      <Navbar className="app-navbar" bg="white" expand="lg">
+      <Navbar className="app-navbar" expand="lg">
         <Navbar.Brand className="navbar-item" as={Link} to="/">
           <img className="navbar-logo" src={image} alt="logo" />
           <span className="title ml-3">Swami Ayurveda</span>
