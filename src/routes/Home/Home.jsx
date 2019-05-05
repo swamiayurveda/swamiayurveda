@@ -99,7 +99,7 @@ const PreFooter = () => {
     <Container className="pre-footer-section">
       <Row className="my-5">
         <Col className="my-5">
-          <div className="page-subheader d-inline-block bg-white mt-4">
+          <div className="h5 d-inline-block bg-white mt-4">
             {i18n.sign_up_subscribe}
           </div>
           <SubscribeForm />
