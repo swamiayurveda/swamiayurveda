@@ -17,8 +17,8 @@ const Services = () => {
             <div>{i18n.services}</div>
           </h1>
           <div className="page-subheader pt-4">
-            <div>{i18n.subheader}</div>
-            <div>{i18n.subheader2}</div>
+            <div>{i18n.service_subheader}</div>
+            <div>{i18n.service_subheader2}</div>
           </div>
         </Col>
       </Row>
@@ -34,15 +34,23 @@ const Services = () => {
                   <Card.Text>
                     {service.brief}
                   </Card.Text>
+                  <Card.Text>
+                  <h6>Benfits</h6>
+                  <ul>
+                    {service.benefits.map(benefit => (
+                      <li key={benefit}>{benefit}</li>
+                    ))}
+                  </ul>
+                  </Card.Text>
                 </Card.Body>
-                <Card.Footer>
+                {/* <Card.Footer>
                   {service.rates.map((rate, idx) => (
                     <React.Fragment key={rate + idx}>
                       <span>{`${rate.time}: ${rate.cost}`}</span>
                       {idx !== service.rates.length - 1 && <b> | </b>}
                     </React.Fragment>
                   ))}
-                </Card.Footer>
+                </Card.Footer> */}
               </Card>
             </Col>
           );

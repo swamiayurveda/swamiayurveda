@@ -11,7 +11,7 @@
 
 .service-card {
   @include no-anchor-style;
-  height: 244px;
+  height: 344px;
   transition: .2s ease-in-out;
 
   .card-footer{
@@ -22,5 +22,9 @@
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media (max-width: 991.98px) {
+    height: auto;
   }
 }

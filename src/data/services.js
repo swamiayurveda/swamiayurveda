@@ -16,12 +16,12 @@ export default {
     ],
     resources: [
       {
-        name: 'Study #1',
-        url: 'https://google.com'
+        name: 'Effects of Ayurvedic Abhyanga',
+        url: 'https://www.ncbi.nlm.nih.gov/pubmed/21568717'
       },
       {
-        name: 'Study #2',
-        url: 'https://google.com'
+        name: 'Explanation of Abhyanga',
+        url: 'https://www.omicsonline.org/open-access/physioanatomical-explanation-of-abhyanga-an-ayurvedic-massage-technique-for-healthy-life-2573-4555-1000252-95904.html'
       },
     ]
   },
@@ -45,12 +45,12 @@ export default {
     ],
     resources: [
       {
-        name: 'Study #1',
-        url: 'https://google.com'
+        name: 'Clinical Evaluation of Kati Basti',
+        url: 'http://www.iamj.in/posts/images/upload/2237.pdf'
       },
       {
-        name: 'Study #2',
-        url: 'https://google.com'
+        name: 'Kati Basti Comparative Study',
+        url: 'http://ijcrr.com/uploads/485_pdf.pdf'
       },
     ]
   },
@@ -70,12 +70,12 @@ export default {
     ],
     resources: [
       {
-        name: 'Study #1',
-        url: 'https://google.com'
+        name: 'Clinical Evaluation of Janu Basti',
+        url: 'http://aamj.in/wp-content/uploads/volume1/issue2/AAMJ_74_77.pdf'
       },
       {
-        name: 'Study #2',
-        url: 'https://google.com'
+        name: 'Janu Basti Comparative Study',
+        url: 'http://52.172.27.147:8080/jspui/bitstream/123456789/4492/1/Prashanth%20D.pdf'
       },
     ]
   },
@@ -95,12 +95,8 @@ export default {
     ],
     resources: [
       {
-        name: 'Study #1',
-        url: 'https://google.com'
-      },
-      {
-        name: 'Study #2',
-        url: 'https://google.com'
+        name: 'Case study of Greeva Basti',
+        url: 'http://ijaar.in/issue/images/upload/IJAAR_VOLUME_III__ISSUE_IX__JUL_%E2%80%93AUG_2018__1365_1369.pdf'
       },
     ]
   },
@@ -122,12 +118,8 @@ export default {
     ],
     resources: [
       {
-        name: 'Study #1',
-        url: 'https://google.com'
-      },
-      {
-        name: 'Study #2',
-        url: 'https://google.com'
+        name: 'Experience with Netra Basti',
+        url: 'https://www.refinery29.com/en-us/ayurveda-netra-basti-dry-eye-treatment-experience'
       },
     ]
   },
@@ -149,12 +141,12 @@ export default {
     ],
     resources: [
       {
-        name: 'Study #1',
-        url: 'https://google.com'
+        name: 'Effectiveness of Nasya',
+        url: 'https://www.ncbi.nlm.nih.gov/pubmed/27532316'
       },
       {
-        name: 'Study #2',
-        url: 'https://google.com'
+        name: 'Efficacy of Nasya in coma',
+        url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4995859/'
       },
     ]
   },

@@ -26,9 +26,9 @@ const ServiceModal = ({ history, match }) => {
       </Modal.Header>
       <Modal.Body>
         <h4>Overview</h4>
-        <p>{service.overview}</p>
+        <p className="mb-5">{service.brief}</p>
         <h4>Benfits</h4>
-        <ul>
+        <ul className="mb-5">
           {service.benefits.map(benefit => (
             <li key={benefit}>{benefit}</li>
           ))}

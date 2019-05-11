@@ -8,6 +8,8 @@ export default {
   dosha_desc2: 'This is categorized into 3 doshas (energies): Vata, Pitta, and Kapha inspiring a unique living form.',
   dosha: 'Dosha',
   earth: 'Earth',
+  service_subheader: 'Ayurvedic Practices',
+  service_subheader2: 'to Improve Quality of Life',
   ether: 'Ether',
   fire: 'Fire',
   fundamentals: 'Fundamentals',
