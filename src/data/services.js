@@ -1,10 +1,12 @@
 export default {
-  initial_consultation: {
-    title: 'Initial Consultation',
-    brief: '',
+  abhyanga: {
+    title: 'Abhyanga',
+    brief: 'Application of dosha-specific warm herbal oils on the body, using long strokes with mild to hard pressure. Expect oil from head to toe.',
     overview: '',
     benefits: [
-      'Healthy',
+      'Eliminates excess toxins',
+      'Nourishes and relaxes the muscles',
+      'Strengthens muscles and tissues',
     ],
     rates: [
       {
@@ -23,40 +25,13 @@ export default {
       },
     ]
   },
-  abyanga: {
-    title: 'Abyanga',
-    brief: 'Long, ﬂowing strokes with light to moderate pressure help restore the balance of vital energy, deeply nourish the body, and relax the nervous system, enhancing lymphatic and arterial circulation.',
+  kati_basti: {
+    title: 'Kati Basti',
+    brief: 'A wall of Urad Dal (black gram) is built on the lower back, which is then filled with warm herbal oil to penetrate deeper into the skin',
     overview: '',
     benefits: [
-      'Healthy',
-    ],
-    rates: [
-      {
-        time: '50 minutes',
-        cost: '$95',
-      },
-      {
-        time: '80 minutes',
-        cost: '$155',
-      },
-    ],
-    resources: [
-      {
-        name: 'Study #1',
-        url: 'https://google.com'
-      },
-      {
-        name: 'Study #2',
-        url: 'https://google.com'
-      },
-    ]
-  },
-  marma_balancing: {
-    title: 'Marma Balancing',
-    brief: 'This gentle treatment uses light pressure to focus on energy points, soothing and aligning the physical and subtle bodies.',
-    overview: '',
-    benefits: [
-      'Healthy',
+      'Relieves pain and stiffness; swelling',
+      'Helps with difficult movement',
     ],
     rates: [
       {
@@ -81,32 +56,11 @@ export default {
   },
   janu_basti: {
     title: 'Janu Basti',
-    brief: '',
+    brief: 'A wall of Urad Dal (black gram) is built around the knees, which is then filled with warm herbal oil to penetrate deeper into the skin.',
     overview: '',
     benefits: [
-    ],
-    rates: [
-      {
-        time: '50 minutes',
-        cost: '$95',
-      },
-    ],
-    resources: [
-      {
-        name: 'Study #1',
-        url: 'https://google.com'
-      },
-      {
-        name: 'Study #2',
-        url: 'https://google.com'
-      },
-    ]
-  },
-  kati_basti: {
-    title: 'Kati Basti',
-    brief: '',
-    overview: '',
-    benefits: [
+      'Relieves pain and stiffness',
+      'Swelling; helps with difficult movement',
     ],
     rates: [
       {
@@ -127,9 +81,38 @@ export default {
   },
   greeva_basti: {
     title: 'Greeva Basti',
-    brief: '',
+    brief: 'A wall of Urad Dal (black gram) is built around the upper back/neck, which is then filled with warm herbal oil to penetrate deeper in the skin.',
     overview: '',
     benefits: [
+      'Relieves pain and stiffness; swelling',
+      'Helps with difficult movement',
+    ],
+    rates: [
+      {
+        time: '50 minutes',
+        cost: '$95',
+      },
+    ],
+    resources: [
+      {
+        name: 'Study #1',
+        url: 'https://google.com'
+      },
+      {
+        name: 'Study #2',
+        url: 'https://google.com'
+      },
+    ]
+  },
+  netra_basti: {
+    title: 'Netra Basti',
+    brief: 'A wall(s) of Urad Dal (black gram) is built around the eyes, which is then filled with warm triphala ghee',
+    overview: '',
+    benefits: [
+      'Relieve dry eyes, tired eyes',
+      'Calms the Pitta',
+      'Increases concentration, slows degeneration',
+      'Slows degeneration',
     ],
     rates: [
       {
@@ -150,78 +133,13 @@ export default {
   },
   nasya: {
     title: 'Nasya',
-    brief: '',
+    brief: 'Herbal oil therapy that cleanses the ENT area by addings in few drops into nostrils.',
     overview: '',
     benefits: [
-    ],
-    rates: [
-      {
-        time: '50 minutes',
-        cost: '$95',
-      },
-    ],
-    resources: [
-      {
-        name: 'Study #1',
-        url: 'https://google.com'
-      },
-      {
-        name: 'Study #2',
-        url: 'https://google.com'
-      },
-    ]
-  },
-  shirodhara: {
-    title: 'Shirodhara',
-    brief: '',
-    overview: '',
-    benefits: [
-    ],
-    rates: [
-      {
-        time: '50 minutes',
-        cost: '$95',
-      },
-    ],
-    resources: [
-      {
-        name: 'Study #1',
-        url: 'https://google.com'
-      },
-      {
-        name: 'Study #2',
-        url: 'https://google.com'
-      },
-    ]
-  },
-  shali_shashtika_pinda_sweda: {
-    title: 'Shali Shashtika Pinda Sweda',
-    brief: '',
-    overview: '',
-    benefits: [
-    ],
-    rates: [
-      {
-        time: '50 minutes',
-        cost: '$95',
-      },
-    ],
-    resources: [
-      {
-        name: 'Study #1',
-        url: 'https://google.com'
-      },
-      {
-        name: 'Study #2',
-        url: 'https://google.com'
-      },
-    ]
-  },
-  churna_pinda_sweda: {
-    title: 'Churna Pinda Sweda',
-    brief: '',
-    overview: '',
-    benefits: [
+      'Removes excess Kapha',
+      'Helps with headaches, sore throat, ear issues, provides mental clarity, cleanses and lubricates ENT',
+      'Provides mental clarity, cleanses and lubricates ENT',
+      'Cleanses and lubricates ear, nose, and thorat',
     ],
     rates: [
       {
