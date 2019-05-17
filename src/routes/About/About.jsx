@@ -11,10 +11,10 @@ const About = () => {
           <h1 className="page-header">
             <div>{i18n.about_us}</div>
           </h1>
-          <div className="page-subheader pt-4">
+          {/* <div className="page-subheader pt-4">
             <div>{i18n.subheader}</div>
             <div>{i18n.subheader2}</div>
-          </div>
+          </div> */}
         </Col>
       </Row>
       <Row className="pt-5">
@@ -23,11 +23,12 @@ const About = () => {
             <Card.Body>
               <Card.Title>About</Card.Title>
               <Card.Text className="lh-2">
-                Since childhood, Tejal Swami had always been interested in the medical field. As years passed by she realized that our current health system lacks expertise in the preventing disease so her interest shifted more towards holistic health. Being brought up in an Indian household, Ayurvedic Medicine seemed to be the perfect fit as her career choice. 
+                Tejal Swami is a passionate advocate and practitioner of Ayurvedic Medicine. She received her Bachelors in Psychology at the University of California, Santa Barbara and from there pursued her certification as an Ayurvedic Wellness Educator and Ayurvedic Practitioner at Southern California University of Health Sciences where she underwent a two-year clinical internship with intensive training on consultations, herbs, and treatments.              </Card.Text>
+              <Card.Text className="lh-2">
+                Since childhood, Tejal had always been interested in the medical field. As she learned more about our current health system she realized that it not only lacked expertise in preventing disease, but it failed to treat an individual as an interconnected whole. Her desire to provide a more holistic and preventative approach to healing took Tejal back to her traditional Indian roots and into the depths of Ayurvedic Medicine.
               </Card.Text>
               <Card.Text className="lh-2">
-                She pursued her Bachelors in Psychology at University of California, Santa Barbara (UCSB) and then went to Southern California University of Health Sciences (SCUHS) and received certification as an Ayurvedic Wellness Educator and Ayurvedic Practitioner. This includes a two-year Clinical Internship with intensive training on consultations, herbs, and treatments.
-              </Card.Text>
+                Tejal currently resides in Ventura, California where her experience with and practice of Ayurvedic Medicine guides her to spread the holistic healing wisdom of Ayurveda through clinical practice and other public outlets. She encourages individuals to explore a holistic approach to treating the mind and body through Ayurveda; she believes that Ayurveda has the means to provide a higher and healthier quality of life, something everyone deserves.               </Card.Text>
             </Card.Body>
           </Card>
         </Col>

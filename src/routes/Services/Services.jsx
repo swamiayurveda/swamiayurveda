@@ -35,11 +35,11 @@ const Services = () => {
                     {service.brief}
                   </Card.Text>
                   <Card.Text>
-                  <h6>Benfits</h6>
-                  <ul>
-                    {service.benefits.map(benefit => (
-                      <li key={benefit}>{benefit}</li>
-                    ))}
+                    <h6>Benefits</h6>
+                    <ul>
+                      {service.benefits.map(benefit => (
+                        <li key={benefit}>{benefit}</li>
+                      ))}
                   </ul>
                   </Card.Text>
                 </Card.Body>
