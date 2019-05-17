@@ -11,9 +11,12 @@ var loadScript = function(src) {
   script.async = false;
   script.src = src;
   script.onload = function() {
+    const body = document.getElementById('square-scheduler');
     const loading = document.getElementsByClassName('spinner-border')[0];
 
-    body.removeChild(loading);
+    if (body) {
+      body.removeChild(loading);
+    }
   }
 
   body.appendChild(script);
