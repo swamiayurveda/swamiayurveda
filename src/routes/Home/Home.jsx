@@ -62,6 +62,9 @@ const Intro = () => {
           >
             {i18n.learn_more}
           </Button>
+          <Link to="/about" className="mt-4 text-white d-block">
+            <div>Now open in Ventura, CA</div>
+          </Link>
         </Col>
       </Row>
       <Row className="mt-3 flex-grow-1 justify-content-center align-items-center" noGutters>

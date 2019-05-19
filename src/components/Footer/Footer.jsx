@@ -30,8 +30,8 @@ const Footer = () => {
         </Col>
         <Col lg={4}>
           <ul className="footer-list">
-            <li><Link className="footer-list-item" to="/terms">Privacy Policy</Link></li>
-            <li><Link className="footer-list-item" to="/privacy">Terms of Service</Link></li>
+            <li><Link className="footer-list-item" to="/book">Book Online</Link></li>
+            <li><Link className="footer-list-item" to="/services">Services</Link></li>
           </ul>
         </Col>
       </Row>
