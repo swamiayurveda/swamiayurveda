@@ -22,7 +22,7 @@ const Footer = () => {
         <Col lg={4}>
           <ul className="footer-list">
             <li><Link className="footer-list-item" to="/about">About Us</Link></li>
-            <li><a className="footer-list-item" href="mailto:swamiayurveda7@gmail.com">Contact Us</a></li>
+            <li><a className="footer-list-item" href="mailto:tejal@swami.life">Contact Us</a></li>
           </ul>
         </Col>
         <Col lg={4}>

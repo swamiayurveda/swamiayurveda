@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Col, Row, Card } from 'react-bootstrap';
+import { Container, Col, Row, Card, Image } from 'react-bootstrap';
+import profileAvatar from '../../images/tejal.png';
 
 import i18n from '../../i18n';
 
@@ -19,9 +20,12 @@ const About = () => {
       </Row>
       <Row className="pt-5">
         <Col className="mt-3" lg={6}>
-          <Card border="success">
+          <Card border="success" className="text-center">
             <Card.Body>
               <Card.Title>About</Card.Title>
+              <div className="my-4">
+                <Image src={profileAvatar} roundedCircle style={{ width: '45%' }}></Image>
+              </div>
               <Card.Text className="lh-2">
                 Tejal Swami is a passionate advocate and practitioner of Ayurvedic Medicine. She received her Bachelors in Psychology at the University of California, Santa Barbara and from there pursued her certification as an Ayurvedic Wellness Educator and Ayurvedic Practitioner at Southern California University of Health Sciences where she underwent a two-year clinical internship with intensive training on consultations, herbs, and treatments.              </Card.Text>
               <Card.Text className="lh-2">
@@ -46,6 +50,10 @@ const About = () => {
                 <Col lg={6}>
                   <div className="font-weight-bold">Hours</div>
                   <div>Based on Appointment</div>
+                </Col>
+                <Col lg={6}>
+                  <div className="font-weight-bold">Email</div>
+                  <a href="mailto:tejal@swami.life">tejal@swami.life</a>
                 </Col>
               </Row>
             </Card.Body>
