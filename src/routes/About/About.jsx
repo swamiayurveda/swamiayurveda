@@ -36,12 +36,12 @@ const About = () => {
           <Card border="success">
             <Card.Body>
               <Card.Title>Location</Card.Title>
-              <iframe title="map" style={{ border: '0px', width: '100%', height: '134px' }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13187.09430067697!2d-119.28150853022464!3d34.279825649999985!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e9acf35114d5d1%3A0x3278b824dccfe023!2sTaco+Bell!5e0!3m2!1sen!2sus!4v1555809771460!5m2!1sen!2sus" frameBorder="0" allowFullScreen></iframe>
+              <iframe title="map" style={{ border: '0px', width: '100%', height: '134px' }} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.537473971581!2d-119.21604278477942!3d34.26034408054989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e84d48bab80b27%3A0x15fd049b38cf71e5!2s5700+Ralston+St+%23110%2C+Ventura%2C+CA+93003!5e0!3m2!1sen!2sus!4v1562735833078!5m2!1sen!2sus" width="400" height="300" frameborder="0" allowfullscreen></iframe>
               <Row>
                 <Col lg={6}>
                   <div className="font-weight-bold">Address</div>
-                  <div>123 Maple St.</div>
-                  <div>Ventura, CA 93001</div>
+                  <div>5700 Ralston St. Suite 110</div>
+                  <div>Ventura, CA 93003</div>
                 </Col>
                 <Col lg={6}>
                   <div className="font-weight-bold">Hours</div>
