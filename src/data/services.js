@@ -135,8 +135,7 @@ export default {
     cover: 'https://www.womenbuddha.com/wp-content/uploads/2019/02/Nasya-Therapy-800x400.jpg',
     benefits: [
       'Removes excess Kapha',
-      'Helps with headaches, sore throat, ear issues, provides mental clarity, cleanses and lubricates ENT',
-      'Provides mental clarity, cleanses and lubricates ENT',
+      'Helps with headaches, sore throat, ear issues and provides mental clarity',
       'Cleanses and lubricates ear, nose, and thorat',
     ],
     rates: [
