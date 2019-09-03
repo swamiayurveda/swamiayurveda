@@ -1,3 +1,3 @@
 ## TODO
-- [ ] BG skew
-- [ ] Routing on refresh
+- [X] BG skew
+- [X] Routing on refresh
