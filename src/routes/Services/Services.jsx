@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Col, Row, Card } from 'react-bootstrap';
 
 import services from '../../data/services';
+// import { s } from '../../images/services';
 import i18n from '../../i18n';
 import './style.scss';
 
@@ -29,6 +30,7 @@ const Services = () => {
           return (
             <Col className="mt-3" lg={6} key={key}>
               <Card className="service-card" border="success" as={Link} to={`/services/${key}`}>
+                <Card.Img variant="top" className="service-card__image" src={service.cover} />
                 <Card.Body>
                   <Card.Title>{service.title}</Card.Title>
                   <Card.Text>

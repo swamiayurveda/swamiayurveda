@@ -3,6 +3,7 @@ export default {
     title: 'Abhyanga',
     brief: 'Application of dosha-specific warm herbal oils on the body, using long strokes with mild to hard pressure. Expect oil from head to toe.',
     overview: '',
+    cover: 'https://www.ayuruniverse.com/blogs/wp-content/uploads/2017/12/Abhyanga.jpg',
     benefits: [
       'Eliminates excess toxins',
       'Nourishes and relaxes the muscles',
@@ -29,6 +30,7 @@ export default {
     title: 'Kati Basti',
     brief: 'A wall of Urad Dal (black gram) is built on the lower back, which is then filled with warm herbal oil to penetrate deeper into the skin',
     overview: '',
+    cover: 'https://www.ayurtimes.com/wp-content/uploads/2014/09/Kati-Basti-for-Low-Back-ache.jpg',
     benefits: [
       'Relieves pain and stiffness; swelling',
       'Helps with difficult movement',
@@ -58,6 +60,7 @@ export default {
     title: 'Janu Basti',
     brief: 'A wall of Urad Dal (black gram) is built around the knees, which is then filled with warm herbal oil to penetrate deeper into the skin.',
     overview: '',
+    cover: 'https://thepract.com/wp-content/uploads/2017/03/Janu-Basti-Special-lubricating-therapy-applied-primarily-to-the-knee.jpg',
     benefits: [
       'Relieves pain and stiffness',
       'Swelling; helps with difficult movement',
@@ -83,6 +86,7 @@ export default {
     title: 'Greeva Basti',
     brief: 'A wall of Urad Dal (black gram) is built around the upper back/neck, which is then filled with warm herbal oil to penetrate deeper in the skin.',
     overview: '',
+    cover: 'http://www.indu4ayurveda.com/images/disease/Greeva-Basti1.jpg',
     benefits: [
       'Relieves pain and stiffness; swelling',
       'Helps with difficult movement',
@@ -104,6 +108,7 @@ export default {
     title: 'Netra Basti',
     brief: 'A wall(s) of Urad Dal (black gram) is built around the eyes, which is then filled with warm triphala ghee',
     overview: '',
+    cover: 'https://s1.r29static.com//bin/entry/7b5/x,80/2019808/image.jpg',
     benefits: [
       'Relieve dry eyes, tired eyes',
       'Calms the Pitta',
@@ -127,6 +132,7 @@ export default {
     title: 'Nasya',
     brief: 'Herbal oil therapy that cleanses the ENT area by addings in few drops into nostrils.',
     overview: '',
+    cover: 'https://www.womenbuddha.com/wp-content/uploads/2019/02/Nasya-Therapy-800x400.jpg',
     benefits: [
       'Removes excess Kapha',
       'Helps with headaches, sore throat, ear issues, provides mental clarity, cleanses and lubricates ENT',

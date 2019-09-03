@@ -11,13 +11,18 @@
 
 .service-card {
   @include no-anchor-style;
-  height: 344px;
+  height: 544px;
   transition: .2s ease-in-out;
 
   .card-footer{
     background: none;
     border: 0;
     text-align: right;
+  }
+
+  .service-card__image {
+    height: 200px;
+    object-fit: cover;
   }
 
   &:hover {
