@@ -55,8 +55,8 @@ const Intro = () => {
       <Row className="mt-3">
         <Col>
           <Button
-            as={Link}
-            to="/about"
+            as="a"
+            href="#overview-section"
             className="rounded-pill btn-outline-white"
             variant="outline-secondary"
           >
@@ -83,7 +83,7 @@ const Intro = () => {
 
 const Overview = () => {
   return(
-    <Container className="overview-section">
+    <Container className="overview-section" id="overview-section">
       <Row className="mt-5">
         <Col className="d-none d-md-flex justify-content-center align-items-center">
           <img alt="land" className="img-fluid" src={land} />
