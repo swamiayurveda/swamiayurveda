@@ -39,7 +39,7 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-day-picker": "^7.3.0",
-    "react-dev-utils": "^5.0.1",
+    "react-dev-utils": "^5.0.2",
     "react-dev-utils-for-webpack4": "^5.0.0-webpack4",
     "react-dom": "^16.8.6",
     "react-router": "^4.3.1",
