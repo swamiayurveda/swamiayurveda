@@ -60,7 +60,7 @@ export default {
     title: 'Janu Basti',
     brief: 'A wall of Urad Dal (black gram) is built around the knees, which is then filled with warm herbal oil to penetrate deeper into the skin.',
     overview: '',
-    cover: 'https://thepract.com/wp-content/uploads/2017/03/Janu-Basti-Special-lubricating-therapy-applied-primarily-to-the-knee.jpg',
+    cover: 'http://www.proayurvedapanchakarma.com/wp-content/uploads/2019/05/Janu-Basti.jpg',
     benefits: [
       'Relieves pain and stiffness',
       'Swelling; helps with difficult movement',
@@ -125,6 +125,33 @@ export default {
       {
         name: 'Experience with Netra Basti',
         url: 'https://www.refinery29.com/en-us/ayurveda-netra-basti-dry-eye-treatment-experience'
+      },
+    ]
+  },
+  shirodhara: {
+    title: 'Shirodhara',
+    brief: 'Treatment that involves a stream of warm oil flowing over the forehead and scalp',
+    overview: '',
+    cover: 'https://chopra.brightspotcdn.com/dims4/default/13530ac/2147483647/strip/true/crop/795x341+0+15/resize/1788x766!/quality/90/?url=http%3A%2F%2Fchopra-brightspot.s3.amazonaws.com%2F77%2F66%2F3e4175abdcdd6ae2148c0288f149%2Fshirodhara.jpg',
+    benefits: [
+      'Reduces anxiety, migraines, depression',
+      'Improve sleep quality',
+      'Calms vata dosha',
+    ],
+    rates: [
+      {
+        time: 'minutes',
+        cost: '$',
+      },
+    ],
+    resources: [
+      {
+        name: 'Case Study on Shirodhara',
+        url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3667433/'
+      },
+      {
+        name: 'Ayurvedic Therapy (Shirodhara) for Insomnia',
+        url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3921608/',
       },
     ]
   },
